@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Fuel Lab — Personal coaching, diagnostics and performance nutrition by Perfect Fitness Solutions. Personalised plans, assessments and race-ready programs." />
+  <title>Perfect Fitness Solutions Pvt Ltd | Fuel Lab (Coaching)</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Optional site CSS -->
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background-color: #F8F9FA; color: #1a202c; }
+    .hero-gradient { background: linear-gradient(135deg, #FFF1F2 0%, #E0F2FE 100%); }
+    .challenge-gradient { background: linear-gradient(135deg, #4F46E5 0%, #EF4444 100%); }
+    .card-hover { transition: transform .3s, box-shadow .3s; }
+    .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgba(0,0,0,.1), 0 10px 10px -5px rgba(0,0,0,.04); }
+    .btn-primary { background-color: #EF4444; color: #fff; transition: background-color .3s; }
+    .btn-primary:hover { background-color: #DC2626; }
+    .btn-secondary { background-color: #1a202c; color: #fff; transition: background-color .3s; }
+    .btn-secondary:hover { background-color: #374151; }
+    .nav-link-hover { position: relative; transition: color .3s; }
+    .nav-link-hover::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 50%; transform: translateX(-50%); background-color: #EF4444; transition: width .3s; }
+    .nav-link-hover:hover::after, .nav-link-hover.active::after { width: 60%; }
+    .badge { display:inline-block; font-size:.75rem; font-weight:700; padding:.25rem .625rem; border-radius:9999px; background:#FEE2E2; color:#B91C1C; }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- Header & Navbar -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="/" class="flex items-center space-x-2">
+        <img src="https://profitsports.in/images/pfs-color.png" alt="Perfect Fitness Solutions Pvt Ltd Logo" class="h-12 w-auto">
+      </a>
+
+      <!-- Mobile menu button -->
+      <div class="lg:hidden">
+        <button id="nav-toggle" class="text-gray-800 focus:outline-none" aria-label="Open Menu" aria-expanded="false">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Desktop Nav -->
+      <div id="nav-menu" class="hidden lg:flex lg:items-center lg:space-x-6">
+        <a href="/" class="text-gray-700 nav-link-hover font-medium">Home</a>
+        <a href="/events.html" class="text-gray-700 nav-link-hover font-medium">Signature Strides</a>
+        <a href="/corporate.html" class="text-gray-700 nav-link-hover font-medium">Power Up @ Work</a>
+        <a href="/coaching.html" class="text-gray-700 nav-link-hover font-medium active">Fuel Lab</a>
+        <a href="/stories.html" class="text-gray-700 nav-link-hover font-medium">Stories & Impact</a>
+        <a href="/events.html" class="btn-primary rounded-full px-5 py-2.5 font-semibold ml-2">Get Started</a>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden px-6 pb-4 border-t border-gray-200" aria-hidden="true">
+      <a href="/" class="block py-2 text-gray-700 font-medium">Home</a>
+      <a href="/events.html" class="block py-2 text-gray-700 font-medium">Signature Strides</a>
+      <a href="/corporate.html" class="block py-2 text-gray-700 font-medium">Power Up @ Work</a>
+      <a href="/coaching.html" class="block py-2 text-gray-700 font-medium active">Fuel Lab</a>
+      <a href="/stories.html" class="block py-2 text-gray-700 font-medium">Stories & Impact</a>
+      <a href="#contact" class="block mt-2 text-center btn-primary rounded-full px-5 py-2.5 font-semibold">Get Started</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero-gradient py-20 md:py-28">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="space-y-6 text-center md:text-left">
+            <span class="badge">Fuel Lab</span>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-800 leading-tight">
+              Personal Coaching, Built Around Real Life.
+            </h1>
+            <p class="text-lg text-gray-700 max-w-xl mx-auto md:mx-0">
+              From first 3K to negative-split 10K, Fuel Lab blends smart training, diagnostics, and performance nutrition to help every stride tell a better story.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 pt-2 justify-center md:justify-start">
+              <a href="#plans" class="btn-primary rounded-full px-8 py-3.5 font-bold text-lg shadow-lg transform hover:scale-105 transition-transform">Explore Plans</a>
+              <a href="#assessment" class="btn-secondary rounded-full px-8 py-3.5 font-bold text-lg shadow-lg transform hover:scale-105 transition-transform">Book Assessment</a>
+            </div>
+          </div>
+          <div class="hidden md:block">
+            <img src="/assets/images/fuel-lab-hero.jpg" class="rounded-3xl shadow-2xl" alt="Fuel Lab coaching and diagnostics"
+                 onerror="this.onerror=null;this.src='images/fuel.png';">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how" class="py-16 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800">How Fuel Lab Works</h2>
+          <p class="text-gray-600 mt-2 max-w-2xl mx-auto">
+            Three pillars to keep training practical, progressive, and sustainable.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+            <div class="h-12 w-12 rounded-full bg-red-100 text-red-600 flex items-center justify-center mb-5" aria-hidden="true">
+              <i class="fa-solid fa-person-running"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">Personalised Training</h3>
+            <p class="text-gray-600">
+              Adaptive plans for beginners to sub-90 HM chasers—targeted workouts, recovery, and load management.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+            <div class="h-12 w-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mb-5" aria-hidden="true">
+              <i class="fa-solid fa-microscope"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">Diagnostics & Tracking</h3>
+            <p class="text-gray-600">
+              Baseline assessments, periodic testing, and dashboards to monitor pace, HR, RPE, and progress.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+            <div class="h-12 w-12 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center mb-5" aria-hidden="true">
+              <i class="fa-solid fa-utensils"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">Peak Form Nutrition</h3>
+            <p class="text-gray-600">
+              Performance-focused fueling, hydration, and habit integration that fit work, travel, and family schedules.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coaching Plans -->
+    <section id="plans" class="py-20">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Choose a Coaching Track</h2>
+          <p class="text-gray-600 mt-2 max-w-2xl mx-auto">
+            All plans include onboarding call, weekly structure, and progress check-ins. Upgrade anytime.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Plan 1 -->
+          <div class="bg-white rounded-2xl shadow-lg p-8 card-hover flex flex-col">
+            <span class="badge mb-4">Starter</span>
+            <h3 class="text-2xl font-extrabold text-gray-800 mb-1">Base Builder</h3>
+            <p class="text-gray-600 mb-6">Perfect for getting consistent and finishing 3K–10K strong.</p>
+            <ul class="text-gray-700 space-y-3 mb-8">
+              <li><i class="fa-solid fa-check-circle text-green-500 mr-2"></i>4-day training week</li>
+              <li><i class="fa-solid fa-check-circle text-green-500 mr-2"></i>Monthly plan updates</li>
+              <li><i class="fa-solid fa-check-circle text-green-500 mr-2"></i>Coach email support</li>
+              <li><i class="fa-solid fa-check-circle text-green-500 mr-2"></i>Event readiness tips</li>
+            </ul>
+            <div class="mt-auto">
+              <a href="#apply" class="btn-primary inline-block rounded-full px-6 py-3 font-semibold">Start Base Builder</a>
+            </div>
+          </div>
+
+          <!-- Plan 2 -->
+          <div class="bg-white rounded-2xl shadow-lg p-8 card-hover ring-2 ring-red-500 flex flex-col">
+            <span class="badge mb-4">Most Popular</span>
+            <h3 class="text-2xl font-extrabold text-gray-800 mb-1">Progression Plus</h3>
+            <p class="text-gray-600 mb-6">For PB seekers: structured cycles, feedback, and race strategy.</p>
+            <ul class="text-gray-700 space-y-3 mb-8">
+              <li><i class="fa-solid fa-check-circle text-green-500 mr-2"></i>5-day training week</li>
+              <li><i class="fa-solid fa-check-circle text-green-500 mr-2"></i>Bi-weekly plan revisions</li>
+              <li><i class="fa-solid fa-check-circle text-green-500 mr-2"></i>WhatsApp/email support</li>
+              <li><i class="fa-solid fa-check-circle text-green-500 mr-2"></i>Race plan + pacing guidance</li>
+            </ul>
+            <div class="mt-auto">
+              <a href="#apply" class="btn-primary inline-block rounded-full px-6 py-3 font-semibold">Join Progression Plus</a>
+            </div>
+          </div>
+
+          <!-- Plan 3 -->
+          <div class="bg-white rounded-2xl shadow-lg p-8 card-hover flex flex-col">
+            <span class="badge mb-4">Premium</span>
+            <h3 class="text-2xl font-extrabold text-gray-800 mb-1">Peak Form Pro</h3>
+            <p class="text-gray-600 mb-6">High-accountability coaching with diagnostics and nutrition.</p>
+            <ul class="text-gray-700 space-y-3 mb-8">
+              <li><i class="fa-solid fa-check-circle text-green-500 mr-2"></i>6-day training week</li>
+              <li><i class="fa-solid fa-check-circle text-green-500 mr-2"></i>Weekly plan tuning</li>
+              <li><i class="fa-solid fa-check-circle text-green-500 mr-2"></i>1:1 review call monthly</li>
+              <li><i class="fa-solid fa-check-circle text-green-500 mr-2"></i>Nutrition & hydration protocol</li>
+              <li><i class="fa-solid fa-check-circle text-green-500 mr-2"></i>In-race support (select events)</li>
+            </ul>
+            <div class="mt-auto">
+              <a href="#apply" class="btn-primary inline-block rounded-full px-6 py-3 font-semibold">Apply for Peak Form</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center text-sm text-gray-500 mt-6">
+          Plans available in online and hybrid formats; pricing varies by duration and add-ons.
+        </div>
+      </div>
+    </section>
+
+    <!-- Assessment & Diagnostics -->
+    <section id="assessment" class="py-16 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <img src="/assets/images/assessment.jpg" alt="Diagnostics & Assessment" class="rounded-2xl shadow-xl"
+                 onerror="this.onerror=null;this.src='images/Dia.png'">
+          </div>
+          <div>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Start with a Baseline</h2>
+            <p class="text-gray-600 mt-4">
+              A tailored assessment to map current fitness, goals, and constraints, so training fits life—and works.
+            </p>
+            <ul class="text-gray-700 mt-6 space-y-3">
+              <li><i class="fa-solid fa-stethoscope text-red-500 mr-2"></i>Movement & running form screen</li>
+              <li><i class="fa-solid fa-heart-pulse text-red-500 mr-2"></i>PACE/HR zones estimation and load targets</li>
+              <li><i class="fa-solid fa-chart-line text-red-500 mr-2"></i>Goal mapping with 8–12 week mesocycle</li>
+              <li><i class="fa-solid fa-tint text-red-500 mr-2"></i>Hydration/sodium checklist and fueling primer</li>
+            </ul>
+            <div class="mt-6 flex gap-4">
+              <a href="#apply" class="btn-primary rounded-full px-6 py-3 font-semibold">Book Your Baseline</a>
+              <a href="#faq" class="btn-secondary rounded-full px-6 py-3 font-semibold">View FAQ</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nutrition Focus -->
+    <section id="nutrition" class="py-16">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Peak Form Nutrition</h2>
+          <p class="text-gray-600 mt-2 max-w-2xl mx-auto">
+            Practical fueling that respects routines—work, travel, family—and elevates performance and recovery.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+            <h3 class="text-xl font-bold text-gray-800 mb-3">Habit-first Plans</h3>
+            <p class="text-gray-600">No extremes—just sustainable choices that stack up week over week.</p>
+          </div>
+          <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+            <h3 class="text-xl font-bold text-gray-800 mb-3">Train-Day Protocols</h3>
+            <p class="text-gray-600">Pre/during/post fueling and fluids aligned to session goals and heat.</p>
+          </div>
+          <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+            <h3 class="text-xl font-bold text-gray-800 mb-3">Race-week Playbook</h3>
+            <p class="text-gray-600">Dialed carbohydrate, sodium, and GI comfort to execute on the day.</p>
+          </div>
+        </div>
+
+        <div class="text-center mt-10">
+          <a href="#apply" class="btn-primary rounded-full px-8 py-3.5 font-bold shadow-lg hover:scale-105 transition-transform">Book a Nutrition Consult</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- What You Get -->
+    <section id="inclusions" class="py-16 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800">What’s Included</h2>
+          <p class="text-gray-600 mt-2 max-w-2xl mx-auto">Every plan covers essentials; higher tiers add accountability and specificity.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white rounded-xl shadow p-6">
+            <h3 class="font-semibold text-gray-800 mb-2">Structured Weekly Plan</h3>
+            <p class="text-gray-600">Workouts with intent: easy, quality, long, strength, and recovery.</p>
+          </div>
+          <div class="bg-white rounded-xl shadow p-6">
+            <h3 class="font-semibold text-gray-800 mb-2">Form & Mobility Drills</h3>
+            <p class="text-gray-600">Warm-ups, drills, and cooldowns to stay efficient and resilient.</p>
+          </div>
+          <div class="bg-white rounded-xl shadow p-6">
+            <h3 class="font-semibold text-gray-800 mb-2">Progress Check-ins</h3>
+            <p class="text-gray-600">Periodic reviews with adjustments based on response and schedule.</p>
+          </div>
+          <div class="bg-white rounded-xl shadow p-6">
+            <h3 class="font-semibold text-gray-800 mb-2">Race Strategy</h3>
+            <p class="text-gray-600">Course planning, pacing bands, and nutrition timing for race day.</p>
+          </div>
+          <div class="bg-white rounded-xl shadow p-6">
+            <h3 class="font-semibold text-gray-800 mb-2">Community & Events</h3>
+            <p class="text-gray-600">Access to group sessions and event-ready resources across seasons.</p>
+          </div>
+          <div class="bg-white rounded-xl shadow p-6">
+            <h3 class="font-semibold text-gray-800 mb-2">Coach Support</h3>
+            <p class="text-gray-600">Tiered communication: email, WhatsApp, and 1:1 calls as per plan.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="challenge-gradient text-white">
+      <div class="container mx-auto px-6 py-16 text-center">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Ready to Train with Purpose?</h2>
+        <p class="text-white/90 max-w-2xl mx-auto mb-8">Apply to Fuel Lab and get a plan that fits life—then elevates it.</p>
+        <a href="#apply" class="bg-white text-red-500 rounded-full px-10 py-4 font-bold text-lg shadow-xl transform hover:scale-105 transition-transform inline-block">Apply Now</a>
+      </div>
+    </section>
+
+    <!-- Application / Contact -->
+    <section id="apply" class="py-16 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Apply to Fuel Lab</h2>
+          <p class="text-gray-600 mt-2 max-w-2xl mx-auto">Share a few details to match with the right plan and coach flow.</p>
+        </div>
+
+        <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg p-8">
+          <!-- Replace action="#" with your real endpoint -->
+      <form id="applyForm" class="grid grid-cols-1 md:grid-cols-2 gap-6" novalidate>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1" for="fullname">Full Name</label>
+              <input id="fullname" name="fullname" type="text" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-400" placeholder="Enter your name" required>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1" for="email">Email</label>
+              <input id="email" name="email" type="email" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-400" placeholder="name@example.com" required>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1" for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-400" placeholder="+91..." required>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1" for="goal">Primary Goal</label>
+              <select id="goal" name="goal" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-400">
+                <option>Start 3K–5K</option>
+                <option>10K PB</option>
+                <option>Half Marathon PB</option>
+                <option>General Fitness</option>
+                <option>Return from Injury</option>
+              </select>
+            </div>
+            <div class="md:col-span-2">
+              <label class="block text-sm font-medium text-gray-700 mb-1" for="notes">Notes</label>
+              <textarea id="notes" name="notes" class="w-full border border-gray-300 rounded-lg px-4 py-3 h-28 focus:outline-none focus:ring-2 focus:ring-red-400" placeholder="Share training background, constraints, upcoming event, etc."></textarea>
+            </div>
+            <div class="md:col-span-2 flex items-center justify-between">
+              <p class="text-sm text-gray-500">By submitting, consent to be contacted about coaching.</p>
+              <button type="submit" class="btn-primary rounded-full px-8 py-3 font-semibold">Submit Application</button>
+            </div>
+          </form>
+          <p id="applyMsg" class="text-sm text-gray-500 mt-3 hidden"></p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+  const applyForm = document.getElementById('applyForm');
+  const applySubmitBtn = document.getElementById('applySubmitBtn');
+  const applyMsg = document.getElementById('applyMsg');
+  const backendUrl = 'http://localhost:3000/send-form'; // IMPORTANT: Change for live site
+
+  applyForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = new FormData(this);
+    const formProps = Object.fromEntries(formData);
+    const emailBody = `<div style="font-family: Arial, sans-serif; line-height: 1.6;">
+        <h2>New Fuel Lab Coaching Application</h2>
+        <p><strong>Name:</strong> ${formProps['Full Name']}</p>
+        <p><strong>Email:</strong> ${formProps['Email']}</p>
+        <p><strong>Phone:</strong> ${formProps['Phone']}</p>
+        <p><strong>Primary Goal:</strong> ${formProps['Primary Goal']}</p><hr>
+        <p><strong>Notes:</strong></p><p>${formProps['Notes'] || 'None'}</p></div>`;
+    const submissionData = {
+      fromName: formProps['Full Name'],
+      fromEmail: formProps['Email'],
+      subject: 'New Fuel Lab Coaching Application',
+      body: emailBody
+    };
+    applySubmitBtn.disabled = true;
+    applySubmitBtn.textContent = 'Submitting...';
+    applyMsg.textContent = '';
+    fetch(backendUrl, { method: 'POST', body: JSON.stringify(submissionData), headers: { 'Content-Type': 'application/json' }})
+      .then(res => res.json()).then(data => {
+        applyMsg.textContent = data.message.includes('success') ? "Thank you! Your application has been submitted." : data.message;
+        if(data.message.includes('success')) { applyForm.reset(); }
+      }).catch(err => {
+        applyMsg.textContent = "Oops! Could not connect to the server.";
+      }).finally(() => {
+        applySubmitBtn.disabled = false;
+        applySubmitBtn.textContent = 'Submit Application';
+      });
+  });
+</script>
+
+<script>
+  const newsletterForm = document.getElementById('newsletterForm');
+  if (newsletterForm) {
+    const newsletterSubmitBtn = document.getElementById('newsletterSubmitBtn');
+    const newsletterMsg = document.getElementById('newsletterMsg');
+    // IMPORTANT: Remember to change this URL to your live backend URL when you deploy
+    const backendUrl = 'http://localhost:3000/subscribe-newsletter'; 
+
+    newsletterForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = this.elements['Email'].value;
+      if (!email) return;
+
+      newsletterSubmitBtn.disabled = true;
+      newsletterSubmitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i>';
+      newsletterMsg.textContent = '';
+
+      fetch(backendUrl, {
+        method: 'POST',
+        body: JSON.stringify({ email: email }), // Send as a simple JSON object
+        headers: { 'Content-Type': 'application/json' }
+      })
+      .then(response => response.json())
+      .then(data => {
+          if (data.message && data.message.includes('success')) {
+              newsletterMsg.textContent = "Thanks for joining!";
+              newsletterForm.reset();
+          } else {
+              newsletterMsg.textContent = data.message || "Oops! Something went wrong.";
+          }
+      }).catch(error => {
+          newsletterMsg.textContent = "Oops! Could not connect to the server.";
+      }).finally(() => {
+          newsletterSubmitBtn.disabled = false;
+          newsletterSubmitBtn.textContent = 'Join';
+      });
+    });
+  }
+</script>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-16">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Coaching FAQ</h2>
+          <p class="text-gray-600 mt-2 max-w-2xl mx-auto">Quick answers to common questions.</p>
+        </div>
+
+        <div class="max-w-4xl mx-auto space-y-4">
+          <details class="bg-white rounded-xl shadow p-6">
+            <summary class="font-semibold text-gray-800 cursor-pointer">How do plan revisions work?</summary>
+            <p class="text-gray-600 mt-3">Revisions depend on tier—monthly, bi-weekly, or weekly—factoring training response, fatigue, and schedule changes.</p>
+          </details>
+          <details class="bg-white rounded-xl shadow p-6">
+            <summary class="font-semibold text-gray-800 cursor-pointer">Is in-person support available?</summary>
+            <p class="text-gray-600 mt-3">Hybrid support is available in select cities and at key events; confirm availability during onboarding.</p>
+          </details>
+          <details class="bg-white rounded-xl shadow p-6">
+            <summary class="font-semibold text-gray-800 cursor-pointer">What app or tools are used?</summary>
+            <p class="text-gray-600 mt-3">Simple dashboards and shared docs are standard; compatible with common GPS apps and HR monitors.</p>
+          </details>
+          <details class="bg-white rounded-xl shadow p-6">
+            <summary class="font-semibold text-gray-800 cursor-pointer">Can plans pause during travel or injury?</summary>
+            <p class="text-gray-600 mt-3">Yes—programming pivots to maintenance or rehab-friendly work until full training resumes.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer / Contact -->
+  <footer id="contact" class="bg-gray-800 text-white">
+    <div class="container mx-auto px-6 py-16">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="space-y-4">
+          <h3 class="text-lg font-semibold uppercase tracking-wider">The Company</h3>
+          <ul class="space-y-2">
+            <li><a href="/" class="text-gray-400 hover:text-white transition">Home</a></li>
+            <li><a href="/coaching.html" class="text-gray-400 hover:text-white transition">Our Team</a></li>
+            <li><a href="/stories.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+            <li><a href="/events.html" class="text-gray-400 hover:text-white transition">Support</a></li>
+          </ul>
+        </div>
+        <div class="space-y-4">
+          <h3 class="text-lg font-semibold uppercase tracking-wider">PFS</h3>
+          <ul class="space-y-2">
+            <li><a href="/events.html" class="text-gray-400 hover:text-white transition">Signature Strides</a></li>
+            <li><a href="/corporate.html" class="text-gray-400 hover:text-white transition">Power Up @ Work</a></li>
+            <li><a href="/merchandise.html" class="text-gray-400 hover:text-white transition">The Gear Grid</a></li>
+            <li><a href="/coaching.html" class="text-gray-400 hover:text-white transition">Fuel Lab</a></li>
+            <li><a href="/stories.html" class="text-gray-400 hover:text-white transition">Stories & Impact</a></li>
+          </ul>
+        </div>
+        <div class="space-y-4">
+          <h3 class="text-lg font-semibold uppercase tracking-wider">Follow Us</h3>
+          <div class="flex space-x-4 text-gray-400">
+            <a href="#" class="hover:text-white transition" aria-label="Facebook"><i class="fab fa-facebook-f fa-lg"></i></a>
+            <a href="#" class="hover:text-white transition" aria-label="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="#" class="hover:text-white transition" aria-label="Twitter"><i class="fab fa-twitter fa-lg"></i></a>
+            <a href="#" class="hover:text-white transition" aria-label="YouTube"><i class="fab fa-youtube fa-lg"></i></a>
+          </div>
+        </div>
+        <div class="space-y-4">
+          <h3 class="text-lg font-semibold uppercase tracking-wider">Stay Updated</h3>
+          <ul class="space-y-2">
+            <li><a href="/events.html" class="text-gray-400 hover:text-white transition">Event Calendar</a></li>
+            <li><a href="/coaching.html" class="text-gray-400 hover:text-white transition">Trainings</a></li>
+          </ul>
+
+          <form id="newsletterForm" class="mt-4 flex gap-2">
+            <input type="email" name="Email" required placeholder="Email address"
+                   class="w-full px-3 py-2 rounded-lg border border-gray-600 bg-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500"/>
+            <button type="submit" id="newsletterSubmitBtn" class="px-4 py-2 rounded-lg bg-red-500 text-white hover:bg-red-600">Join</button>
+          </form>
+          <p id="newsletterMsg" class="text-xs text-gray-400"></p>
+        </div>
+      </div>
+
+      <div class="mt-12 border-t border-gray-700 pt-8 text-center text-gray-500 text-sm">
+        <p>© <span id="year"></span> Perfect Fitness Solutions Pvt Ltd. All Rights Reserved. Website by Vivek Pandey.</p>
+        <p class="mt-1">Prices shown are approximate in INR (₹).</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Optional site JS -->
+  <script src="/assets/js/main.js"></script>
+  <script>
+    // Mobile nav behaviour (toggle + accessibility + resize reset)
+    (function () {
+      const navToggle = document.getElementById('nav-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      function setAriaExpanded(val) {
+        if (navToggle) navToggle.setAttribute('aria-expanded', String(val));
+        if (mobile

@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Moments That Moved Us | Perfect Fitness Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Note: I've commented out the local stylesheet as Tailwind and the inline styles should be sufficient. -->
+    <!-- <link rel="stylesheet" href="/assets/css/styles.css" /> -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F9FA;
+            color: #1a202c;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #FFF1F2 0%, #E0F2FE 100%);
+        }
+
+        .card-hover {
+            transition: transform .3s ease, box-shadow .3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, .1), 0 10px 10px -5px rgba(0, 0, 0, .04);
+        }
+
+        .btn-primary {
+            background-color: #EF4444;
+            color: #fff;
+            transition: background-color .3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #DC2626;
+        }
+
+        .btn-secondary {
+            background-color: #1a202c;
+            color: #fff;
+            transition: background-color .3s;
+        }
+
+        .btn-secondary:hover {
+            background-color: #374151;
+        }
+
+        .nav-link-hover {
+            position: relative;
+            transition: color .3s;
+        }
+
+        .nav-link-hover::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #EF4444;
+            transition: width .3s;
+        }
+
+        .nav-link-hover:hover::after,
+        .nav-link-hover.active::after {
+            width: 60%;
+        }
+
+        /* I've removed the specific .nav-link-events rule as it's redundant. */
+        /* You can simply add the 'active' class to the link when it's the current page. */
+
+        .badge {
+            font-size: 12px;
+            font-weight: 700;
+            padding: .35rem .6rem;
+            border-radius: 999px;
+        }
+
+        .badge-blue {
+            background: #DBEAFE;
+            color: #1E3A8A;
+        }
+
+        .pill {
+            border: 1px solid rgba(17, 24, 39, 0.08);
+        }
+
+        .pill.active {
+            background: #ef4444;
+            color: #fff;
+            border-color: #ef4444;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="flex items-center space-x-2">
+                <img src="https://profitsports.in/images/pfs-color.png" alt="Perfect Fitness Solutions Pvt Ltd Logo" class="h-12 w-auto">
+            </a>
+            <div class="lg:hidden">
+                <button id="nav-toggle" class="text-gray-800 focus:outline-none" aria-label="Open Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+            <div id="nav-menu" class="hidden lg:flex lg:items-center lg:space-x-6">
+                <a href="/index.html" class="text-gray-700 nav-link-hover font-medium">Home</a>
+                <!-- The 'active' class is now handled by this single class to highlight the current page. -->
+                <a href="/events.html" class="text-gray-700 nav-link-hover font-medium active">Signature Strides</a>
+                <a href="/corporate.html" class="text-gray-700 nav-link-hover font-medium">Power Up @ Work</a>
+                <a href="/coaching.html" class="text-gray-700 nav-link-hover font-medium">Fuel Lab</a>
+                <a href="/stories.html" class="text-gray-700 nav-link-hover font-medium">Stories & Impact</a>
+                <a href="/events.html" class="btn-primary rounded-full px-5 py-2.5 font-semibold ml-2">Get Started</a>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden lg:hidden px-6 pb-4 border-t border-gray-200">
+            <a href="/index.html" class="block py-2 text-gray-700 font-medium">Home</a>
+            <a href="/events.html" class="block py-2 text-red-500 font-medium">Signature Strides</a>
+            <a href="/corporate.html" class="block py-2 text-gray-700 font-medium">Power Up @ Work</a>
+            <a href="/coaching.html" class="block py-2 text-gray-700 font-medium">Fuel Lab</a>
+            <a href="/stories.html" class="block py-2 text-gray-700 font-medium">Stories & Impact</a>
+            <a href="/coaching.html#contact" class="block mt-2 text-center btn-primary rounded-full px-5 py-2.5 font-semibold">Get Started</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-gradient py-16 md:py-20">
+            <div class="container mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-10 items-center">
+                    <div>
+                        <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+                           Moments That Moved Us 
+                        </h1>
+                        <p class="mt-4 text-lg text-gray-700 max-w-2xl">
+                            Browse every race and community event we’ve hosted. Search by city, year, month, category, or distance tags.
+                        </p>
+                        <div class="mt-6 flex items-center gap-2 text-sm text-gray-600">
+                            <span class="badge badge-blue">2018 – 2025</span>
+                        </div>
+                        <div class="mt-6">
+                            <a href="/events.html#past-events" class="btn-secondary rounded-full px-6 py-2.5 font-semibold inline-flex items-center gap-2">
+                                <i class="fa-solid fa-arrow-left"></i> Back to Events
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hidden md:block">
+                        <img src="images/past.jpg"
+                            alt="Runners archive"
+                            class="rounded-3xl shadow-2xl w-full h-[320px] object-cover"
+                            onerror="this.onerror=null;this.src='https://placehold.co/600x400/f8f8f8/1a202c?text=Past+Events';">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-10">
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-800">Moments That Moved Us</h2>
+                    <p class="text-gray-600 mt-2 max-w-2xl mx-auto">
+                        Combine search, dropdowns and quick pills to narrow down.
+                    </p>
+                </div>
+
+                <!-- Filters -->
+                <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
+                    <div class="grid grid-cols-1 md:grid-cols-5 gap-4 w-full">
+                        <div>
+                            <input id="pastSearch" type="text" placeholder="Search by name, venue or city"
+                                class="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-400">
+                        </div>
+                        <div>
+                            <select id="pastFilterCity" class="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-400">
+                                <option value="">All Cities</option>
+                                <option>Gurugram</option>
+                                <option>New Delhi</option>
+                                <option>Panchkula</option>
+                                <option>Noida</option>
+                                <option>Nahan</option>
+                                <option>Rewari</option>
+                                <option>Ludhiana</option>
+                                <option>Faridabad</option>
+                                <option>Anupshahr</option>
+                                <option>Kanatal</option>
+                                <option>Solan</option>
+                                <option>Jim Corbett</option>
+                                <option>Sonepat</option>
+                                <option>Lucknow</option>
+                                <option>Kangra</option>
+                                <option>Dharamshala</option>
+                                <option>Kochi</option>
+                                <option>Kaziranga</option>
+                                <option>Bir</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select id="pastFilterMonth" class="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-400">
+                                <option value="">Any Month</option>
+                                <option value="01">January</option>
+                                <option value="02">February</option>
+                                <option value="03">March</option>
+                                <option value="04">April</option>
+                                <option value="05">May</option>
+                                <option value="06">June</option>
+                                <option value="07">July</option>
+                                <option value="08">August</option>
+                                <option value="09">September</option>
+                                <option value="10">October</option>
+                                <option value="11">November</option>
+                                <option value="12">December</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select id="pastFilterYear" class="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-400">
+                                <option value="">All Years</option>
+                                <option value="2025">2025</option>
+                                <option value="2024">2024</option>
+                                <option value="2023">2023</option>
+                                <option value="2022">2022</option>
+                                <option value="2021">2021</option>
+                                <option value="2020">2020</option>
+                                <option value="2019">2019</option>
+                                <option value="2018">2018</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select id="pastFilterType" class="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-400">
+                                <option value="">All Categories</option>
+                                <option>Running</option>
+                                <option>Walkathon</option>
+                                <option>Walk</option>
+                                <option>Kids Run</option>
+                                <option>Ultra Run</option>
+                                <option>Marathon</option>
+                                <option>Half Marathon</option>
+                                <option>Cyclothon</option>
+                                <option>Duathlon</option>
+                                <option>Trail</option>
+                                <option>Relay Run</option>
+                                <option>Trek</option>
+                                <option>Swimming</option>
+                                <option>Triathlon</option>
+                                <option>Awards</option>
+                                <option>Family Run</option>
+                                <option>X-country Run</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap gap-2 mb-10">
+                    <button class="pill px-3 py-1.5 rounded-full text-sm bg-white hover:bg-gray-50" data-pill-past="ultra-run" aria-pressed="false">Ultra Run</button>
+                    <button class="pill px-3 py-1.5 rounded-full text-sm bg-white hover:bg-gray-50" data-pill-past="half-marathon" aria-pressed="false">Half Marathon</button>
+                    <button class="pill px-3 py-1.5 rounded-full text-sm bg-white hover:bg-gray-50" data-pill-past="marathon" aria-pressed="false">Marathon</button>
+                    <button class="pill px-3 py-1.5 rounded-full text-sm bg-white hover:bg-gray-50" data-pill-past="10k" aria-pressed="false">10K</button>
+                    <button class="pill px-3 py-1.5 rounded-full text-sm bg-white hover:bg-gray-50" data-pill-past="5k" aria-pressed="false">5K</button>
+                    <button class="pill px-3 py-1.5 rounded-full text-sm bg-white hover:bg-gray-50" data-pill-past="trail" aria-pressed="false">Trail</button>
+                    <button class="pill px-3 py-1.5 rounded-full text-sm bg-white hover:bg-gray-50" data-pill-past="walkathon" aria-pressed="false">Walkathon</button>
+                    <button id="clearPastFilters" class="px-3 py-1.5 rounded-full text-sm bg-gray-100 hover:bg-gray-200">Clear</button>
+                </div>
+
+                <!-- Grid -->
+                <div id="pastEventsGrid" class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Injected by JS -->
+                </div>
+                <div id="noPastEvents" class="hidden text-center mt-12">
+                    <p class="text-lg text-gray-600">No past events match your filters. Try clearing your filters.</p>
+                </div>
+
+                <!-- Pagination controls -->
+                <div id="paginationContainer" class="flex justify-center items-center gap-2 mt-10">
+                    <!-- Pagination will be injected by JS -->
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+  <footer id="contact" class="bg-gray-800 text-white">
+    <div class="container mx-auto px-6 py-16">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="space-y-4">
+          <h3 class="text-lg font-semibold uppercase tracking-wider">The Company</h3>
+          <ul class="space-y-2">
+            <li><a href="/" class="text-gray-400 hover:text-white transition">Home</a></li>
+            <li><a href="/coaching.html" class="text-gray-400 hover:text-white transition">Our Team</a></li>
+            <li><a href="/stories.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+            <li><a href="/events.html" class="text-gray-400 hover:text-white transition">Support</a></li>
+          </ul>
+        </div>
+        <div class="space-y-4">
+          <h3 class="text-lg font-semibold uppercase tracking-wider">PFS</h3>
+          <ul class="space-y-2">
+            <li><a href="/events.html" class="text-gray-400 hover:text-white transition">Signature Strides</a></li>
+            <li><a href="/corporate.html" class="text-gray-400 hover:text-white transition">Power Up @ Work</a></li>
+            <li><a href="/merchandise.html" class="text-gray-400 hover:text-white transition">The Gear Grid</a></li>
+            <li><a href="/coaching.html" class="text-gray-400 hover:text-white transition">Fuel Lab</a></li>
+            <li><a href="/stories.html" class="text-gray-400 hover:text-white transition">Stories & Impact</a></li>
+          </ul>
+        </div>
+        <div class="space-y-4">
+          <h3 class="text-lg font-semibold uppercase tracking-wider">Follow Us</h3>
+          <div class="flex space-x-4 text-gray-400">
+            <a href="#" class="hover:text-white transition" aria-label="Facebook"><i class="fab fa-facebook-f fa-lg"></i></a>
+            <a href="#" class="hover:text-white transition" aria-label="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="#" class="hover:text-white transition" aria-label="Twitter"><i class="fab fa-twitter fa-lg"></i></a>
+            <a href="#" class="hover:text-white transition" aria-label="YouTube"><i class="fab fa-youtube fa-lg"></i></a>
+          </div>
+        </div>
+        <div class="space-y-4">
+          <h3 class="text-lg font-semibold uppercase tracking-wider">Stay Updated</h3>
+          <ul class="space-y-2">
+            <li><a href="/events.html" class="text-gray-400 hover:text-white transition">Event Calendar</a></li>
+            <li><a href="/coaching.html" class="text-gray-400 hover:text-white transition">Trainings</a></li>
+          </ul>
+          <form id="newsletterForm" class="mt-4 flex gap-2">
+            <input type="email" required placeholder="Email address"
+                   class="w-full px-3 py-2 rounded-lg border border-gray-600 bg-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500"/>
+            <button class="px-4 py-2 rounded-lg bg-red-500 text-white hover:bg-red-600">Join</button>
+          </form>
+          <p id="newsletterMsg" class="text-xs text-gray-400"></p>
+        </div>
+      </div>
+      <div class="mt-12 border-top border-gray-700 pt-8 text-center text-gray-500 text-sm">
+        <p>© <span id="year"></span> Perfect Fitness Solutions Pvt Ltd. All Rights Reserved. Website by Vivek Pandey.</p>
+        <p class="mt-1">Prices shown are approximate in INR(₹).</p>
+      </div>
+    </div>
+  </footer>
+
+    <script>
+        // Footer year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile nav
+        const navToggle = document.getElementById('nav-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (navToggle && mobileMenu) {
+            navToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+            mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+        }
+
+        // EVENTS_DATA: This array holds all your past events. I've parsed the HTML you provided to create this comprehensive dataset.
+        const EVENTS_DATA = [
+            // 2025 Events
+            { id: 'corpo-jumble-gurugram-2025', name: 'Corpo Jumble Gurugram 2025', date: '2025-08-03', day: 'Sunday', venue: 'International Tech Park Gurgaon', city: 'Gurugram', categories: ['Running'], tags: ['10K', '5K', '1 Mile'], resultLink: 'https://corpojumble.coachravinder.com/results-2025.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=154&p=0', image: 'images/2025/corpo-jumble-2025-results.jpg', isUpcoming: false },
+            { id: 'sundown-run-2025', name: 'Sundown Run 2025', date: '2025-05-31', day: 'Saturday', venue: 'Karma Lakelands, New Gurugram', city: 'Gurugram', categories: ['Ultra Run', 'Running', 'Kids Run', 'Walkathon'], tags: ['50K', 'Half Marathon', '10K', '5K', '1 Mile', 'Walk'], resultLink: 'https://sundownrun.coachravinder.com/results-2025.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=EE5gM59R6gU&p=0', image: 'images/2025/sundown-run-results.jpg', isUpcoming: false },
+            { id: 'nahan-x-country-race-2025', name: 'Nahan X-Country Race 2025', date: '2025-05-11', day: 'Sunday', venue: 'Nahan', city: 'Nahan', categories: ['X-country Run', 'Cyclothon', 'Duathlon', 'Walk'], tags: ['30K', '15K', '80K', '40K', 'Duathlon', '5K', 'Walk'], resultLink: null, photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=213&p=0', image: 'images/2025/nahanrace-results.jpg', isUpcoming: false },
+            { id: 'run-for-her-2025', name: 'Run For Her 2025', date: '2025-05-11', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Running', 'Walkathon', 'Kids Run'], tags: ['10K', '5K', '1 Mile', 'Walk'], resultLink: 'https://runforher.coachravinder.com/results-2025.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=212&p=0', image: 'images/2025/runforher-results.jpg', isUpcoming: false },
+            { id: 'anant-raj-runathon-2025', name: 'Anant Raj Runathon 2025', date: '2025-04-20', day: 'Sunday', venue: 'Anant Raj', city: 'Sonepat', categories: ['Running', 'Walkathon'], tags: ['10 Mile', '5 Mile', 'Walk'], resultLink: 'https://runathon.coachravinder.com/results-2025.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=205&p=0', image: 'images/2025/anantraj-runathon-results.jpg', isUpcoming: false },
+            { id: 'honda-manesar-half-marathon-2025', name: 'Honda Manesar Half Marathon', date: '2025-03-30', day: 'Sunday', venue: 'Manesar', city: 'Gurugram', categories: ['Half Marathon', 'Running'], tags: ['Half Marathon', '10K', '5K'], resultLink: 'https://hondamanesarhalfmarathon.coachravinder.com/results-2025.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=198&p=0', image: 'images/2025/hondamarathon-results.jpg', isUpcoming: false },
+            { id: 'ion-contribution-run-2025', name: 'ION Contribution Run 2025', date: '2025-03-23', day: 'Sunday', venue: 'Noida', city: 'Noida', categories: ['Half Marathon', 'Running', 'Walkathon', 'Kids Run'], tags: ['Half Marathon', '10K', '5K', 'Walk', '1 Mile'], resultLink: 'https://ioncontribution.coachravinder.com/results-2025.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=196&p=0', image: 'images/2025/ion-results.jpg', isUpcoming: false },
+            { id: 'ipa-neerathon-2025', name: 'IPA Neerathon', date: '2025-03-16', day: 'Sunday', venue: 'New Delhi', city: 'New Delhi', categories: ['Running'], tags: ['10K', '5K', '3K'], resultLink: 'https://www.coachravinder.com/results-ipa-neerathon.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=194&p=0', image: 'images/2025/ipa-results.jpg', isUpcoming: false },
+            { id: 'kidney-support-network-run-2-2025', name: 'Kidney Support Network Run 2.0', date: '2025-03-09', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Running', 'Walk', 'Kids Run'], tags: ['10K', '5K', '3K', '1 Mile', 'Walk'], resultLink: 'https://coachravinder.com/results-ksn-2025.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=192&p=0', image: 'images/2025/ksn-walkathon2-results.jpg', isUpcoming: false },
+            { id: 'women-10k-run-2025', name: 'Women 10K Run 2025', date: '2025-03-08', day: 'Saturday', venue: 'Gurugram', city: 'Gurugram', categories: ['Running', 'Walkathon', 'Kids Run'], tags: ['10K', '5K', 'Walk', '1 Mile'], resultLink: 'https://women10k.coachravinder.com/results-2025.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=190&p=0', image: 'images/2025/women10k-results.jpg', isUpcoming: false },
+
+            // 2024 Events
+            { id: 'karma-lakelands-half-marathon-2024', name: 'Karma Lakelands Half Marathon', date: '2024-12-29', day: 'Sunday', venue: 'Karma Lakelands', city: 'Gurugram', categories: ['Half Marathon', 'Running', 'Kids Run'], tags: ['Half Marathon', '10K', '5K', '1 Mile'], resultLink: 'https://klhm.coachravinder.com/results-2024.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://honeysnapshots.in/search/e?e=178&p=0', image: 'images/2024/klhm-2024.jpg', isUpcoming: false },
+            { id: 'rewari-half-marathon-2024', name: 'Rewari Half Marathon', date: '2024-12-01', day: 'Sunday', venue: 'Rewari', city: 'Rewari', categories: ['Half Marathon', 'Running'], tags: ['Half Marathon', '10K', '5K'], resultLink: null, photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/', image: 'images/2024/rewari.jpg', isUpcoming: false },
+            { id: 'aravali-trail-run-2024-nov', name: 'Aravali Trail Run 2024', date: '2024-11-24', day: 'Sunday', venue: 'Aravali', city: 'Gurugram', categories: ['Ultra Run', 'Running', 'Walk'], tags: ['71.1K', '51.1K', '30K', '21.1K', '10K', '5K', 'Walk'], resultLink: 'https://aravalitrailrun.coachravinder.com/results.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://honeysnapshots.in/search/e?e=172&p=0', image: 'images/2024/atr-2024-results.jpg', isUpcoming: false },
+            { id: 'shivalik-ultra-run-ride-2024', name: 'Shivalik Ultra Run & Ride 2024', date: '2024-11-16', day: 'Saturday', venue: 'Shivalik', city: 'Panchkula', categories: ['Duathlon', 'Running', 'Cyclothon', 'Ultra Run', 'Walkathon'], tags: ['10K', '20K', '5K', '100K', '50K', '30K', '80K', '40K', 'Walk'], resultLink: null, photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://honeysnapshots.in/search/e?e=171&p=0', image: 'images/2024/shivalik-results.jpg', isUpcoming: false },
+            { id: 'nhrdn-run-2024', name: 'NHRDN Run 2024', date: '2024-10-13', day: 'Sunday', venue: 'New Delhi', city: 'New Delhi', categories: ['Running', 'Walkathon'], tags: ['10K', '5K', 'Walk'], resultLink: null, photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=167&p=0', image: 'images/2024/nhrdn-results.jpg', isUpcoming: false },
+            { id: 'freedom-run-2024', name: 'Freedom Run 2024', date: '2024-10-12', day: 'Saturday', venue: 'Gurugram', city: 'Gurugram', categories: ['Running', 'Kids Run', 'Walk'], tags: ['10K', '5.6K', '2.3K', 'Walk'], resultLink: 'https://freedomrun.coachravinder.com/results-freedom-run-2024.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=166&p=0', image: 'images/2024/freedom-results.jpg', isUpcoming: false },
+            { id: 'farmley-snack-run-2024', name: 'Farmley Snack Run', date: '2024-09-29', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Running', 'Walk'], tags: ['10K', '5K', 'Walk'], resultLink: 'https://coachravinder.com/results-farmley-snack-run-2024.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=165&p=0', image: 'images/2024/farmley-results.jpg', isUpcoming: false },
+            { id: 'ukg-unity-run-2024', name: 'UKG Unity Run 2024', date: '2024-09-22', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Running', 'Walkathon'], tags: ['10K', '5K', 'Walk'], resultLink: 'https://ukgrun.coachravinder.com/results-2024.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=164&p=0', image: 'images/2024/ukg-results.jpg', isUpcoming: false },
+            { id: 'sn10k-challenge-2024', name: 'SN10K Challenge 2024', date: '2024-09-01', day: 'Sunday', venue: 'Sonepat', city: 'Sonepat', categories: ['Running', 'Walk'], tags: ['10K', '5K', 'Walk'], resultLink: null, photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=162&p=0', image: 'images/2024/snu10k-results.jpg', isUpcoming: false },
+            { id: 'dwarka-half-marathon-charity-run-2024', name: 'Dwarka Half Marathon & Charity Run 2024', date: '2024-08-25', day: 'Sunday', venue: 'Dwarka', city: 'New Delhi', categories: ['Half Marathon', 'Running', 'Walkathon'], tags: ['Half Marathon', '15K', '10K', '5K', 'Walk'], resultLink: 'https://dhm.coachravinder.com/results-2024.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=161&p=0', image: 'images/2024/dhm-results.jpg', isUpcoming: false },
+            { id: 'corpo-jumble-2024-gurugram', name: 'Corpo Jumble 2024 Gurugram', date: '2024-08-04', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Running'], tags: ['10K', '5K', '1 Mile'], resultLink: 'https://corpojumble.coachravinder.com/results-2024.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=154&p=0', image: 'images/2024/corpojumble-gurgaon-results.jpg', isUpcoming: false },
+            { id: 'footloose-run-2024', name: 'Footloose Run 2024', date: '2024-07-28', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Half Marathon', 'Running'], tags: ['Half Marathon', '10K', '5K'], resultLink: 'https://footloose.coachravinder.com/results-2024.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=153&p=0', image: 'images/2024/footloose-results.jpg', isUpcoming: false },
+            { id: 'foxed-cross-country-run-2024', name: 'Foxed Cross Country Run 2024', date: '2024-06-30', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['X-country Run', 'Half Marathon', 'Running', 'Relay Run'], tags: ['Half Marathon', '14K', '7K', 'Relay'], resultLink: null, photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=148&p=0', image: 'images/2024/foxed-results.jpg', isUpcoming: false },
+            { id: 'nahan-x-country-run-2024', name: 'Nahan X-Country Run 2024', date: '2024-06-23', day: 'Sunday', venue: 'Nahan', city: 'Nahan', categories: ['X-country Run', 'Running', 'Walk'], tags: ['30K', '15K', '5K', 'Walk'], resultLink: null, photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=147&p=0', image: 'images/2024/nahan-run-results.jpg', isUpcoming: false },
+            { id: 'sundown-run-2024', name: 'Sundown Run 2024', date: '2024-06-01', day: 'Saturday', venue: 'Gurugram', city: 'Gurugram', categories: ['Half Marathon', 'Running', 'Walkathon'], tags: ['Half Marathon', '10.5K', '5.25K', 'Walk'], resultLink: 'https://sundownrun.coachravinder.com/results-2024.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=144&p=0', image: 'images/2024/sundown-results.jpg', isUpcoming: false },
+            { id: 'dreamcity-family-run-ludhiana-2024', name: '2nd Dream City Family Run Ludhiana', date: '2024-05-05', day: 'Sunday', venue: 'Ludhiana', city: 'Ludhiana', categories: ['Running', 'Walkathon'], tags: ['10K', '5K', '1 Mile', 'Walk'], resultLink: 'https://www.coachravinder.com/results-aipl-dreamcity-familyrun-2024.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=142&p=0', image: 'images/2024/dreamcity-run-results.jpg', isUpcoming: false },
+            { id: 'ahimsa-run-gurugram-2024', name: 'Ahimsa Run, Gurugram', date: '2024-03-31', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Running'], tags: ['10K', '5K', '3K'], resultLink: 'https://runizen.com/e/96dFak', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=137&p=0', image: 'images/2024/ahimsarun.jpg', isUpcoming: false },
+            { id: 'aravali-trail-run-2024-mar', name: 'Aravali Trail Run', date: '2024-03-17', day: 'Sunday', venue: 'Aravali', city: 'Gurugram', categories: ['Ultra Run', 'Running', 'Walk'], tags: ['12hrs', '80K', '52K', '32K', '16K', '8K', 'Walk'], resultLink: 'https://aravalitrailrun.coachravinder.com/results-2024.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://honeysnapshots.in/search/e?e=135&p=0', image: 'images/2024/atr-results.jpg', isUpcoming: false },
+            { id: 'ksn-walkathon-2024', name: 'KSN Walkathon', date: '2024-03-17', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Walkathon'], tags: ['5K', 'Walk'], resultLink: null, photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=134&p=0', image: 'images/2024/ksn-results.jpg', isUpcoming: false },
+            { id: 'honda-manesar-half-marathon-2024', name: 'Honda Manesar Half Marathon’24', date: '2024-03-10', day: 'Sunday', venue: 'Manesar', city: 'Gurugram', categories: ['Half Marathon', 'Running'], tags: ['Half Marathon', '10K', '5K'], resultLink: 'https://hondamanesarhalfmarathon.coachravinder.com/results-2024.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://honeysnapshots.in/search/e?e=133&p=12', image: 'images/2024/hondahm-results.jpg', isUpcoming: false },
+            { id: 'women-10k-run-2024', name: 'Women 10K Run 2024', date: '2024-02-18', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Running', 'Walkathon', 'Kids Run'], tags: ['10K', '5K', 'Walk', '3K'], resultLink: 'https://women10k.coachravinder.com/results-2024.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=130&p=0', image: 'images/2024/women10k-results.jpg', isUpcoming: false },
+            { id: 'ion-contribution-run-2024', name: 'ION Contribution Run 2024', date: '2024-01-28', day: 'Sunday', venue: 'Noida', city: 'Noida', categories: ['Half Marathon', 'Running', 'Walk'], tags: ['Half Marathon', '10K', '5K', 'Walk', '1 Mile'], resultLink: 'https://ioncontribution.coachravinder.com/results-2024.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=123&p=0', image: 'images/2024/ion.jpg', isUpcoming: false },
+            { id: 'runners-of-the-year-awards-2023', name: 'Runners of The Year Awards 2023', date: '2024-01-07', day: 'Sunday', venue: 'Gurgaon', city: 'Gurugram', categories: ['Awards'], tags: ['Awards'], resultLink: null, photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=121&p=0', image: 'https://www.coachravinder.com/images/2023/roty-23.jpg?123', isUpcoming: false },
+            { id: 'josh-challenge-2024', name: 'Josh Challenge', date: '2024-01-01', day: 'Monday', venue: 'Virtual', city: null, categories: ['Running'], tags: ['100K', '150K', '200K'], resultLink: null, photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'https://www.schoolofrunning.org/images/josh-high-challenge.jpg', isUpcoming: false },
+            
+            // 2023 Events
+            { id: 'faridabad-stadium-run-2023', name: 'Faridabad Stadium Run', date: '2023-12-24', day: 'Sunday', venue: 'Faridabad', city: 'Faridabad', categories: ['Ultra Run', 'Running'], tags: ['12hrs', '6hrs', '3hrs', '1hr'], resultLink: 'https://ncrstadiumrun.coachravinder.com/results-dec2023.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=120&p=0', image: 'images/2023/ncr-stadium-results-2023.jpg', isUpcoming: false },
+            { id: 'new-gurugram-half-marathon-2023', name: 'New Gurugram Half Marathon', date: '2023-12-10', day: 'Sunday', venue: 'New Gurugram', city: 'Gurugram', categories: ['Half Marathon', 'Running', 'Kids Run', 'Walkathon'], tags: ['Half Marathon', '10.5K', '5.25K', '3K', 'Walk'], resultLink: 'https://nghm.coachravinder.com/results-dec2023.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=118&p=0', image: 'images/2023/nghm-2023-results.jpg', isUpcoming: false },
+            { id: 'run-for-the-rhino-2023', name: 'Run For The Rhino 2023', date: '2023-12-03', day: 'Sunday', venue: 'Kaziranga', city: 'Kaziranga', categories: ['Ultra Run', 'Running'], tags: ['52K', '26K', '10K', '5K'], resultLink: 'https://www.coachravinder.com/results-run-for-the-rhino-2023.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=119&p=0', image: 'images/2023/run-for-the-rhino-results.jpg', isUpcoming: false },
+            { id: 'paras-health-run-2023', name: 'Paras Health Run', date: '2023-12-03', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Running', 'Walk'], tags: ['10K', '5K', 'Walk'], resultLink: 'https://www.coachravinder.com/results-paras-health-run-2023.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=117&p=0', image: 'images/2023/paras-run-results.jpg', isUpcoming: false },
+            { id: 'rising-hills-trek-2023', name: 'Rising Hills Trek', date: '2023-11-26', day: 'Sunday', venue: 'Kangra', city: 'Kangra', categories: ['Trek'], tags: ['13K', 'Trek'], resultLink: null, photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/', image: 'images/2023/rising-hilltrek-results.jpg', isUpcoming: false },
+            { id: 'shivalik-ultra-run-ride-2023', name: 'Shivalik Ultra Run & Ride 2023', date: '2023-11-25', day: 'Saturday', venue: 'Panchkula', city: 'Panchkula', categories: ['Duathlon', 'Running', 'Cyclothon', 'Ultra Run', 'Walkathon'], tags: ['30K', '10K', '100K', '60K', '80K', '50K', 'Walk'], resultLink: null, photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=116&p=0', image: 'images/2023/shivalik-ultra-results.jpg', isUpcoming: false },
+            { id: 'runathon-2023', name: 'Runathon 2023', date: '2023-11-19', day: 'Sunday', venue: 'Rewari', city: 'Rewari', categories: ['Running', 'Walkathon'], tags: ['16K', '10K', '5K', '3K', 'Walk'], resultLink: 'https://www.coachravinder.com/results-runathon-2023.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=112&p=0', image: 'images/2023/runathon-results.jpg', isUpcoming: false },
+            { id: 'morni-hills-marathon-2023', name: 'Morni Hills Marathon 2023', date: '2023-11-05', day: 'Sunday', venue: 'Morni Hills', city: 'Panchkula', categories: ['Marathon', 'Half Marathon', 'Running', 'Walkathon'], tags: ['42.2K', '30K', '21.1K', '10K', '5K', 'Walk'], resultLink: 'https://mornihillsmarathon.coachravinder.com/results-morni-hills-2023.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=111&p=0', image: 'images/2023/morni-results.jpg', isUpcoming: false },
+            { id: 'wings-marathon-2023', name: 'Wings Marathon 2023', date: '2023-10-29', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Marathon', 'Half Marathon', 'Running', 'Walkathon'], tags: ['42.2K', '30K', '21.1K', '10K', '5K', 'Walk'], resultLink: 'https://www.wingsmarathon.com/results-2023.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=108&p=0', image: 'images/2023/wings-marathon-results.jpg', isUpcoming: false },
+            { id: 'freedom-run-2023', name: 'Freedom Run 2023', date: '2023-10-22', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Running', 'Walk', 'Kids Run'], tags: ['10K', '5.6K', 'Walk', '2.3K'], resultLink: 'https://www.coachravinder.com/results-freedom-run-2023.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=107&p=0', image: 'images/2023/freedom-run-results.jpg', isUpcoming: false },
+            { id: 'rotary-charity-run-2023', name: 'Rotary Charity Run 2023', date: '2023-10-08', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Running', 'Walkathon'], tags: ['10K', '5K', '3K', 'Walk'], resultLink: 'https://www.coachravinder.com/results-rotary-charity-run-2023.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=106&p=0', image: 'images/2023/rotary-results.jpg', isUpcoming: false },
+            { id: 'nhrdn-run-2023', name: 'NHRDN Run', date: '2023-10-07', day: 'Saturday', venue: 'Gurugram', city: 'Gurugram', categories: ['Running', 'Walk'], tags: ['10K', '5K', 'Walk'], resultLink: 'https://www.coachravinder.com/nhrdn-2023.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=104&p=0', image: 'images/2023/nhrdn-results.jpg', isUpcoming: false },
+            { id: 'potpourri-challenge-2023', name: 'Potpourri Challenge 2023', date: '2023-09-24', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Running'], tags: ['10K', '5K', '1 Mile'], resultLink: 'https://potpourri.coachravinder.com/results-2023.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=102&p=0', image: 'images/2023/potpourri-run-results.jpg', isUpcoming: false },
+            { id: 'ukg-unity-run-2023', name: 'UKG Unity Run', date: '2023-09-17', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Running', 'Walkathon'], tags: ['10K', '5K', 'Walk'], resultLink: 'https://ukgrun.coachravinder.com/results.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=101&p=0', image: 'images/2023/ukg-results.jpg', isUpcoming: false },
+            { id: 'corpo-jumble-gurgaon-2023', name: 'Corpo Jumble Gurgaon', date: '2023-09-10', day: 'Sunday', venue: 'Gurgaon', city: 'Gurugram', categories: ['Running'], tags: ['10K', '5K', '1 Mile'], resultLink: 'https://corpojumble.coachravinder.com/results.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=100&p=0', image: 'images/2023/corpojumble-gurugram-results.jpg', isUpcoming: false },
+            { id: 'shiv-nadar-10k-challenge-2023', name: 'Shiv Nadar 10K Challenge', date: '2023-09-03', day: 'Sunday', venue: 'Shiv Nadar', city: 'Noida', categories: ['Running', 'Walk'], tags: ['10K', '5K', 'Walk'], resultLink: 'https://shivnadar10k.com/results.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=99&p=0', image: 'images/2023/shivnadar-results.jpg', isUpcoming: false },
+            { id: 'pardada-pardadi-half-marathon-2023', name: 'Pardada Pardadi Half Marathon 2023', date: '2023-08-27', day: 'Sunday', venue: 'Anupshahr', city: 'Anupshahr', categories: ['Half Marathon', 'Running'], tags: ['21K', '10K', '5K'], resultLink: null, photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=98&p=0', image: 'images/2023/pardada-pardadi-results.jpg', isUpcoming: false },
+            { id: 'corpo-jumble-noida-2023', name: 'Corpo Jumble Noida', date: '2023-08-20', day: 'Sunday', venue: 'Noida', city: 'Noida', categories: ['Running'], tags: ['10K', '5K', '1 Mile'], resultLink: 'https://corpojumble.coachravinder.com/noida-results-2023.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=97&p=0', image: 'images/2023/corpo-noida-results.jpg', isUpcoming: false },
+            { id: 'foxed-the-cross-country-2023', name: 'Foxed, The Cross Country', date: '2023-08-13', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['X-country Run', 'Half Marathon', 'Running', 'Relay Run'], tags: ['7K', '14K', 'Half Marathon', 'Relay'], resultLink: 'results-foxed-2023.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=92&p=0', image: 'images/2023/foxed-results.jpg', isUpcoming: false },
+            { id: 'footloose-run-2023', name: 'Footloose Run 2023', date: '2023-07-09', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Half Marathon', 'Running'], tags: ['Half Marathon', '10K', '5K'], resultLink: 'https://footloose.coachravinder.com/results-2023.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=90&p=0', image: 'images/2023/footloose-run-results.jpg', isUpcoming: false },
+            { id: 'swag-run-2023', name: 'Swag Run 2023', date: '2023-06-18', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Running', 'Kids Run'], tags: ['1K', '10K', '5K', '3K', 'Kids'], resultLink: null, photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.in/search/e?e=87&p=0', image: 'images/2023/swag-run-results.jpg', isUpcoming: false },
+            { id: 'sundown-run-2023', name: 'Sundown Run 2023', date: '2023-06-03', day: 'Saturday', venue: 'Gurugram', city: 'Gurugram', categories: ['Half Marathon', 'Running'], tags: ['21.1K', '10.5K', '5.25K'], resultLink: 'https://sundownrun.coachravinder.com/results.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://honeysnapshots.in/search/e?e=84&p=0', image: 'images/2023/sundown-run-results.jpg', isUpcoming: false },
+            { id: 'dharamshala-stadium-run-2023', name: 'Dharamshala Stadium Run 2023', date: '2023-05-21', day: 'Sunday', venue: 'Dharamshala', city: 'Dharamshala', categories: ['Ultra Run', 'Running'], tags: ['12hrs', '6hrs', '3hrs', '1hr'], resultLink: 'https://stadiumrun.coachravinder.com/results.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://honeysnapshots.in/search/e?e=83&p=0', image: 'images/2023/dharamshala-run-results.jpg', isUpcoming: false },
+            { id: 'aipl-dreamcity-family-run-2023', name: 'AIPL Dreamcity Family Run 2023', date: '2023-04-30', day: 'Sunday', venue: 'Ludhiana', city: 'Ludhiana', categories: ['Running'], tags: ['10K', '5K', '3K'], resultLink: 'https://coachravinder.com/results-aipl-dreamcity-familyrun.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://honeysnapshots.in/search/e?e=82&p=0', image: 'images/2023/dreamcity-run-2023.jpg', isUpcoming: false },
+            { id: 'dwarka-half-marathon-charity-run-2023', name: 'Dwarka Half Marathon & Charity Run', date: '2023-04-23', day: 'Sunday', venue: 'Dwarka', city: 'New Delhi', categories: ['Half Marathon', 'Running', 'Walk'], tags: ['Half Marathon', '15K', '10K', '5K', 'Walk'], resultLink: 'https://dhm.coachravinder.com/results-2023.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://honeysnapshots.in/search/e?e=81&p=0', image: 'images/2023/dhm-results.jpg', isUpcoming: false },
+            { id: 'sportzon-half-marathon-2023', name: 'Sportzon Half Marathon', date: '2023-04-16', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Half Marathon', 'Running'], tags: ['Half Marathon', '10K', '5K', '1 Mile'], resultLink: null, photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://honeysnapshots.in/search/e?e=80&p=0', image: 'images/2023/sportzon-hm-results.jpg', isUpcoming: false },
+            { id: 'games-forest-obstacle-run-2023', name: 'Games Forest Obstacle Run 2023', date: '2023-04-09', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Running', 'Kids Run'], tags: ['10K', '5K', '2K'], resultLink: 'https://coachravinder.com/results-games-forest-obastacle-run-2023.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://honeysnapshots.in/search/e?e=78&p=0', image: 'images/2023/results-gamesforest-2023.jpg', isUpcoming: false },
+            { id: 'bir-5000-mountain-rush-2023', name: 'Bir 5000 Mountain Rush 2023', date: '2023-04-01', day: 'Saturday', venue: 'Bir', city: 'Bir', categories: ['Running', 'Cyclothon', 'Half Marathon'], tags: ['25K', '50K', '100K', 'Half Marathon', '10K', '5K'], resultLink: null, photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/2023/bir-5000-results.jpg', isUpcoming: false },
+            { id: 'ion-contribution-2023', name: 'ION Contribution 2023', date: '2023-03-26', day: 'Sunday', venue: 'Noida', city: 'Noida', categories: ['Half Marathon', 'Running', 'Walkathon', 'Kids Run'], tags: ['3K', '5K', '10K', 'Half Marathon', 'Walk'], resultLink: 'https://ioncontribution.coachravinder.com/results-2023.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://honeysnapshots.in/search/e?e=74&p=0', image: 'images/2023/ion-results.jpg', isUpcoming: false },
+            { id: 'jim-corbett-forest-run-2023', name: 'Jim Corbett Forest Run 2023', date: '2023-03-12', day: 'Sunday', venue: 'Jim Corbett', city: 'Jim Corbett', categories: ['Ultra Run', 'Running'], tags: ['51K', '33K', '23K', '10K', '5K'], resultLink: null, photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/2023/jim-corbett-run-results.jpg', isUpcoming: false },
+            { id: 'aipl-women-10k-run-2023', name: 'AIPL Women 10K Run 2023', date: '2023-03-05', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Running', 'Walkathon', 'Kids Run'], tags: ['3K', '5K', '10K', 'Walk'], resultLink: 'https://women10k.coachravinder.com/results-2023.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/2023/women10k-results.jpg', isUpcoming: false },
+            { id: 'faridabad-stadium-run-2023-feb', name: 'Faridabad Stadium Run 2023', date: '2023-02-19', day: 'Sunday', venue: 'Faridabad', city: 'Faridabad', categories: ['Ultra Run', 'Running'], tags: ['12hrs', '6hrs', '3hrs', '1hr'], resultLink: 'https://ncrstadiumrun.coachravinder.com/results.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/2023/ncr-stadium-results.jpg', isUpcoming: false },
+            { id: 'anvayins-kaziranga-ultra-run-2023', name: 'Anvayins Kaziranga Ultra Run 2023', date: '2023-01-28', day: 'Saturday', venue: 'Kaziranga', city: 'Kaziranga', categories: ['Ultra Run', 'Running', 'Walkathon'], tags: ['52K', '26K', '14K', '5K', 'Walk'], resultLink: null, photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/2023/kaziranga-ultra-run-results.jpg', isUpcoming: false },
+            { id: 'new-gurugram-half-marathon-2023-jan', name: 'New Gurugram Half Marathon 2023', date: '2023-01-08', day: 'Sunday', venue: 'New Gurugram', city: 'Gurugram', categories: ['Half Marathon', 'Running', 'Kids Run', 'Walkathon'], tags: ['Half Marathon', '10.5K', '5.25K', '3K', 'Walk'], resultLink: 'https://nghm.coachravinder.com/results-2023.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://honeysnapshots.in/search/e?e=61&p=0', image: 'images/2023/nghm-results.jpg', isUpcoming: false },
+            
+            // 2022 Events
+            { id: 'wings-marathon-2022', name: 'Wings Marathon 2022', date: '2022-12-25', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Marathon', 'Half Marathon', 'Running'], tags: ['Full Marathon', '30K', 'Half Marathon', '10K', '5K'], resultLink: 'https://wingsmarathon.com/results-2022.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/2022/wings-results.jpg', isUpcoming: false },
+            { id: 'aravali-trail-run-2022', name: 'Aravali Trail Run 2022', date: '2022-12-18', day: 'Sunday', venue: 'Aravali', city: 'Gurugram', categories: ['Ultra Run', 'Running', 'Walk'], tags: ['8K', '16K', '32K', '52K', '80K', '100K', '12hrs', 'Walk'], resultLink: 'https://aravalitrailrun.coachravinder.com/results-2022.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://honeysnapshots.in/search/e?e=60&p=0', image: 'images/2022/aravali-results.jpg', isUpcoming: false },
+            { id: 'yashoda-half-marathon-2022', name: 'Yashoda Half Marathon 2022', date: '2022-11-13', day: 'Sunday', venue: 'Sonepat', city: 'Sonepat', categories: ['Half Marathon', 'Running', 'Kids Run'], tags: ['Half Marathon', '10K', '5K', '3K'], resultLink: 'https://yashodahalfmarathon.coachravinder.com/results-2022.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/2022/yhm-2022-results.jpg', isUpcoming: false },
+            { id: 'shivalik-ultra-run-2022', name: 'Shivalik Ultra Run 2022', date: '2022-11-05', day: 'Saturday', venue: 'Shivalik', city: 'Panchkula', categories: ['Ultra Run', 'Running', 'Walkathon'], tags: ['100K', '80K', '50K', '30K', '40K', '10K', '5K', 'Walk'], resultLink: null, photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/2022/shivalik-2022.jpg', isUpcoming: false },
+            { id: 'corpo-jumble-noida-2022', name: 'Corpo Jumble Noida 2022', date: '2022-10-30', day: 'Sunday', venue: 'Noida', city: 'Noida', categories: ['Running'], tags: ['10K', '5K', '1 Mile'], resultLink: 'https://corpojumble.coachravinder.com/noida-results.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/2022/corponoida-results.jpg', isUpcoming: false },
+            { id: 'freedom-run-2022', name: 'Freedom Run 2022', date: '2022-10-23', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Running', 'Kids Run', 'Walk'], tags: ['10K', '5.6K', '2.3K', 'Walk'], resultLink: 'results-freedom-run-2022.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/2022/freedom-run-results.jpg', isUpcoming: false },
+            { id: 'modern-foods-global-race-2022', name: 'Modern Foods Global Race', date: '2022-09-25', day: 'Sunday', venue: 'Kochi', city: 'Kochi', categories: ['Running', 'Walkathon'], tags: ['10K', '5K', 'Walk', '2.5K'], resultLink: 'https://bgrm.coachravinder.com/results.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/2022/bgrm-small.jpg', isUpcoming: false },
+            { id: 'harvest-gold-global-race-2022', name: 'Harvest Gold Global Race 2022', date: '2022-09-25', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Running', 'Walkathon'], tags: ['10K', '5K', 'Walk', '3K'], resultLink: 'https://bgr.coachravinder.com/results.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/2022/bgr-small.jpg', isUpcoming: false },
+            { id: 'ukg-unity-run-2022', name: 'UKG Unity Run 2022', date: '2022-09-11', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Running', 'Walkathon'], tags: ['10K', '5K', 'Walk'], resultLink: 'https://ukgrun.coachravinder.com/results-2022.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/2022/ukgrun-2022-small.png', isUpcoming: false },
+            { id: 'dwarka-half-marathon-charity-run-2022', name: 'Dwarka Half Marathon & Charity Run', date: '2022-09-04', day: 'Sunday', venue: 'Dwarka', city: 'New Delhi', categories: ['Half Marathon', 'Running'], tags: ['Half Marathon', '15K', '10K', '5K'], resultLink: 'https://dhm.coachravinder.com/results-2022.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/2022/dhm-results.jpg', isUpcoming: false },
+            { id: 'corpo-jumble-gurgaon-2022', name: 'Corpo Jumble Gurgaon 2022', date: '2022-07-31', day: 'Sunday', venue: 'Gurgaon', city: 'Gurugram', categories: ['Running'], tags: ['10K', '5K', '1 Mile'], resultLink: 'https://corpojumble.coachravinder.com/results.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/2022/corpo-jumble-small.jpg', isUpcoming: false },
+            { id: 'monsoon-trail-run-2022', name: 'Monsoon Trail Run', date: '2022-07-31', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Half Marathon', 'Running', 'Walk'], tags: ['Half Marathon', '10.5K', '5K', 'Walk'], resultLink: 'https://coachravinder.com/past-events.html#monsoontrail2022', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/2022/monsoon-results-icon.jpg', isUpcoming: false },
+            { id: 'sundown-run-2022', name: 'Sundown Run 2022', date: '2022-06-04', day: 'Saturday', venue: 'Gurugram', city: 'Gurugram', categories: ['Running', 'Kids Run', 'Walkathon'], tags: ['10 Miles', '5 Miles', '2.5 Miles', 'Walk'], resultLink: 'https://coachravinder.com/past-events.html#sundownrun2022', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/2022/sundown-run-2022-small.jpg', isUpcoming: false },
+            { id: 'potpourri-sprints-challenge-2022', name: 'Potpourri Sprints Challenge 2022', date: '2022-05-29', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Running'], tags: ['10K', '5K', '1 Mile'], resultLink: 'https://potpourri.coachravinder.com/', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/2022/potpourri-challenge-2022.jpg', isUpcoming: false },
+            { id: 'games-forest-obstacle-run-2022', name: 'Games Forest Obstacle Run 2022', date: '2022-05-08', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Running', 'Kids Run'], tags: ['10K', '5K', '2K'], resultLink: 'https://coachravinder.com/past-events.html#gfor2022', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/2022/games-forest-obstacle-run-2002-smallbanner.jpg', isUpcoming: false },
+            { id: 'new-gurugram-half-marathon-2022', name: 'New Gurugram Half Marathon 2022', date: '2022-04-24', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Half Marathon', 'Running', 'Walkathon', 'Kids Run'], tags: ['Half Marathon', '10.5K', '5.25K', '3K', 'Walk'], resultLink: null, photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/2022/New Gurugram Half Marathon-Small-Banner.jpg', isUpcoming: false },
+            { id: 'kangra-x-country-run-ride-2022', name: 'Kangra X-Country Run & Ride', date: '2022-04-17', day: 'Sunday', venue: 'Kangra', city: 'Kangra', categories: ['Duathlon', 'Running', 'Cyclothon', 'X-country Run', 'Walk'], tags: ['16K', '32K', '48K', '10K', '5K', 'Walk'], resultLink: null, photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/2022/Kangra X-Country Run 2022-Small-Banner.jpg', isUpcoming: false },
+            { id: 'open-water-swimathon-2022', name: 'Open Water Swimathon', date: '2022-04-15', day: 'Friday', venue: 'Kangra', city: 'Kangra', categories: ['Swimming'], tags: ['1K', '2K', '3K', '4K', '5K', 'Swim'], resultLink: null, photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/2022/Open Water Swimathon-Small-Banner.jpg', isUpcoming: false },
+            { id: 'aipl-women-10k-run-2022', name: 'AIPL Women 10K Run 2022', date: '2022-03-06', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Running'], tags: ['10K', '5K', '3K'], resultLink: 'https://women10k.coachravinder.com/results.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/2022/aipl-women10k-2022-smallbanner.png', isUpcoming: false },
+            { id: 'delta-105-ultra-run-2022', name: 'Delta 105 Ultra Run', date: '2022-02-19', day: 'Saturday', venue: 'Sonepat', city: 'Sonepat', categories: ['Ultra Run', 'Running', 'Half Marathon'], tags: ['105K', '80K', '60K', '50K', '42.2K', '21.1K', '10K'], resultLink: null, photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/2022/delta-105-run-2022-smallbanner.jpg', isUpcoming: false },
+            { id: 'rustic-run-2022', name: 'Rustic Run', date: '2022-01-30', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Half Marathon', 'Running'], tags: ['21.1K', '10K', '5K'], resultLink: null, photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/2022/rustic-run-smallbanner.jpg', isUpcoming: false },
+
+            // 2021 Events
+            { id: 'aravali-trail-run-2021', name: 'Aravali Trail Run 2021', date: '2021-12-26', day: 'Sunday', venue: 'Aravali', city: 'Gurugram', categories: ['Ultra Run', 'Running'], tags: ['12hrs', '83K', '66K', '50K', '33K', '17K', '8K'], resultLink: 'https://aravalitrailrun.coachravinder.com/results-2021.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.com/search/index', image: 'images/2022/aravali-2021-smallbanner.jpg', isUpcoming: false },
+            { id: 'swarnim-maitri-half-marathon-2021', name: 'Swarnim Maitri Half Marathon 2021', date: '2021-12-19', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Half Marathon', 'Running'], tags: ['Half Marathon', '10K', '5K'], resultLink: 'https://smhmindiannavy.com/results.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: 'https://www.honeysnapshots.com/search/index', image: 'images/2022/smhm-smallbanner.jpg', isUpcoming: false },
+            { id: 'wings-marathon-2021', name: 'Wings Marathon 2021', date: '2021-10-31', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Marathon', 'Half Marathon', 'Running'], tags: ['Full Marathon', 'Half Marathon', '10K', '5K'], resultLink: 'http://www.wingsmarathon.com/results-2021.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/2022/wings-small-banner.jpg', isUpcoming: false },
+            { id: 'morni-hills-marathon-2021', name: 'Morni Hills Marathon 2021', date: '2021-10-03', day: 'Sunday', venue: 'Morni Hills', city: 'Panchkula', categories: ['Marathon', 'Half Marathon', 'Running'], tags: ['Full Marathon', 'Half Marathon', '10K', '5K'], resultLink: 'http://mornihillsmarathon.coachravinder.com/results-morni-hills-2021.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/2022/mronihills-2021-smallbanner.jpg', isUpcoming: false },
+            { id: 'dwarka-half-marathon-charity-2021', name: 'Dwarka Half Marathon & Charity 2021', date: '2021-09-04', day: 'Saturday', venue: 'Dwarka', city: 'New Delhi', categories: ['Half Marathon', 'Running'], tags: ['Half Marathon', '10K', '5K'], resultLink: 'https://dhm.coachravinder.com/results-2021.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/2022/dhm-2021-smallbanner.jpg', isUpcoming: false },
+
+            // 2020 Events
+            { id: 'run-for-her-2020', name: 'Run for Her 2020', date: '2020-03-08', day: 'Sunday', venue: 'New Delhi', city: 'New Delhi', categories: ['Running', 'Walk'], tags: ['10K', '5K', 'Walk'], resultLink: null, photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/initiatives/run-for-her-2020-small-banner.jpg', isUpcoming: false },
+            { id: 'pagdandi-ultra-run-2020', name: 'Pagdandi Ultra Run 2020', date: '2020-02-29', day: 'Saturday', venue: 'Gurugram', city: 'Gurugram', categories: ['Ultra Run', 'Running'], tags: ['24hrs', '12hrs', '50K', '30K', '10K'], resultLink: 'http://pagdandiultra.coachravinder.com/results-2020.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/initiatives/pagdandi-ultra-run-2020-smallbanner.jpg', isUpcoming: false },
+            { id: 'tristar-triathlon-run-2020', name: 'TriStar Triathlon & Run', date: '2020-02-23', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Triathlon', 'Running'], tags: ['Sprint', 'Olympic', '40mile', '20K', '10K', '5K'], resultLink: null, photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/initiatives/tristar-triathlon-small-banner.jpg', isUpcoming: false },
+            { id: 'alcis-family-run-gurugram-2020', name: 'Alcis Family Run Gurugram 2020', date: '2020-01-26', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Running'], tags: ['10K', '5K', '3K'], resultLink: 'https://alcisrun.coachravinder.com/gurugram-results-2020.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/initiatives/alcis-family-run-2020-small-banner.jpg', isUpcoming: false },
+            { id: 'alcis-family-run-panchkula-2020', name: 'Alcis Family Run Panchkula 2020', date: '2020-01-19', day: 'Sunday', venue: 'Panchkula', city: 'Panchkula', categories: ['Running'], tags: ['10K', '5K', '3K'], resultLink: 'https://alcisrun.coachravinder.com/panchkula-results-2020.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/initiatives/alcis-family-run-panchkula-2020-small-banner.jpg', isUpcoming: false },
+            { id: 'pitthoo-race-2020', name: 'Pitthoo Race', date: '2020-01-05', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Running'], tags: ['5K'], resultLink: null, photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/initiatives/pitthoo-race-small-banner.jpg', isUpcoming: false },
+            { id: 'run-for-her-50k-ultra-2020', name: 'Run for Her 50K Ultra', date: '2020-01-05', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Ultra Run'], tags: ['50K'], resultLink: null, photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/initiatives/run-for-her-50k-ultra-small-banner.jpg', isUpcoming: false },
+            { id: 'canal-a-thon-2020', name: 'Canal-A-Thon 2020', date: '2020-01-01', day: 'Wednesday', venue: 'Gurugram', city: 'Gurugram', categories: ['Running', 'Walk'], tags: ['10K', '20K', '30K', 'Walk'], resultLink: null, photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/initiatives/canal-a-thon-2020-small-banner.jpg', isUpcoming: false },
+            
+            // 2019 Events
+            { id: 'alcis-family-run-lucknow-2019', name: 'Alcis Family Run Lucknow 2019', date: '2019-12-29', day: 'Sunday', venue: 'Lucknow', city: 'Lucknow', categories: ['Running'], tags: ['10K', '5K', '3K'], resultLink: 'https://alcisrun.coachravinder.com/lucknow-results-2019.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/initiatives/alcis-family-run-lucknow-smallbanner.jpg', isUpcoming: false },
+            { id: 'born2run-2019', name: 'Born2Run 2019', date: '2019-12-22', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Running', 'Half Marathon'], tags: ['21K', '10K', '5K'], resultLink: null, photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/initiatives/born2run-small-banner.jpg', isUpcoming: false },
+            { id: 'wings-marathon-2019', name: 'Wings Marathon', date: '2019-12-15', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Marathon', 'Half Marathon', 'Running'], tags: ['42.2K', '21.1K', '10K', '5K'], resultLink: 'http://www.wingsmarathon.com/results.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/initiatives/wingsmarathon-2019.jpg', isUpcoming: false },
+            { id: 'rewari-half-marathon-2019', name: '3rd Rewari Half Marathon', date: '2019-11-24', day: 'Sunday', venue: 'Rewari', city: 'Rewari', categories: ['Half Marathon', 'Running'], tags: ['21.1K', '10.5K', '7K', '3K'], resultLink: null, photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/initiatives/rewari-half-marathon-2019.jpg', isUpcoming: false },
+            { id: 'shivalik-ultra-run-2019', name: '3rd Shivalik Ultra Run', date: '2019-11-24', day: 'Sunday', venue: 'Shivalik', city: 'Panchkula', categories: ['Ultra Run', 'Running', 'Cyclothon', 'Walk'], tags: ['80K', '50K', '30K', '10K', '5K', '40K', 'Cyclothon', 'Walk'], resultLink: 'https://shivalikultra.coachravinder.com/shivalikultra-results-2019.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/initiatives/shivalik-ultra-run-2019.jpg', isUpcoming: false },
+            { id: 'starry-night-marathon-2019', name: '4th Starry Night Marathon', date: '2019-11-16', day: 'Saturday', venue: 'Gurugram', city: 'Gurugram', categories: ['Half Marathon', 'Running'], tags: ['Half Marathon', '15K', '10K', '5K'], resultLink: 'http://www.starrynightmarathon.com/results.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/initiatives/starry-night-marathon-2019-small-banner.jpg', isUpcoming: false },
+            { id: 'marchula-forest-run-2019', name: 'Marchula Forest Run, Jim Corbett National Park', date: '2019-11-09', day: 'Saturday', venue: 'Jim Corbett National Park', city: 'Jim Corbett', categories: ['Running', 'Walkathon'], tags: ['60K', '40K', '10K', '20K', 'Walk'], resultLink: null, photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/initiatives/marchula-forest-run.jpg', isUpcoming: false },
+            { id: 'morni-hills-marathon-2019', name: 'Morni Hills Marathon', date: '2019-11-03', day: 'Sunday', venue: 'Morni Hills', city: 'Panchkula', categories: ['Marathon', 'Half Marathon', 'Running', 'Walkathon'], tags: ['42.2K', '21.1K', '10K', '5K', '20K', 'Walk'], resultLink: 'http://mornihillsmarathon.coachravinder.com/results-morni-hills-2019.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/initiatives/morni-hill-marathon-2019.jpg', isUpcoming: false },
+            { id: 'i-can-run-2019', name: 'I Can Run', date: '2019-10-05', day: 'Saturday', venue: 'Dwarka', city: 'New Delhi', categories: ['Running', 'Walkathon'], tags: ['10K', '5K', '3K', 'Walk'], resultLink: 'http://icanrun.runwithme.in/results-icanrun-dwarka.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/initiatives/icanrun-delhi-run.jpg', isUpcoming: false },
+            { id: 'delhi-fitness-run-2019', name: 'Delhi Fitness Run', date: '2019-09-29', day: 'Sunday', venue: 'New Delhi', city: 'New Delhi', categories: ['Running', 'Walkathon'], tags: ['10K', '5K', '3K', 'Walk'], resultLink: 'https://fitnessrun.coachravinder.com/results-fitnessrun.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/initiatives/fitnessrun-delhi.jpg', isUpcoming: false },
+            { id: 'primus-heart-run-2019', name: 'Primus Heart Run', date: '2019-09-28', day: 'Saturday', venue: 'New Delhi', city: 'New Delhi', categories: ['Running', 'Walkathon'], tags: ['10K', '5K', 'Walk'], resultLink: null, photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/initiatives/primus-heart-run-2019.jpg', isUpcoming: false },
+            { id: 'global-energy-race-2019', name: 'Global Energy Race 2019', date: '2019-09-22', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Running', 'Walkathon'], tags: ['10K', '5K', '3K', 'Walk'], resultLink: 'http://ger.coachravinder.com/ger-results-2019.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/initiatives/ger-2019.jpg', isUpcoming: false },
+            { id: 'yashoda-half-marathon-2019', name: 'Yashoda Half Marathon 2019', date: '2019-09-15', day: 'Sunday', venue: 'Sonepat', city: 'Sonepat', categories: ['Half Marathon', 'Running', 'Walkathon'], tags: ['Half Marathon', '10K', '5K', 'Walk'], resultLink: 'http://yashodahalfmarathon.coachravinder.com/yashodahm-results.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/initiatives/yashoda-half-marathon.jpg', isUpcoming: false },
+            { id: 'kronos-liveinspired-10k-run-2019', name: 'Kronos LiveInspired 10K Run', date: '2019-09-08', day: 'Sunday', venue: 'Noida', city: 'Noida', categories: ['Running', 'Walkathon'], tags: ['10K', '5K', '3K', 'Walk'], resultLink: 'http://kronos.coachravinder.com/results.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/initiatives/kronos-run-noida-2019.jpg', isUpcoming: false },
+            { id: 'dwarka-half-marathon-charity-run-2019', name: 'Dwarka Half Marathon & Charity Run 2019', date: '2019-09-01', day: 'Sunday', venue: 'Dwarka', city: 'New Delhi', categories: ['Half Marathon', 'Running'], tags: ['Half Marathon', '15K', '10K', '5K'], resultLink: 'http://dhm.coachravinder.com/results.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/initiatives/dhm-2019.jpg', isUpcoming: false },
+            { id: 'corpo-jumble-gurugram-2019', name: 'Corpo Jumble 2019, Gurugram', date: '2019-08-18', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Running'], tags: ['10K', '5K', '3K'], resultLink: 'https://corpojumble.coachravinder.com/results-2019.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/initiatives/corpo-jumble-2019.jpg', isUpcoming: false },
+            { id: '1947-run-chasingmemories-2019', name: '19.47 Run #ChasingMemories', date: '2019-08-11', day: 'Sunday', venue: 'Gurgaon', city: 'Gurugram', categories: ['Running', 'Walk'], tags: ['19.47K', '10K', '5K', 'Walk'], resultLink: null, photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/initiatives/1947-run-gurgaon.jpg', isUpcoming: false },
+            { id: 'games-forest-obstacle-run-2019', name: 'Games Forest Obstacle Run, Gurugram', date: '2019-07-28', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Running', 'Kids Run'], tags: ['5K', '1K'], resultLink: null, photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/initiatives/games-forest-obstacle-run.jpg', isUpcoming: false },
+            { id: 'the-footloose-run-2019', name: 'The Footloose Run 2019', date: '2019-07-14', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Half Marathon', 'Running'], tags: ['Half Marathon', '15K', '10K', '5K'], resultLink: 'https://footloose.coachravinder.com/results.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/initiatives/footloose-2019.jpg', isUpcoming: false },
+            { id: 'forest-monks-ultra-run-2019', name: 'Forest Monks Ultra Run', date: '2019-06-29', day: 'Saturday', venue: 'Kanatal', city: 'Kanatal', categories: ['Ultra Run', 'Marathon', 'Half Marathon', 'Running', 'Walk'], tags: ['63.3K', 'Marathon', 'Half Marathon', '10K', '20K', 'Walk'], resultLink: null, photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/initiatives/forestmonks-ultra-run.jpg', isUpcoming: false },
+            { id: 'shoolini-hill-marathon-2019', name: 'Shoolini Hill Marathon', date: '2019-06-02', day: 'Sunday', venue: 'Solan', city: 'Solan', categories: ['Half Marathon', 'Running', 'Walk'], tags: ['21.1K', '10K', '5K', 'Walk'], resultLink: null, photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/initiatives/shoolini-hill-marathon.jpg', isUpcoming: false },
+            { id: 'ion-contribution-run-2019', name: '2nd ION Contribution Run', date: '2019-05-26', day: 'Sunday', venue: 'Noida', city: 'Noida', categories: ['Running'], tags: ['10K', '5K', '3K'], resultLink: 'http://ioncontribution.coachravinder.com/results.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/initiatives/ion-contribution-2019.jpg', isUpcoming: false },
+            { id: 'runner-of-the-year-awards-2019', name: '7th T10 Runner of the Year Awards 2019', date: '2019-05-19', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Awards'], tags: ['Awards'], resultLink: null, photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/initiatives/runneroftheyearawards-2019.jpg', isUpcoming: false },
+            { id: 'kangra-x-country-run-2019', name: 'Kangra X-Country Run', date: '2019-04-28', day: 'Sunday', venue: 'Kangra', city: 'Kangra', categories: ['X-country Run', 'Running', 'Walk'], tags: ['5K', '10K', '16K', '32K', '48K', 'Walk'], resultLink: null, photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/initiatives/kangracrosscountry-2019.jpg', isUpcoming: false },
+            { id: 'healthsetgo-run-for-juniors-2019', name: 'HealthSetGo Run for Juniors', date: '2019-04-20', day: 'Saturday', venue: 'Gurgaon', city: 'Gurugram', categories: ['Running', 'Kids Run', 'Family Run'], tags: ['1K', '2K', '3K', '4K', 'Family Run'], resultLink: null, photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/initiatives/healthsetgo-run-2019.jpg', isUpcoming: false },
+            { id: 'vatika-half-marathon-2019', name: 'Vatika Half Marathon 2019', date: '2019-04-07', day: 'Sunday', venue: 'New Gurgaon', city: 'Gurugram', categories: ['Half Marathon', 'Running', 'Walkathon'], tags: ['21.1K', '10K', '5K', 'Walk'], resultLink: 'https://vatikahalfmarathon.com/pages/results', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/initiatives/vatikahalfmarathon-2019.jpg', isUpcoming: false },
+            { id: 'morni-hill-marathon-2019', name: 'Morni Hill Marathon', date: '2019-03-24', day: 'Sunday', venue: 'Morni Road', city: 'Panchkula', categories: ['Marathon', 'Half Marathon', 'Running', 'Relay Run', 'Walkathon'], tags: ['42.2K', '21.1K', '10K', '30K', 'Walk', 'Relay'], resultLink: null, photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/initiatives/morni-hill-marathon.jpg', isUpcoming: false },
+            { id: 'pagdandi-ultra-run-2019', name: 'Pagdandi Ultra Run, Gurugram', date: '2019-03-17', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Ultra Run', 'Running', 'Walkathon'], tags: ['50K', '30K', '20K', '10K', 'Walk'], resultLink: 'http://pagdandiultra.coachravinder.com/results.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/initiatives/pagdandi-ultra-run.jpg', isUpcoming: false },
+            { id: 'run-for-her-2019', name: 'Run For Her, Chankyapuri', date: '2019-03-03', day: 'Sunday', venue: 'New Delhi', city: 'New Delhi', categories: ['Running', 'Walk'], tags: ['10K', '5K', 'Walk'], resultLink: 'http://runforher.coachravinder.com/results.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/initiatives/runforher.jpg', isUpcoming: false },
+            { id: 'the-brilliance-run-2019', name: 'The Brilliance Run', date: '2019-02-24', day: 'Sunday', venue: 'Najafgarh', city: 'New Delhi', categories: ['Running', 'Walkathon'], tags: ['5K', '3K', '1 Mile', 'Walk'], resultLink: null, photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/initiatives/the-brilliance-run-najafgarh-delhi.jpg', isUpcoming: false },
+            { id: 'trail-a-thon-2019', name: 'Trail-A-Thon 2019', date: '2019-02-03', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Ultra Run', 'Running', 'Walk'], tags: ['84K', '56K', '28K', '14K', '7K', 'Walk'], resultLink: 'http://www.trailathon.org/results.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/initiatives/trailathon-2019.jpg', isUpcoming: false },
+            { id: 'alcis-family-run-2019', name: 'Alcis Family Run 2019', date: '2019-01-27', day: 'Sunday', venue: 'Gurgaon', city: 'Gurugram', categories: ['Running'], tags: ['10K', '5K', '3K', '1 Mile'], resultLink: 'http://alcisrun.coachravinder.com/results.html', photoLink: 'http://bit.ly/indiarunningphotogallery', photoSearchLink: null, image: 'images/initiatives/alcis-family-run.jpg', isUpcoming: false },
+            
+            // 2018 Events
+            { id: 'urban-forest-3x-run-2018', name: 'Urban Forest 3X Run', date: '2018-12-23', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Running', 'Trail'], tags: ['45K', '25K', '10K'], resultLink: null, photoLink: 'https://www.facebook.com/pg/Coach-Ravinder-1631156230478214/photos/?tab=albums', photoSearchLink: null, image: 'images/initiatives/3xrun.jpg', isUpcoming: false },
+            { id: 'bmg-rewari-half-marathon-2018', name: 'BMG Rewari Half Marathon', date: '2018-12-09', day: 'Sunday', venue: 'Rewari', city: 'Rewari', categories: ['Half Marathon', 'Running'], tags: ['Half Marathon', '10K', '5K', '3K'], resultLink: null, photoLink: 'https://www.facebook.com/pg/Coach-Ravinder-1631156230478214/photos/?tab=albums', photoSearchLink: null, image: 'images/initiatives/bmg-rewarihalf-marathon.jpg', isUpcoming: false },
+            { id: 'shivalik-ultra-run-2018', name: 'Shivalik Ultra Run', date: '2018-11-24', day: 'Saturday', venue: 'Panchkula', city: 'Panchkula', categories: ['Ultra Run', 'Running', 'Cyclothon', 'Walkathon'], tags: ['80K', '50K', '30K', '10K', 'Walk', 'Cyclothon'], resultLink: null, photoLink: 'https://www.facebook.com/pg/Coach-Ravinder-1631156230478214/photos/?tab=albums', photoSearchLink: null, image: 'images/initiatives/shivalikultrarun-2018-26oct.jpg', isUpcoming: false },
+            { id: 'starry-night-marathon-2018', name: 'Starry Night Marathon 2018', date: '2018-10-06', day: 'Saturday', venue: 'Gurugram', city: 'Gurugram', categories: ['Half Marathon', 'Running', 'Walk'], tags: ['Half Marathon', '15K', '10K', '5K', 'Walk'], resultLink: 'http://www.starrynightmarathon.com/results.html', photoLink: 'https://www.facebook.com/pg/Coach-Ravinder-1631156230478214/photos/?tab=albums', photoSearchLink: null, image: 'images/initiatives/starry-night2018.jpg', isUpcoming: false },
+            { id: 'harvest-gold-global-energy-race-2018', name: 'Harvest Gold Global Energy Race', date: '2018-09-23', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Running', 'Walkathon'], tags: ['10K', '5K', '3K', 'Walk'], resultLink: 'http://ger.coachravinder.com/results.html', photoLink: 'https://www.facebook.com/pg/Coach-Ravinder-1631156230478214/photos/?tab=albums', photoSearchLink: null, image: 'images/initiatives/globalenergyrace-gurgaon-2018.jpg', isUpcoming: false },
+            { id: 'dwarka-half-marathon-charity-run-2018', name: '6th Dwarka Half Marathon & Charity Run', date: '2018-09-16', day: 'Sunday', venue: 'Dwarka', city: 'New Delhi', categories: ['Half Marathon', 'Running', 'Walk'], tags: ['Half Marathon', '15K', '10K', '5K', 'Walk'], resultLink: 'http://dhm.coachravinder.com/results.html', photoLink: 'https://www.facebook.com/pg/Coach-Ravinder-1631156230478214/photos/?tab=albums', photoSearchLink: null, image: 'images/initiatives/dwarkahalfmarathon-2018.jpg', isUpcoming: false },
+            { id: 'pardada-pardadi-half-marathon-2018', name: '5th Pardada Pardadi Half Marathon', date: '2018-09-09', day: 'Sunday', venue: 'Anupshahr', city: 'Anupshahr', categories: ['Half Marathon', 'Running'], tags: ['Half Marathon', '10K', '5K'], resultLink: null, photoLink: 'https://www.facebook.com/pg/Coach-Ravinder-1631156230478214/photos/?tab=albums', photoSearchLink: null, image: 'images/initiatives/pardada-pardadi-anupshahr-half-marathon-2018.jpg', isUpcoming: false },
+            { id: 'kronos-liveinspired-10k-run-2018', name: 'Kronos LiveInspired 10K Run', date: '2018-09-08', day: 'Saturday', venue: 'Noida', city: 'Noida', categories: ['Running'], tags: ['10K', '5K', '3K'], resultLink: 'http://kronos.coachravinder.com/results.html', photoLink: 'https://www.facebook.com/pg/Coach-Ravinder-1631156230478214/photos/?tab=albums', photoSearchLink: null, image: 'images/initiatives/kronos-liveinspired-run-noida.jpg', isUpcoming: false },
+            { id: 'runner-of-the-year-awards-2018', name: 'Runner of the Year Awards 2018', date: '2018-09-01', day: 'Saturday', venue: 'Gurugram', city: 'Gurugram', categories: ['Awards'], tags: ['Awards'], resultLink: 'http://www.runneroftheyearawards.com/2018-results.html', photoLink: 'https://www.facebook.com/pg/Coach-Ravinder-1631156230478214/photos/?tab=albums', photoSearchLink: null, image: 'images/initiatives/runneroftheyearawards-2018.jpg', isUpcoming: false },
+            { id: 'corpo-jumble-run-2018', name: 'Corpo Jumble Run 2018', date: '2018-08-19', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Running'], tags: ['10K', '5K', '3K', '1 Mile'], resultLink: 'http://corpojumble.coachravinder.com/results-2018.html', photoLink: 'https://www.facebook.com/pg/Coach-Ravinder-1631156230478214/photos/?tab=albums', photoSearchLink: null, image: 'images/initiatives/corpojumble-2018-runningevent.jpg', isUpcoming: false },
+            { id: 'footloose-run-2018', name: 'Footloose Run 2018', date: '2018-07-15', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Half Marathon', 'Running'], tags: ['Half Marathon', '15K', '10K', '5K'], resultLink: 'http://footloose.coachravinder.com/results.html', photoLink: 'https://www.facebook.com/pg/Coach-Ravinder-1631156230478214/photos/?tab=albums', photoSearchLink: null, image: 'images/initiatives/footloose-2018.jpg', isUpcoming: false },
+            { id: 'darting-damsels-2018', name: '3rd Darting Damsels (10K Women Relay)', date: '2018-05-27', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Running', 'Relay Run'], tags: ['10K', '5K', '1 Mile'], resultLink: null, photoLink: 'https://www.facebook.com/pg/Coach-Ravinder-1631156230478214/photos/?tab=albums', photoSearchLink: null, image: 'images/initiatives/darting-damsels-2018.jpg', isUpcoming: false },
+            { id: 'dashing-dudes-2018', name: 'Dashing Dudes (10K Men Relay)', date: '2018-05-27', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Running', 'Relay Run'], tags: ['10K', '5K', '1 Mile'], resultLink: null, photoLink: 'https://www.facebook.com/pg/Coach-Ravinder-1631156230478214/photos/?tab=albums', photoSearchLink: null, image: 'images/initiatives/dashingdudes-2018.jpg', isUpcoming: false },
+            { id: 'vatika-half-marathon-2018', name: 'Vatika Half Marathon', date: '2018-05-20', day: 'Sunday', venue: 'New Gurgaon', city: 'Gurugram', categories: ['Half Marathon', 'Running', 'Walkathon'], tags: ['Half Marathon', '10K', '5K', 'Walk'], resultLink: 'http://www.coachravinder.com/results.html#vatikamarathon', photoLink: 'https://www.facebook.com/pg/Coach-Ravinder-1631156230478214/photos/?tab=albums', photoSearchLink: null, image: 'images/initiatives/vatikahalfmarathon.jpg', isUpcoming: false },
+            { id: 'women-10k-run-chandigarh-2018', name: 'Women 10K Run Chandigarh', date: '2018-05-13', day: 'Sunday', venue: 'Chandigarh', city: 'Panchkula', categories: ['Running', 'Walkathon'], tags: ['10K', '5K', '3K', 'Walk'], resultLink: null, photoLink: 'https://www.facebook.com/pg/Coach-Ravinder-1631156230478214/photos/?tab=albums', photoSearchLink: null, image: 'images/initiatives/women10krun-chandigarh.jpg', isUpcoming: false },
+            { id: 'the-kangra-x-country-run-2018', name: 'The Kangra X-Country Run & MTB Challenge 2018', date: '2018-04-22', day: 'Sunday', venue: 'Kangra', city: 'Kangra', categories: ['X-country Run', 'Running', 'Cyclothon', 'Walk'], tags: ['32K', '16K', '10K', '5K', '48K', 'Walk'], resultLink: null, photoLink: 'https://www.facebook.com/pg/Coach-Ravinder-1631156230478214/photos/?tab=albums', photoSearchLink: null, image: 'images/initiatives/kangracrosscountry.jpg', isUpcoming: false },
+            { id: 'ion-contribution-run-2018', name: 'ION Contribution Run', date: '2018-04-15', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Running', 'Relay Run'], tags: ['10K', '5K', '3K', '1 Mile'], resultLink: 'http://ioncontribution.coachravinder.com/results-2018.html', photoLink: 'https://www.facebook.com/pg/Coach-Ravinder-1631156230478214/photos/?tab=albums', photoSearchLink: null, image: 'images/initiatives/ion-contribution.jpg', isUpcoming: false },
+            { id: 'the-potpourri-challenge-2018', name: 'The Potpourri Challenge 2018', date: '2018-04-08', day: 'Sunday', venue: 'Gurugram', city: 'Gurugram', categories: ['Running', 'Relay Run'], tags: ['10K', '5K', '1 Mile'], resultLink: 'http://potpourri.coachravinder.com/results.html', photoLink: 'https://www.facebook.com/pg/Coach-Ravinder-1631156230478214/photos/?tab=albums', photoSearchLink: null, image: 'images/initiatives/potpourri-challenge.jpg', isUpcoming: false },
+            { id: 'amangani-rewari-half-marathon-2018', name: 'Amangani Rewari Half Marathon', date: '2018-04-01', day: 'Sunday', venue: 'Rewari', city: 'Rewari', categories: ['Half Marathon', 'Running'], tags: ['Half Marathon', '10K', '5K', '3K'], resultLink: 'http://rewarihalfmarathon.coachravinder.com/results.html', photoLink: 'https://www.facebook.com/pg/Coach-Ravinder-1631156230478214/photos/?tab=albums', photoSearchLink: null, image: 'images/initiatives/rewari-half-marathon.jpg', isUpcoming: false }
+        ];
+
+        // Sort events from most recent to oldest
+        EVENTS_DATA.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+        // State variables for pagination and filtering
+        const EVENTS_PER_PAGE = 10;
+        let currentPage = 1;
+        let filteredEvents = [];
+
+        // Helper function to normalize strings for case-insensitive comparison
+        function norm(s) {
+            return (s || '').toString().trim().toLowerCase();
+        }
+
+        // Helper to format an ISO date string
+        function formatDate(iso) {
+            const [y, m, d] = iso.split('-').map(Number);
+            const dt = new Date(y, m - 1, d);
+            return new Intl.DateTimeFormat('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }).format(dt);
+        }
+
+        // Filter functions for each criteria
+        function includesCategory(categories = [], selected = '') {
+            if (!selected) return true;
+            const sel = norm(selected);
+            return categories.some(c => norm(c) === sel);
+        }
+
+        function matchesCity(city = '', sel = '') {
+            return !sel || norm(city) === norm(sel);
+        }
+
+        function matchesMonth(date = '', sel = '') {
+            return !sel || (date.split('-')[1] || '') === sel;
+        }
+
+        // CORRECTED: This function now correctly extracts the year from the date string.
+        function matchesYear(date = '', sel = '') {
+            return !sel || (date.split('-')[0] || '') === sel;
+        }
+
+        function matchesQuery(ev, q = '') {
+            if (!q) return true;
+            const nq = norm(q);
+            return norm(ev.name).includes(nq) || norm(ev.venue).includes(nq) || norm(ev.city).includes(nq);
+        }
+
+        function matchesPill(ev, activePill = '') {
+            if (!activePill) return true;
+            const pill = activePill.replace(/[\s-]/g, '').toLowerCase();
+            const tags = (ev.tags || []).map(t => t.toLowerCase().replace(/[\s-]/g, ''));
+            return tags.includes(pill);
+        }
+        
+        // --- RENDER FUNCTIONS ---
+
+        // Function to render the events on the current page
+        function renderEventsForPage(events, page) {
+            const container = document.getElementById('pastEventsGrid');
+            const emptyState = document.getElementById('noPastEvents');
+            container.innerHTML = '';
+            
+            const start = (page - 1) * EVENTS_PER_PAGE;
+            const end = start + EVENTS_PER_PAGE;
+            const eventsToRender = events.slice(start, end);
+
+            if (!eventsToRender.length) {
+                emptyState.classList.remove('hidden');
+                return;
+            }
+            emptyState.classList.add('hidden');
+            eventsToRender.forEach(event => {
+                const el = document.createElement('div');
+                el.className = 'bg-white rounded-xl shadow-lg overflow-hidden card-hover flex flex-col lg:flex-row';
+                const categories = (event.categories || []).join(', ');
+                const title = (event.name || '').replace(/\d{4}/g, '').trim();
+                el.innerHTML = `
+                    <div class="lg:w-1/3">
+                        <img src="${event.image}"
+                            class="w-full h-48 lg:h-full object-cover"
+                            alt="${event.name}"
+                            onerror="this.onerror=null;this.src='https://placehold.co/600x400/f8f8f8/1a202c?text=Past+Event+Photo';">
+                    </div>
+                    <div class="p-5 lg:w-2/3 flex flex-col flex-grow">
+                        <h3 class="text-lg font-bold text-gray-800">${title}</h3>
+                        <p class="text-sm text-gray-500 mt-1">${event.venue || ''}</p>
+                        <p class="text-sm text-gray-500">${formatDate(event.date)} (${event.day}) - ${categories}</p>
+                        <div class="mt-auto pt-4 flex flex-wrap gap-4">
+                            ${event.resultLink ? `<a href="${event.resultLink}" class="font-bold text-red-500 hover:text-red-600">Result Link →</a>` : '<span class="text-gray-500">Result coming soon</span>'}
+                            ${event.photoSearchLink ? `<a href="${event.photoSearchLink}" class="font-bold text-gray-500 hover:text-gray-700">Photo Search →</a>` : ''}
+                        </div>
+                    </div>
+                `;
+                container.appendChild(el);
+            });
+        }
+        
+        // Function to render the pagination controls
+        function renderPagination(totalEvents) {
+            const container = document.getElementById('paginationContainer');
+            container.innerHTML = '';
+            const totalPages = Math.ceil(totalEvents / EVENTS_PER_PAGE);
+
+            if (totalPages <= 1) {
+                return;
+            }
+
+            // Previous button
+            const prevButton = document.createElement('button');
+            prevButton.className = `px-4 py-2 rounded-lg font-semibold ${currentPage === 1 ? 'text-gray-400 cursor-not-allowed' : 'text-red-500 hover:bg-red-50'}`;
+            prevButton.textContent = 'Previous';
+            prevButton.disabled = currentPage === 1;
+            prevButton.addEventListener('click', () => {
+                if (currentPage > 1) {
+                    currentPage--;
+                    applyFiltersAndRender();
+                }
+            });
+            container.appendChild(prevButton);
+
+            // Page number buttons
+            for (let i = 1; i <= totalPages; i++) {
+                const pageButton = document.createElement('button');
+                pageButton.className = `w-10 h-10 rounded-full font-semibold transition-colors duration-200 ${currentPage === i ? 'bg-red-500 text-white' : 'text-gray-700 hover:bg-gray-200'}`;
+                pageButton.textContent = i;
+                pageButton.addEventListener('click', () => {
+                    currentPage = i;
+                    applyFiltersAndRender();
+                });
+                container.appendChild(pageButton);
+            }
+
+            // Next button
+            const nextButton = document.createElement('button');
+            nextButton.className = `px-4 py-2 rounded-lg font-semibold ${currentPage === totalPages ? 'text-gray-400 cursor-not-allowed' : 'text-red-500 hover:bg-red-50'}`;
+            nextButton.textContent = 'Next';
+            nextButton.disabled = currentPage === totalPages;
+            nextButton.addEventListener('click', () => {
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    applyFiltersAndRender();
+                }
+            });
+            container.appendChild(nextButton);
+        }
+
+        // Main filter and render function that orchestrates everything
+        function applyFiltersAndRender() {
+            const query = norm(pastSearchInput?.value || '');
+            const city = pastFilterCity?.value || '';
+            const month = pastFilterMonth?.value || '';
+            const year = pastFilterYear?.value || '';
+            const type = pastFilterType?.value || '';
+
+            // First, filter all events based on the current criteria
+            filteredEvents = EVENTS_DATA
+                .filter(ev => !ev.isUpcoming) // Ensure we only show past events
+                .filter(ev => matchesQuery(ev, query) &&
+                    matchesCity(ev.city, city) &&
+                    matchesMonth(ev.date, month) &&
+                    matchesYear(ev.date, year) &&
+                    includesCategory(ev.categories, type) &&
+                    matchesPill(ev, activePastPill)
+                );
+
+            // Reset to page 1 if the filter results in a different number of pages
+            const newTotalPages = Math.ceil(filteredEvents.length / EVENTS_PER_PAGE);
+            if (currentPage > newTotalPages && newTotalPages > 0) {
+                 currentPage = 1;
+            }
+
+            // Then, render the events for the current page and update pagination
+            renderEventsForPage(filteredEvents, currentPage);
+            renderPagination(filteredEvents.length);
+        }
+
+        // Add event listeners to trigger the main render function
+        const pastSearchInput = document.getElementById('pastSearch');
+        const pastFilterCity = document.getElementById('pastFilterCity');
+        const pastFilterMonth = document.getElementById('pastFilterMonth');
+        const pastFilterYear = document.getElementById('pastFilterYear');
+        const pastFilterType = document.getElementById('pastFilterType');
+        const pastPillButtons = document.querySelectorAll('[data-pill-past]');
+        const clearPastFiltersBtn = document.getElementById('clearPastFilters');
+        let activePastPill = '';
+
+        pastSearchInput?.addEventListener('input', () => {
+            currentPage = 1;
+            applyFiltersAndRender();
+        });
+        pastFilterCity?.addEventListener('change', () => {
+            currentPage = 1;
+            applyFiltersAndRender();
+        });
+        pastFilterMonth?.addEventListener('change', () => {
+            currentPage = 1;
+            applyFiltersAndRender();
+        });
+        pastFilterYear?.addEventListener('change', () => {
+            currentPage = 1;
+            applyFiltersAndRender();
+        });
+        pastFilterType?.addEventListener('change', () => {
+            currentPage = 1;
+            applyFiltersAndRender();
+        });
+
+        pastPillButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const pill = button.dataset.pillPast;
+                if (activePastPill === pill) {
+                    activePastPill = '';
+                    button.classList.remove('active');
+                    button.setAttribute('aria-pressed', 'false');
+                } else {
+                    pastPillButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                        btn.setAttribute('aria-pressed', 'false');
+                    });
+                    activePastPill = pill;
+                    button.classList.add('active');
+                    button.setAttribute('aria-pressed', 'true');
+                }
+                currentPage = 1;
+                applyFiltersAndRender();
+            });
+        });
+
+        clearPastFiltersBtn?.addEventListener('click', () => {
+            if (pastSearchInput) pastSearchInput.value = '';
+            if (pastFilterCity) pastFilterCity.value = '';
+            if (pastFilterMonth) pastFilterMonth.value = '';
+            if (pastFilterYear) pastFilterYear.value = '';
+            if (pastFilterType) pastFilterType.value = '';
+            activePastPill = '';
+            pastPillButtons.forEach(btn => {
+                btn.classList.remove('active');
+                btn.setAttribute('aria-pressed', 'false');
+            });
+            currentPage = 1;
+            applyFiltersAndRender();
+        });
+
+        // Initial render on page load
+        applyFiltersAndRender();
+    </script>
+</body>
+</html>

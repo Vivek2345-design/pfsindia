@@ -1,0 +1,19 @@
+# Enable Rewrite Engine
+RewriteEngine On
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Redirect www to non-www (optional)
+RewriteCond %{HTTP_HOST} ^www\.pfsindia\.in [NC]
+RewriteRule ^(.*)$ https://pfsindia.in/$1 [L,R=301]
+
+# Default index file
+DirectoryIndex index.html index.php
+
+# Prevent access to .htaccess itself
+<Files .htaccess>
+  Order allow,deny
+  Deny from all
+</Files>

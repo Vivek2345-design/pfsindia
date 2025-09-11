@@ -1,0 +1,840 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Stories & Impact | Perfect Fitness Solutions</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family:'Inter',sans-serif; background:#F8F9FA; color:#1a202c; }
+    .hero-gradient { background: linear-gradient(135deg,#FFF1F2 0%,#E0F2FE 100%); }
+    .challenge-gradient { background: linear-gradient(135deg,#4F46E5 0%,#EF4444 100%); }
+    .card-hover { transition: transform .3s ease, box-shadow .3s ease; }
+    .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgba(0,0,0,.1), 0 10px 10px -5px rgba(0,0,0,.04); }
+    .btn-primary { background:#EF4444; color:#fff; transition: background-color .3s; }
+    .btn-primary:hover { background:#DC2626; }
+    .btn-secondary { background:#1a202c; color:#fff; transition: background-color .3s; }
+    .btn-secondary:hover { background:#374151; }
+    .nav-link-hover { position:relative; transition: color .3s; }
+    .nav-link-hover::after { content:''; position:absolute; width:0; height:2px; bottom:-4px; left:50%; transform:translateX(-50%); background:#EF4444; transition: width .3s; }
+    .nav-link-hover:hover::after, .nav-link-hover.active::after { width:60%; }
+    .filter-chip { border:1px solid #e5e7eb; }
+    .filter-chip.active { background:#ef4444; color:#fff; border-color:#ef4444; }
+    .story-modal {
+      display: none;
+      position: fixed;
+      z-index: 100;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.7);
+    }
+    .modal-content {
+      background-color: #fefefe;
+      margin: 5% auto;
+      padding: 2rem;
+      border-radius: 1rem;
+      max-width: 800px;
+      position: relative;
+    }
+    .modal-header img {
+      max-height: 250px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- Header & Navbar (same structure as home page) -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="/index.html" class="flex items-center space-x-2">
+        <img src="https://profitsports.in/images/pfs-color.png" alt="Perfect Fitness Solutions Pvt Ltd Logo" class="h-12 w-auto">
+      </a>
+      <div class="lg:hidden">
+        <button id="nav-toggle" class="text-gray-800 focus:outline-none" aria-label="Open Menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+        </button>
+      </div>
+      <div id="nav-menu" class="hidden lg:flex lg:items-center lg:space-x-6">
+        <a href="/index.html" class="text-gray-700 nav-link-hover font-medium">Home</a>
+        <a href="/events.html" class="text-gray-700 nav-link-hover font-medium">Signature Strides</a>
+        <a href="/corporate.html" class="text-gray-700 nav-link-hover font-medium">Power Up @ Work</a>
+        <a href="/coaching.html" class="text-gray-700 nav-link-hover font-medium">Fuel Lab</a>
+        <a href="/stories.html" class="text-gray-700 nav-link-hover font-medium active">Stories & Impact</a>
+        <a href="/events.html" class="btn-primary rounded-full px-5 py-2.5 font-semibold ml-2">Get Started</a>
+      </div>
+    </nav>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden px-6 pb-4 border-t border-gray-200">
+      <a href="/index.html" class="block py-2 text-gray-700 font-medium">Home</a>
+      <a href="/events.html" class="block py-2 text-gray-700 font-medium">Signature Strides</a>
+      <a href="/corporate.html" class="block py-2 text-gray-700 font-medium">Power Up @ Work</a>
+      <a href="/coaching.html" class="block py-2 text-gray-700 font-medium">Fuel Lab</a>
+      <a href="/stories.html" class="block py-2 text-gray-700 font-medium">Stories & Impact</a>
+      <a href="/coaching.html#contact" class="block mt-2 text-center btn-primary rounded-full px-5 py-2.5 font-semibold">Get Started</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero-gradient py-16 md:py-24">
+      <div class="container mx-auto px-6 text-center md:text-left">
+        <h1 class="text-3xl md:text-5xl font-extrabold">Stories & Impact</h1>
+        <p class="mt-3 text-lg text-gray-700 max-w-3xl">Transformations from the community and insights from the journey—training, race-day lessons, wellness at work, and purpose in motion.</p>
+        <div class="mt-6 flex items-center gap-3 justify-center md:justify-start">
+          <a href="#stories-list" class="btn-primary rounded-full px-7 py-3 font-bold shadow-lg">Explore Stories</a>
+          <a href="/events.html" class="btn-secondary rounded-full px-7 py-3 font-bold shadow-lg">Find Your Next Event</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Story (Now dynamic) -->
+    <section class="py-14 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-10 items-center">
+          <div id="featuredStoryImageContainer">
+            <!-- Featured story image injected here -->
+          </div>
+          <div id="featuredStoryTextContainer">
+            <!-- Featured story text injected here -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filters & Search -->
+    <section class="py-6 bg-white border-y border-gray-200">
+      <div class="container mx-auto px-6 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+        <div class="flex items-center gap-2 flex-wrap">
+          <button class="filter-chip px-4 py-2 rounded-full text-sm active" data-filter="all">All</button>
+          <button class="filter-chip px-4 py-2 rounded-full text-sm" data-filter="training">Training</button>
+          <button class="filter-chip px-4 py-2 rounded-full text-sm" data-filter="nutrition">Nutrition</button>
+          <button class="filter-chip px-4 py-2 rounded-full text-sm" data-filter="race-day">Race Day</button>
+          <button class="filter-chip px-4 py-2 rounded-full text-sm" data-filter="corporate">Corporate</button>
+          <button class="filter-chip px-4 py-2 rounded-full text-sm" data-filter="community">Community</button>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="relative w-full lg:w-80">
+            <input id="search" type="text" placeholder="Search articles..."
+                   class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500">
+            <i class="fa-solid fa-magnifying-glass text-gray-400 absolute right-3 top-2.5"></i>
+          </div>
+          <select id="sort" class="px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500">
+            <option value="latest">Sort: Latest</option>
+            <option value="alpha">Title: A → Z</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stories Grid -->
+    <section id="stories-list" class="py-14">
+      <div class="container mx-auto px-6">
+        <div id="storiesGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Cards injected by JS -->
+        </div>
+        <!-- Pagination (now dynamic) -->
+        <div id="paginationContainer" class="mt-10 flex justify-center items-center gap-2">
+          <!-- Pagination buttons injected here -->
+        </div>
+        <div id="noStoriesMessage" class="hidden text-center text-gray-600 mt-10">
+          No stories match your filters.
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal for displaying full stories -->
+    <div id="storyModal" class="story-modal">
+        <div class="modal-content">
+            <button id="closeModal" class="absolute top-4 right-4 text-xl text-gray-500 hover:text-gray-800">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="modalHeader" class="modal-header rounded-t-lg mb-6">
+              <!-- Modal header content (image, tag) injected here -->
+            </div>
+            <h2 id="modalTitle" class="text-3xl font-extrabold text-gray-800 mb-4"></h2>
+            <div id="modalContent" class="prose max-w-none text-gray-600"></div>
+        </div>
+    </div>
+    
+    <!-- CTA Band -->
+    <section class="challenge-gradient text-white">
+      <div class="container mx-auto px-6 py-12 text-center">
+        <h2 class="text-2xl md:text-3xl font-extrabold mb-4">Write the next chapter of your story</h2>
+        <a href="/coaching.html" class="bg-white text-red-500 rounded-full px-10 py-4 font-bold inline-block shadow-xl">Get Coaching Support</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (same structure and style as home page) -->
+  <footer class="bg-gray-800 text-white">
+    <div class="container mx-auto px-6 py-16">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="space-y-4">
+          <h3 class="text-lg font-semibold uppercase tracking-wider">The Company</h3>
+          <ul class="space-y-2">
+            <li><a href="/index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+            <li><a href="/coaching.html" class="text-gray-400 hover:text-white transition">Our Team</a></li>
+            <li><a href="/stories.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+            <li><a href="/events.html" class="text-gray-400 hover:text-white transition">Support</a></li>
+          </ul>
+        </div>
+        <div class="space-y-4">
+          <h3 class="text-lg font-semibold uppercase tracking-wider">PFS</h3>
+          <ul class="space-y-2">
+            <li><a href="/events.html" class="text-gray-400 hover:text-white transition">Signature Strides</a></li>
+            <li><a href="/corporate.html" class="text-gray-400 hover:text-white transition">Power Up @ Work</a></li>
+            <li><a href="/merchandise.html" class="text-gray-400 hover:text-white transition">The Gear Grid</a></li>
+            <li><a href="/coaching.html" class="text-gray-400 hover:text-white transition">Fuel Lab</a></li>
+            <li><a href="/stories.html" class="text-gray-400 hover:text-white transition">Stories & Impact</a></li>
+          </ul>
+        </div>
+        <div class="space-y-4">
+          <h3 class="text-lg font-semibold uppercase tracking-wider">Follow Us</h3>
+          <div class="flex space-x-4 text-gray-400">
+            <a href="#" class="hover:text-white transition" aria-label="Facebook"><i class="fab fa-facebook-f fa-lg"></i></a>
+            <a href="#" class="hover:text-white transition" aria-label="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="#" class="hover:text-white transition" aria-label="Twitter"><i class="fab fa-twitter fa-lg"></i></a>
+            <a href="#" class="hover:text-white transition" aria-label="YouTube"><i class="fab fa-youtube fa-lg"></i></a>
+          </div>
+        </div>
+        <div class="space-y-4">
+          <h3 class="text-lg font-semibold uppercase tracking-wider">Stay Updated</h3>
+          <ul class="space-y-2">
+            <li><a href="/events.html" class="text-gray-400 hover:text-white transition">Event Calendar</a></li>
+            <li><a href="/coaching.html" class="text-gray-400 hover:text-white transition">Trainings</a></li>
+          </ul>
+          <form id="newsletterForm" class="mt-4 flex gap-2">
+            <input type="email" required placeholder="Email address"
+                   class="w-full px-3 py-2 rounded-lg border border-gray-600 bg-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500"/>
+            <button class="px-4 py-2 rounded-lg bg-red-500 text-white hover:bg-red-600">Join</button>
+          </form>
+          <p id="newsletterMsg" class="text-xs text-gray-400"></p>
+        </div>
+      </div>
+      <div class="mt-12 border-top border-gray-700 pt-8 text-center text-gray-500 text-sm">
+        <p>© <span id="year"></span> Perfect Fitness Solutions Pvt Ltd. All Rights Reserved. Website by Vivek Pandey.</p>
+        <p class="mt-1">Prices shown are approximate in INR(₹).</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.getElementById('nav-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (navToggle && mobileMenu) {
+      navToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+      mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+    }
+
+    // Footer year
+    const y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+
+    // Newsletter mock
+    const newsletterForm = document.getElementById('newsletterForm');
+    const newsletterMsg = document.getElementById('newsletterMsg');
+    if (newsletterForm && newsletterMsg) {
+      newsletterForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        newsletterMsg.textContent = "Thanks for joining! Stay tuned for updates.";
+        newsletterForm.reset();
+      });
+    }
+
+    // --- Story Data ---
+    const STORIES = [
+      { 
+          id:'s1', 
+          title:'Beyond the Finish Line - How Running Transforms Life, One Stride at a Time', 
+          tag:'community', 
+          date:'2025-08-29', 
+          img:'images/beyond.jpg', 
+          excerpt:'How running transforms life, one stride at a time.',
+          isFeatured: true,
+          fullContent: `
+            <p>The alarm blares, long before the Faridabad sun even thinks of gracing the horizon. For many, this might signal dread, but for me, it's the call to the roads – a silent pact with myself to move, to breathe, to run. Running wasn't always a passion; it began as a hesitant thought, a whisper of a challenge that gradually grew into a roar.</p>
+            <h3>From Thought to First Race - The Genesis</h3>
+            <p>The idea of "running till coming for the race" felt audacious at first. Why put myself through that? The reasons were a jumble of seeking better health, shedding a few kilos, and frankly, a desperate need for an outlet from the daily grind. Life in Faridabad, with its bustling pace and concrete demands, often felt like a treadmill I couldn't get off. Running, ironically, became my escape on a treadmill, then on the streets, then on the trails.</p>
+            <p>My transformation from Day 1 was anything but linear. It was a clumsy start - gasping for air after a mere kilometre, battling shin splints, and questioning every decision. But then came the small victories – running 5K without stopping, feeling my lungs expand with less effort, seeing the subtle definition in my legs. The first race, a local 5K, wasn't about speed; it was about showing up, enduring, and crossing that finish line. The euphoria was unexpected, profound, and utterly addictive. It wasn't just my body that had changed; my mind had begun to shift too.</p>
+            <h3>Upgrading the Challenge - A Step-by-Step Evolution</h3>
+            <p>That first 5K ignited a spark. Soon, I was eyeing the 10K. Then, the half marathon. The feeling of upgrading the running category, step by step, mirrored a broader growth in life. Each distance demanded more discipline, a deeper understanding of nutrition, better recovery, and crucially, an unwavering belief in myself.</p>
+            <p>The training became more structured, the commitment deeper. I learned to listen to my body, to push when necessary, and to rest when needed. It taught me patience – that progress isn't always linear, but consistent effort always yields results. This incremental approach to running began to seep into other areas of my life.</p>
+            <h3>Running Out of the Box - Life's Broader Canvas</h3>
+            <p>Running isn't just about logging miles; it's a powerful metaphor for life itself. It taught me to set ambitious goals, break them down into manageable steps, and persevere through discomfort. This mindset helped me to grow out of the box in life. Projects at work that once seemed daunting now felt like a long training run – challenging, but achievable with the right strategy and consistent effort. I became more resilient in the face of setbacks, both on the road and in my personal and professional spheres. The grit developed during those long runs, when every fibre of my being wanted to quit, became a transferable skill for tackling life's bigger obstacles.</p>
+            <h3>A Sanctuary for the Mind - Mental Well-being</h3>
+            <p>Perhaps the most profound impact of running has been on my mental well-being. In a world buzzing with constant notifications and demands, running offers a sanctuary. Those early morning runs are my moving meditation. The rhythm of my footsteps, the crisp air, the rising sun over Faridabad – it all creates a space for clarity. Worries that felt overwhelming often dissolve into manageable thoughts by the end of a run. It’s a powerful antidote to stress, a way to clear the mental clutter, and a consistent source of self-affirmation. I have found that no matter how challenging a day might be, a run always helps to reset my perspective, leaving me feeling calmer, more focused, and mentally robust.</p>
+            <h3>Voices from the Track - Testimonials</h3>
+            <p>The impact of running extends beyond individual journeys, fostering community and inspiring others. Here's what participants of the Corpo Jumble Run had to say:</p>
+            <p><strong>By SITA Aero (Corpo Jumble participant)</strong><br>"Hi Coach, Thank you for sharing the cumulative sheet with us. I would also like to extend my heartfelt appreciation to you and your team for organizing such a wonderful Marathon experience. The event was exceptionally well planned, smoothly executed, and flawlessly delivered. We truly had a fantastic time, and it was a pleasure working with you. Looking forward to many more successful collaborations in the future! Regards, Palak Gupta"</p>
+            <p><strong>By TrueBlue (Corpo Jumble participant)</strong><br>"Hi Coach, I wanted to extend my heartfelt thanks and appreciation to you and your team for organizing such a fantastic marathon event. Everything was thoughtfully planned and flawlessly executed — from the route management and hydration points to the enthusiastic volunteers and overall energy of the day. We've received wonderful feedback from participants, many of whom shared how much they enjoyed the experience. It truly left a positive impact — several of them mentioned feeling inspired and motivated to take part in more runs going forward. It’s great to see how this event has encouraged a growing interest in fitness and community participation. Thank you once again for all the hard work that went into making this event such a success. We look forward to being part of the Corpo Jumble Run in the future too! Regards, Pallavi Kalia"</p>
+            <p>Running is more than just a sport; it's a journey of self-discovery, resilience, and personal growth. Whether you are chasing a new personal best or simply seeking a clearer mind, the road awaits.</p>
+          `
+      },
+      { 
+          id:'s2', 
+          title:'Community Spotlight - Weekend Warriors', 
+          tag:'community', 
+          date:'2025-08-20', 
+          img:'images/community-spotlight.jpg', 
+          excerpt:'Celebrating the dedicated community of weekend warriors.',
+          fullContent: `
+            <p>In the heart of every bustling city, a silent but powerful movement is taking shape. They are not defined by their professions or titles, but by the relentless drive that kicks in when the work week ends. They are the <strong>Weekend Warriors</strong>.</p>
+            <p>This community is a diverse tribe of individuals who balance demanding jobs and family life with an unwavering passion for fitness. They are the ones you see logging miles on the road at dawn, pushing through a long bike ride on a Sunday, or conquering a new trail before the rest of the world has had its first coffee.</p>
+            <h3>The Grind and the Glory</h3>
+            <p>The life of a Weekend Warrior is a testament to dedication. Their week is a masterclass in time management: squeezing in a run before office hours, a quick strength session during lunch, or a late-night bike ride. It’s a purposeful hustle, fuelled not by obligation, but by the promise of what the weekend holds.</p>
+            <p>The true glory isn't found in a trophy cabinet, but in the shared experience. It’s the nervous energy at a race start line, the encouraging high-fives from a fellow runner, and the feeling of accomplishment that washes over you at the finish. These moments are a powerful antidote to the stress of daily life, offering a profound sense of purpose and achievement that resonates long after the race is over.</p>
+            <h3>More Than a Hobby - It's a Lifestyle</h3>
+            <p>The Weekend Warrior spirit is about more than just a hobby; it’s a commitment to a healthier, more balanced life. This isn't about being an elite athlete; it's about setting personal goals and consistently working to achieve them. The discipline learned on the pavement or in the gym translates directly to other areas of life, from perseverance in the workplace to mental resilience at home.</p>
+            <p>The community is the real engine behind this movement. Weekend Warriors don’t train alone. They form tight-knit running clubs, cycling teams, and workout groups that provide accountability, support, and friendship. These communities are where struggles are shared, victories are celebrated, and lifelong bonds are forged over shared sweat and triumphs. The collective energy of a group pushing toward a common goal is a powerful motivator, turning a solo pursuit into a shared journey.</p>
+            <img src="images/community-spotlight.jpg" alt="A diverse group of runners on a scenic trail at sunrise.">
+            <h3>The Impact and the Inspiration</h3>
+            <p>The impact of the Weekend Warrior community extends far beyond their own lives. They are the role models for their children, the motivation for their colleagues, and the inspiration for their friends. They show that it's possible to juggle life’s responsibilities while prioritizing personal well-being. They prove that you don't need to be a professional to embrace the thrill of competition and the joy of physical activity.</p>
+            <p>This community is a living testament to the idea that passion, when coupled with consistency, can transform your life. So, whether you are lacing up your shoes for a 5K or planning a challenging trek, know that you are part of a vibrant, dedicated community. You are a Weekend Warrior, and your journey is an inspiration to us all.</p>
+          `
+      },
+      { 
+          id:'s3', 
+          title:'The Runner\'s Edge - Why Strength Training is Your Secret Weapon', 
+          tag:'training', 
+          date:'2025-08-28', 
+          img:'images/runners-edge.png', 
+          excerpt:'Why strength training is your secret weapon.',
+          fullContent: `
+            <p>Gurugram's running scene is booming, from the lush paths of Leisure Valley Park to the challenging routes around the Aravalli’s. Whether you are a seasoned marathoner or just starting your journey on the pavement, there's a crucial element that often gets overlooked in the pursuit of faster times and longer distances ~ <strong>strength training</strong>.</p>
+            <p>Many runners think of pounding the pavement as the only way to improve, but incorporating a well-structured strength routine can transform your running experience, making you more resilient, efficient, and powerful.</p>
+            <h3>Why Strength Training is Non-Negotiable for Runners</h3>
+            <img src="images/runners-edge.jpg" alt="A male runner on a tree-lined path.">
+            <ul>
+                <li><strong>Injury Prevention</strong> - The repetitive impact of running takes a toll on your body. Stronger muscles, tendons, and joints are better equipped to absorb this impact. This significantly reduces your risk of common running ailments like shin splints, runner's knee, and IT band syndrome, keeping you on the track and out of the physio's office.</li>
+                <li><strong>Running Economy</strong> - Imagine running the same pace but using less energy. That's the power of improved running economy! Strength training enhances your stride efficiency, allowing you to maintain your pace with less effort. This means more comfortable long runs and stronger finishes.</li>
+                <li><strong>Power & Speed</strong> - Want to conquer that last sprint or power up a hill? Strong glutes, hamstrings, and a robust core provide the explosive power needed for better propulsion and increased sprinting ability. Think of them as your engine's turbo boost.</li>
+                <li><strong>Endurance</strong> - While often associated with the heart and lungs, muscular endurance plays a vital role. Stronger muscles can maintain proper form for longer, especially in the late miles of a race when fatigue tries to set in.</li>
+                <li><strong>Posture & Stability</strong> - A strong core and upper body are your unsung heroes. They prevent slouching, helping you maintain an open chest for optimal breathing and a steady rhythm during those challenging long runs.</li>
+            </ul>
+            <h3>Your Weekly Strength Training Blueprint (2 Days/Week)</h3>
+            <p>This plan is designed for beginner to intermediate runners and focuses on compound lifts, single-leg stability, and core work. Each session should last approximately 45–60 minutes.</p>
+            <h4>Day 1 – Lower Body Strength & Stability</h4>
+            <p><strong>Warm-up (5 mins)</strong> - Glute bridges, walking lunges, dynamic leg swings</p>
+            <p><strong>Main Strength</strong></p>
+            <ul>
+                <li>Squats (barbell or dumbbell) – 3 sets of 6–8 repetitions</li>
+                <li>Romanian Deadlifts – 3 sets of 8–10 repetitions</li>
+                <li>Step-ups (onto bench/box) – 3 sets of 10 repetitions each leg</li>
+            </ul>
+            <p><strong>Accessory Work</strong></p>
+            <ul>
+                <li>Bulgarian Split Squats – 3 sets of 8 repetitions each leg</li>
+                <li>Calf Raises – 3 sets of 15–20 repetitions</li>
+                <li>Resistance Band Lateral Walks – 2 sets of 20 steps</li>
+            </ul>
+            <p><strong>Core Stability</strong></p>
+            <ul>
+                <li>Side Plank (with hip dips) – 3 sets of 30 seconds per side</li>
+                <li>Bird-Dog – 3 sets of 10 repetitions per side</li>
+            </ul>
+            <h4>Day 2 – Upper Body & Core</h4>
+            <p><strong>Warm-up (5 mins)</strong> - Push-ups, arm circles, cat-cow mobility</p>
+            <p><strong>Main Strength</strong></p>
+            <ul>
+                <li>Deadlifts (conventional/trap bar) – 3 sets of 5–6 repetitions</li>
+                <li>Overhead Press (dumbbell/barbell) – 3 sets of 8 repetitions</li>
+                <li>Pull-ups / Lat Pulldown – 3 sets of 8–10 repetitions</li>
+            </ul>
+            <p><strong>Accessory Work</strong></p>
+            <ul>
+                <li>Dumbbell Row (single arm) – 3 sets of 10 repetitions per side</li>
+                <li>Push-ups or Bench Press – 3 sets of 10 repetitions</li>
+                <li>Band Pull-Aparts / Face Pulls – 3 sets of 12–15 repetitions</li>
+            </ul>
+            <p><strong>Core Stability</strong></p>
+            <ul>
+                <li>Pallof Press (anti-rotation) – 3 sets of 12 repetitions per side</li>
+                <li>Plank with Shoulder Taps – 3 sets of 30 seconds</li>
+            </ul>
+            <h3>How to Fit Strength into Your Running Week</h3>
+            <p>Here's a sample schedule to integrate your running and strength training effectively:</p>
+            <ul>
+                <li><strong>Monday</strong> - Easy Run + Mobility</li>
+                <li><strong>Tuesday</strong> - Speed/Intervals</li>
+                <li><strong>Wednesday</strong> - Strength (Day 1: Lower Body)</li>
+                <li><strong>Thursday</strong> - Easy Run / Cross-train</li>
+                <li><strong>Friday</strong> - Strength (Day 2: Upper + Core)</li>
+                <li><strong>Saturday</strong> - Long Run</li>
+                <li><strong>Sunday</strong> - Rest / Yoga / Mobility</li>
+            </ul>
+            <h3>Key Notes for Success</h3>
+            <ul>
+                <li><strong>Timing is Key</strong> - Avoid scheduling strength sessions immediately before your hardest runs. Fatigue from lifting can compromise your running form and increase injury risk.</li>
+                <li><strong>Balance is Best</strong> - Pair your strength workouts with easy run days or cross-training days to allow for adequate recovery.</li>
+                <li><strong>Form Over Load</strong> - Especially for runners, maintaining proper form is paramount. Focus on executing each exercise correctly before attempting to lift heavier weights.</li>
+                <li><strong>Build Gradually</strong> - Consistency is your greatest asset. Start with manageable weights and repetitions, gradually increasing intensity as your strength improves.</li>
+            </ul>
+            <p>Embrace strength training as an integral part of your running journey. You will not only become a stronger, faster runner but also a more resilient one, ready to tackle any distance on the roads of Gurugram and beyond!</p>
+          `
+      },
+      { 
+          id:'s4', 
+          title:'The Future of Corporate Wellness', 
+          tag:'corporate', 
+          date:'2025-08-26', 
+          img:'images/corporate-wellness.jpg', 
+          excerpt:'How to build an inclusive program that works for all.',
+          fullContent: `
+            <p>In today's corporate world, the term "corporate wellness" is a common buzzword. But too often, these programs miss the mark. They might offer a gym membership discount or a one-size-fits-all health challenge, failing to address the diverse needs of an entire workforce. The real key to a successful wellness program isn't just about offering benefits; it's about making sure everyone feels seen, supported, and included.</p>
+            <p>The future of corporate wellness is not just about physical health. It's about a holistic approach that puts <strong>inclusion first</strong>. This means designing programs that cater to all employees, regardless of their age, physical ability, background, or personal life. A truly inclusive wellness strategy understands that what works for a 25-year-old remote employee might not work for a 50-year-old on-site manager with family responsibilities.</p>
+            <h3>Why Inclusive Wellness is Crucial</h3>
+            <p>An "inclusion-first" approach moves beyond surface-level perks to create a culture where wellness is a fundamental part of the employee experience.</p>
+            <ul>
+                <li><strong>It Boosts Engagement and Morale</strong> - When employees feel that a wellness program is designed with their specific needs in mind, they are far more likely to participate. This leads to higher engagement rates and a stronger sense of belonging. An inclusive program shows that the company truly cares, which in turn boosts morale.</li>
+                <li><strong>It Improves Productivity and Retention</strong> - A diverse workforce brings a wide range of skills and perspectives. By supporting the well-being of all employees, companies can reduce stress, improve mental clarity, and decrease burnout. This leads to higher productivity and better employee retention, as people are less likely to leave a workplace where they feel valued and supported.</li>
+                <li><strong>It Builds a Stronger Community</strong> - Wellness initiatives can be powerful tools for fostering community. When programs are inclusive, they create a space for people from different teams and backgrounds to connect over shared goals. This breaks down silos and builds a more cohesive, supportive work environment.</li>
+            </ul>
+            <h3>How to Build an Inclusive Wellness Program</h3>
+            <p>So, what does an "inclusion-first" wellness program actually look like?</p>
+            <ul>
+                <li><strong>Offer a Variety of Fitness Options</strong> - Instead of just a gym membership, provide options that appeal to different interests and abilities. This could include online yoga classes, virtual walking challenges for remote teams, or even subsidized memberships for local sports leagues.</li>
+                <li><strong>Address Mental and Emotional Health</strong> - True wellness is as much about the mind as it is the body. Provide access to mental health support, stress management workshops, and quiet spaces for relaxation. Acknowledge that mental health is a legitimate and vital part of overall well-being.</li>
+                <li><strong>Consider Diverse Schedules and Locations</strong> - Not everyone works 9 to 5 from an office. Offer flexible programs that accommodate different time zones and work styles. This could include on-demand virtual classes or wellness resources accessible from any location.</li>
+                <li><strong>Personalize the Experience</strong> - Use surveys and feedback to understand what your employees truly need. Some may benefit from financial wellness workshops, while others may need resources for better sleep or nutrition. The most effective programs are those that are tailored to the workforce.</li>
+                <li><strong>Celebrate All Forms of Wellness</strong> - Go beyond traditional metrics. Celebrate participation in non-competitive activities like volunteering, a new hobby, or simply taking a mental health day. This sends a powerful message that all efforts toward personal well-being are valued.</li>
+            </ul>
+            <p>By shifting the focus from a one-size-fits-all approach to one that is fundamentally inclusive, companies can build a culture of genuine care. This is not just a trend; it's a fundamental change that will lead to happier, healthier, and more productive employees. The return on investment is not just in lower healthcare costs, but in a stronger, more resilient organization.</p>
+          `
+      },
+      { 
+          id:'s5', 
+          title:'Pacing the Perfect 10K', 
+          tag:'race-day', 
+          date:'2025-08-25', 
+          img:'images/pacing-10k.jpg', 
+          excerpt:'Your blueprint for a strong finish.',
+          fullContent: `
+            <p>The 10K is a fascinating distance. It's too long to sprint but too short to take it easy. It demands a perfect blend of speed and endurance, making your pacing strategy the single most important factor for a successful race.</p>
+            <p>Many runners fall into the same trap: the race day adrenaline rush. They blast off with the pack, feel great for the first two kilometres, and then hit a wall, struggling to finish. Don't let that be you.</p>
+            <p>Pacing a perfect 10K isn't about running as fast as you can. It's about running smart. Here's your kilometre-by-kilometre guide to a race you can be proud of.</p>
+            <h3>Phase 1 - The First 3 Kilometres Warm-Up</h3>
+            <p>This is the most crucial part of your race. Your goal here is to hold back, settle in, and resist the urge to go with the crowd.</p>
+            <ul>
+                <li><strong>Kilometre 1</strong> - Start a little slower than your goal pace. A common mistake is going out too fast and burning precious energy. This kilometre should feel almost too easy. Focus on your breathing and form.</li>
+                <li><strong>Kilometre 2</strong> - Gently begin to ease into your target race pace. You should feel controlled and comfortable, not straining. Your body is now fully warmed up and ready to work.</li>
+                <li><strong>Kilometre 3</strong> - You should now be hitting your target race pace. This is your "sweet spot." Settle into a consistent rhythm that you know you can hold.</li>
+            </ul>
+            <h3>Phase 2 - The Middle 4 Kilometres "The Engine Room"</h3>
+            <p>This is where the real work happens. You are past the initial excitement and entering the heart of the race. Your focus here is on maintaining a steady effort.</p>
+            <ul>
+                <li><strong>Kilometre 4-6</strong> - Stick to your target pace. This is your "engine room." Focus on your form—keep your posture tall, arms relaxed, and feet light. This is where your training pays off. The effort should feel like a controlled discomfort—you are working hard, but you are not struggling yet.</li>
+                <li><strong>Kilometre 7</strong> - This is often the mental wall for many runners. Fatigue starts to set in, and the finish line still feels a long way off. Trust your training. Remind yourself that you have done this in practice. Hold your pace and stay strong.</li>
+            </ul>
+            <h3>Phase 3 - The Final 3 kilometres Push</h3>
+            <p>You are in the home stretch. This is where you can unleash the energy you have conserved.</p>
+            <ul>
+                <li><strong>Kilometre 8</strong> - It's time to mentally prepare for the final push. If you feel good, you can start to gently pick up the pace, but don't rush it. This is a crucial transition from holding on to actively pushing.</li>
+                <li><strong>Kilometre 9</strong> - Your effort level should be increasing. You are no longer "running" your pace; you are "chasing" it. The end is in sight. Focus on passing runners in front of you—it provides a powerful psychological boost.</li>
+                <li><strong>Kilometre 10</strong> - The final kilometre. Give it everything you have left. The finish line is just ahead. Let your passion and training take over as you kick for the finish. You should cross that line having left nothing in the tank.</li>
+            </ul>
+            <h3>Pro Tips for Perfect Pacing</h3>
+            <ul>
+                <li><strong>Practice with a "Negative Split"</strong> - The ultimate pacing goal is to run the second half of the race faster than the first. This feels powerful and is the most efficient way to run a race. Practice this during your training runs, especially in tempo runs.</li>
+                <li><strong>Listen to Your Body, Not Just Your Watch</strong> - Your watch is a great tool, but your body is the ultimate guide. Pay attention to your breathing and how you feel. A little fatigue is normal, but if you're gasping for air in the first half, you're going too fast.</li>
+                <li><strong>Start with a Goal, But Be Flexible</strong> - Have a target pace in mind, but be willing to adjust based on race day conditions. Humidity, heat, or hills can all impact your pace. A smart runner adjusts, while a stubborn one burns out.</li>
+            </ul>
+            <p>By approaching your 10K with a strategic plan, you will be able to enjoy the race, feel strong in the final kilometres, and cross the finish line with a sense of accomplishment. The perfect pace isn't the fastest; it's the one that lets you finish perfectly.</p>
+          `
+      },
+      { 
+          id:'s6', 
+          title:'Sleep & Recovery - The Unsung Heroes of Your Fitness Journey', 
+          tag:'training', 
+          date:'2025-08-24', 
+          img:'images/sleep-recovery.jpg', 
+          excerpt:'Adaptation happens between sessions, not during them.',
+          fullContent: `
+            <p>We often focus on the glamorous aspects of our fitness routines: the gruelling workouts, the new personal bests, and the perfect nutrition plan. But what if the most important work happens when you are not even trying?</p>
+            <p>The truth is, your progress isn’t made during the workout; it's made in the hours and days that follow. <strong>Sleep and recovery</strong> are the foundations upon which all your training builds. Neglect them, and you're building a house without mortar—it looks good from the outside, but it won't stand for long.</p>
+            <h3>The Power of a Good Night's Sleep</h3>
+            <p>Think of sleep as your body's nightly maintenance crew. Every time you close your eyes, a series of critical processes kick into gear to repair the damage from the day's training.</p>
+            <ul>
+                <li><strong>Muscle Repair & Growth</strong> - While you sleep, your body releases <strong>Human Growth Hormone (HGH)</strong>, a key player in muscle repair and tissue growth. This is when your muscles rebuild stronger and your body adapts to the stress of your workout.</li>
+                <li><strong>Energy Restoration</strong> - Your muscles need fuel. During deep sleep, your body replenishes its <strong>glycogen stores</strong>, which are your primary energy source for high-intensity exercise. Without this recharge, your next workout will feel sluggish and weak.</li>
+                <li><strong>Mental Fortitude</strong> - A well-rested mind is a strong mind. Sleep helps consolidate motor skills, improves focus, and boosts motivation. This is crucial for sticking to a consistent training schedule and making smart decisions about your health.</li>
+            </ul>
+            <h3>Beyond the Nap - The Art of Active Recovery</h3>
+            <p>Recovery isn't just about lying on the couch. <strong>Active recovery</strong> involves low-intensity movement that helps your body bounce back faster. This might sound counterintuitive, but gentle activity is far more effective at reducing soreness than complete rest.</p>
+            <ul>
+                <li><strong>Improved Blood Flow</strong> - Light movement increases blood circulation, which helps flush out metabolic waste products (like lactic acid) from your muscles and delivers fresh, oxygen-rich blood to aid in repair.</li>
+                <li><strong>Reduced Soreness (DOMS)</strong> - Ever woken up two days after a tough leg day and struggled to walk? That’s Delayed Onset Muscle Soreness. Active recovery helps to alleviate this by keeping your muscles mobile and preventing them from stiffening up.</li>
+                <li><strong>Enhanced Flexibility</strong> - Gentle stretching and mobility work can help improve your range of motion and prevent injury, keeping you fluid and ready for your next session.</li>
+            </ul>
+            <p>Some simple forms of active recovery include a <strong>light walk</strong>, <strong>gentle yoga or stretching</strong>, <strong>foam rolling</strong>, or a <strong>leisurely bike ride</strong>. The key is to keep the effort low and focus on feeling good.</p>
+            <h3>Putting It into Practice - Your Recovery Toolkit</h3>
+            <p>You don’t need fancy gadgets to recover like a pro. These simple habits can make a world of difference:</p>
+            <ul>
+                <li><strong>Prioritize Sleep</strong> - Aim for <strong>7-9 hours</strong> a night. Establish a consistent bedtime and wake-up time, even on weekends.</li>
+                <li><strong>Create a Sleep Sanctuary</strong> - Make your bedroom cool, dark, and quiet. Ditch screens at least an hour before bed to help your mind wind down.</li>
+                <li><strong>Fuel Your Recovery</strong> - Consume a mix of <strong>protein and carbohydrates</strong> within an hour of your workout to kick-start muscle repair and replenish energy stores.</li>
+                <li><strong>Stay Hydrated</strong> - Drink water throughout the day, not just during your workout. Proper hydration is essential for every bodily function, including recovery.</li>
+                <li><strong>Schedule Rest Days</strong> - View your rest days as a scheduled part of your training plan, not a failure to work out. This intentional downtime is when your body gets stronger.</li>
+            </ul>
+            <p>Remember, recovery isn't a luxury; it’s a non-negotiable part of your training. By prioritizing sleep and smart recovery practices, you are not just resting—you are preparing your body for the next challenge, ensuring that every effort you make truly counts.</p>
+          `
+      },
+      { 
+          id:'s7', 
+          title:'Hydration Myths Debunked - Time to Drink Smarter, Not Harder', 
+          tag:'nutrition', 
+          date:'2025-08-23', 
+          img:'images/hydration-myths.jpg', 
+          excerpt:'Time to drink smarter, not harder.',
+          fullContent: `
+            <p>Everyone talks about hydration. From fitness magazines to social media influencers, advice on how much water to drink is everywhere. But with so much information out there, it's easy to get confused. Many of the "rules" we have been told for years are, in fact, not entirely true.</p>
+            <p>It’s time to separate fact from fiction. By debunking these common hydration myths, you can move past the rigid rules and learn to listen to your body.</p>
+            <h3>Myth #1. You Must Drink Exactly 8 Glasses of Water Per Day</h3>
+            <p>This is arguably the most famous hydration myth. The "eight glasses a day" rule is simple and easy to remember, but it’s a one-size-fits-all approach that ignores individual needs.</p>
+            <p><strong>The Fact</strong> - Your hydration needs are highly personal. They depend on many factors, including your <strong>body size, activity level, climate, diet, and overall health.</strong> A person training for a marathon in a hot, humid environment will need far more water than someone working at a desk in an air-conditioned office. Furthermore, a significant portion of your daily fluid intake comes from <strong>foods,</strong> especially fruits and vegetables.</p>
+            <h3>Myth #2. Thirst Is a Poor Indicator of Dehydration</h3>
+            <p>You have likely heard that by the time you feel thirsty, you are already dehydrated. This often leads to a fear of not drinking enough.</p>
+            <p><strong>The Fact</strong> - For most healthy individuals, thirst is a highly reliable signal. Your body's thirst mechanism is a finely tuned system designed to maintain fluid balance. It's a natural cue that tells you it’s time to drink. You don’t need to force yourself to chug water when you’re not thirsty. The only exceptions are for elite athletes or in extremely hot conditions, where a pre-planned hydration strategy is a must.</p>
+            <h3>Myth #3. Sports Drinks Are Always Better Than Water</h3>
+            <p>After a workout, many people instinctively reach for a sports drink, assuming it’s the best way to rehydrate.</p>
+            <p><strong>The Fact</strong> - For the vast majority of activities, <strong>water is all you need.</strong> A sports drink is designed for a specific purpose: to replenish carbohydrates and electrolytes lost during prolonged, high-intensity exercise (typically longer than an hour). For a standard gym workout or a short run, the added sugar in most sports drinks is unnecessary. For these scenarios, a balanced diet and water are the best combination.</p>
+            <h3>Myth #4. A Headache Always Means You are Dehydrated</h3>
+            <p>It's a common belief that a headache is a definitive sign you need to drink more water.</p>
+            <p><strong>The Fact</strong> - While dehydration can certainly be a cause of headaches, it’s not the only one. Stress, lack of sleep, eye strain, or a poor diet can all contribute. Assuming every headache is due to a lack of water can lead to over-hydration, a potentially dangerous condition known as <strong>hyponatremia</strong> where sodium levels in the blood become dangerously low.</p>
+            <h3>The Bottom Line</h3>
+            <p>Hydration doesn't have to be complicated. Instead of following rigid, outdated rules, learn to listen to your body. Drink when you are thirsty, choose water for most of your fluid needs, and save the sports drinks for when you truly need them. By listening to your body's signals, you will be able to stay properly hydrated and feel your best.</p>
+          `
+      },
+      { 
+          id:'s8', 
+          title:'The Best Race Day Nutrition Tips That Actually Work', 
+          tag:'nutrition', 
+          date:'2025-08-27', 
+          img:'images/race-day-nutrition.jpg', 
+          excerpt:'A guide for amateur athletes that actually works.',
+          fullContent: `
+            <p>The Best Race Day Nutrition Tips That Actually Work ~ A Guide for Amateur Athletes</p>
+            <p>You have logged the miles along Golf Course Road, pushed through those challenging intervals, and felt the burn on the Aravali trails. Your training is on point, but there's one critical element that can make or break your performance on race day - <strong>nutrition</strong>.</p>
+            <p>Often overlooked, a dialled-in fuelling strategy is as vital as your long runs and speed work. You could be in the best shape of your life, but if your pre-race meal is off or hydration forgotten, your body will rebel in the most crucial kilometres, turning your personal best dreams into a struggle.</p>
+            <p>Let's demystify race day nutrition, ensuring your body is a finely tuned engine from start to finish.</p>
+            <img src="images/race-day-nutrition.jpg" alt="An image showing runners with an infographic about pre-race and on-course fuel.">
+            <h3>It Starts Before Dawn - Pre-Race Preparation</h3>
+            <p>Your race day nutrition journey actually begins the day before the race, or even earlier for longer distances.</p>
+            <h4>Carbohydrate Loading (The Smart Way!)</h4>
+            <p>If your upcoming race is 120 minutes or longer (think half marathon and beyond), a light carbohydrate load 36-48 hours prior can top up your glycogen stores.</p>
+            <p>How to do it right -</p>
+            <ul>
+                <li><strong>Increase Carb Intake</strong> - Aim for 7–10 grams of carbohydrates per kilogram of body weight per day.</li>
+                <li><strong>Reduce Fiber & Fat</strong> - Slightly cut back on fibre and fat to make room for those crucial carbs and avoid any mid-race dash to the restrooms!</li>
+            </ul>
+            <p><strong>Good Carb-Loading Foods</strong> -</p>
+            <ul>
+                <li>White rice, pasta, white bread, potatoes, fruit juices, low-fiber cereals.</li>
+                <li><strong>Example</strong> - A 70 kg runner would target 500-700g of carbs/day for 1-2 days.</li>
+            </ul>
+            <h3>Race Day - Your Fuelling Blueprint</h3>
+            <p>Race day nutrition doesn't have to be complicated, but it <strong>must</strong> be planned and practiced.</p>
+            <h4>1. The All-Important Pre-Race Meal</h4>
+            <p>This is your main energy source for the initial miles.</p>
+            <p><strong>When</strong> - 2 to 3 hours before your race start is ideal. This allows ample time for digestion and energy conversion.</p>
+            <p><strong>What</strong> - Focus on low-fiber, moderate-protein, low-fat, and high-carb foods. Aim for 60-100g of carbs, 10-20g protein, and minimal fat.</p>
+            <p><strong>Examples</strong> -</p>
+            <ul>
+                <li>Oatmeal with banana and a drizzle of honey + a scoop of protein powder.</li>
+                <li>White toast with jam + a hard-boiled egg.</li>
+                <li>Sweet potatoes with honey.</li>
+            </ul>
+            <p><strong>Foods to Avoid</strong> -</p>
+            <ul>
+                <li>High-fibre foods (beans, heavy salads)</li>
+                <li>Anything new! Race day is <strong>not</strong> the time to experiment with untested foods.</li>
+                <li>Greasy or overly spicy dishes.</li>
+            </ul>
+            <p><strong>Crucial Tip</strong> - Always test this exact meal during your long training runs at least twice before race day!</p>
+            <h4>2. Start Hydrated, Stay Hydrated</h4>
+            <p>Dehydration is a guaranteed ticket to early fatigue and a poor performance.</p>
+            <p><strong>Guidelines</strong> -</p>
+            <ul>
+                <li><strong>2 hours pre-race</strong> - Drink 500-600 ml of water with electrolytes.</li>
+                <li><strong>Final hour</strong> - Sip another 150-300 ml, especially if the Gurugram heat and humidity are high.</li>
+            </ul>
+            <p><strong>Electrolytes? Yes!</strong></p>
+            <ul>
+                <li>If your race is over 90 minutes or conditions are hot/humid, electrolytes (especially sodium) are essential. They aid fluid absorption and reduce cramping risk. Locally available ORS or electrolyte powders are excellent choices.</li>
+            </ul>
+            <h4>3. Fuelling During the Race - Go the Distance</h4>
+            <p>For races longer than 2 hours, your body needs external carb fuel to maintain intensity.</p>
+            <p><strong>Rule of Thumb</strong> -</p>
+            <ul>
+                <li>30-60g carbs/hour (for races 1–2.5 hours)</li>
+                <li>60–90g carbs/hour (for races 2.5+ hours)</li>
+            </ul>
+            <p><strong>Sources</strong> -</p>
+            <ul>
+                <li>Energy gels (typically 20-25g carbs per gel)</li>
+                <li>Chews, sports drinks, bananas, or even homemade date bars.</li>
+            </ul>
+            <p><strong>Don't Wait!</strong> Start fuelling early, around the 30-minute mark, and continue consistently. The biggest mistake is waiting until you are tired or hungry; by then, you are already playing catch-up, and your performance will suffer.</p>
+            <h4>4. Hydration During the Race</h4>
+            <p>Don't wait for thirst to strike. Have a hydration plan.</p>
+            <p><strong>Guidelines</strong> -</p>
+            <ul>
+                <li>Aim for 300–500 ml/hour of electrolyte drink, adjusting for temperature and your individual sweat rate.</li>
+                <li>Utilize electrolyte tablets or sports drinks.</li>
+                <li>Practice drinking while running during training – it’s a skill!</li>
+            </ul>
+            <h3>Avoid These Common Race Day Blunders</h3>
+            <ul>
+                <li>Trying new products - Stick to what you've practiced.</li>
+                <li>Skipping breakfast - Allow ample time to eat and digest.</li>
+                <li>Overhydrating - This can lead to hyponatremia (dangerously low sodium levels).</li>
+                <li>Forgetting electrolytes - Critical for longer races or hot conditions.</li>
+                <li>Fuelling too late - Start early and consistently.</li>
+                <li>Not checking aid station offerings - Know what is available on course beforehand.</li>
+            </ul>
+            <p>You have put in the hard work on the roads and parks of Gurugram and other race destinations. Don't let poor fuelling sabotage your success. Plan your nutrition, practice it diligently, and step onto that start line with confidence, knowing you are fully powered to perform your best!</p>
+          `
+      },
+      { 
+          id:'s9', 
+          title:'Half Marathon Taper Tips - How to Rest for Your Best Race', 
+          tag:'race-day', 
+          date:'2025-08-20', 
+          img:'images/half-marathon-taper.png', 
+          excerpt:'How to rest for your best race.',
+          fullContent: `
+            <p>You have put in the hard work. You have logged the long runs, pushed through the speed work, and stayed consistent for months. Now, with just a couple of weeks to go until race day, your training plan tells you to do the one thing that feels completely wrong - <strong>rest</strong>.</p>
+            <p>Welcome to the taper.</p>
+            <p>For many runners, the taper can be mentally challenging. You feel a sudden drop in mileage, your legs might feel sluggish, and the fear of losing fitness creeps in. But tapering isn't a sign of weakness; it’s your secret weapon. It’s the period where your body repairs itself, replenishes energy stores, and prepares to perform at its peak.</p>
+            <p>Think of it as sharpening the pencil before the final exam. You wouldn't write the test with a dull pencil, and you shouldn't run a race on tired legs.</p>
+            <h3>Why Tapering is Your Secret Weapon</h3>
+            <p>The goal of a taper is simple: to arrive at the start line feeling fresh, rested, and ready to go. Here's what's happening behind the scenes -</p>
+            <ul>
+              <li><strong>Muscle Repair</strong> - Your long training runs cause microscopic tears in your muscles. Tapering gives your body the time and resources to fully repair this damage, making you stronger and more resilient.</li>
+              <li><strong>Energy Store Replenishment</strong> - As you train, you deplete your muscle glycogen, which is your body's primary fuel source for running. Cutting back on mileage allows these glycogen stores to fully top off, giving you maximum energy for race day.</li>
+              <li><strong>Mental Freshness</strong> - Tapering helps you overcome mental fatigue. The reduced stress and increased rest leave you feeling mentally sharp, confident, and excited to race, not burned out.</li>
+            </ul>
+            <h3>Your Taper Blueprint - The "How-To"</h3>
+            <p>A standard half marathon taper lasts about two weeks. Here's a simple blueprint to guide you.</p>
+            <p><strong>Week 2-3 Out (The Start of the Taper)</strong> - This is a gentle reduction. You will cut your weekly volume by about <strong>20-30%</strong>. If your peak long run was 16-18 km, your long run this week should be around 10-12 km. The most important thing is to maintain a little bit of your race-pace intensity. Include a few short, fast intervals (e.g., 2-3 x 400m at race pace) within an easy run to keep your legs feeling sharp and ready.</p>
+            <p><strong>Week 1 Out (The Final Week)</strong> - Now, you will significantly reduce your mileage, cutting your weekly volume by another <strong>50% or more</strong>. Your runs should be very short and very easy. The goal is just to stay loose and active. A day or two before the race, do a very short "shakeout" run (1-2 km) at an easy pace. This helps calm nerves, stretches out your legs, and signals to your body that a big effort is coming soon.</p>
+            <h3>Beyond the Run - Tapering Your Lifestyle</h3>
+            <p>Tapering isn't just about your running mileage; it's a holistic approach to getting your body ready.</p>
+            <ul>
+                <li><strong>Prioritize Sleep</strong> - This is your most powerful recovery tool. Aim for 8-9 hours of sleep per night. Don’t worry if you struggle to sleep the night before the race; your body will still be well-rested from the nights leading up to it.</li>
+                <li><strong>Hydrate Consistently</strong> - Don't wait until the day before the race to start chugging water. Hydrate steadily throughout the week. This ensures your body's fluid balance is optimized for performance.</li>
+                <li><strong>Eat Smart</strong> - Focus on a balanced diet rich in complex carbohydrates and protein. Avoid overdoing the "carb-loading." A modest increase in carbohydrates a couple of days before the race is all you need. Don't introduce any new foods!</li>
+                <li><strong>Manage the Jitters</strong> - It's normal to feel anxious or even sluggish. Trust your training. Spend some time visualizing the race—the start, the course, the aid stations, and the finish line. Lay out all your race day gear a day in advance to avoid last-minute stress.</li>
+            </ul>
+            <p>The taper is your final, essential step to race day success. Embrace the rest, trust your training, and get ready to run your best half marathon yet.</p>
+          `
+      },
+    ];
+
+    const STORIES_PER_PAGE = 6;
+    let currentPage = 1;
+
+    const grid = document.getElementById('storiesGrid');
+    const chips = Array.from(document.querySelectorAll('.filter-chip'));
+    const search = document.getElementById('search');
+    const sortSel = document.getElementById('sort');
+    const storyModal = document.getElementById('storyModal');
+    const closeModalBtn = document.getElementById('closeModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalContent = document.getElementById('modalContent');
+    const paginationContainer = document.getElementById('paginationContainer');
+    const noStoriesMessage = document.getElementById('noStoriesMessage');
+    const featuredStoryImageContainer = document.getElementById('featuredStoryImageContainer');
+    const featuredStoryTextContainer = document.getElementById('featuredStoryTextContainer');
+    const modalHeader = document.getElementById('modalHeader');
+
+    let activeTag = 'all';
+    let query = '';
+    let sort = 'latest';
+
+    function cardHTML(s) {
+      return `
+        <article class="bg-white rounded-xl border border-gray-200 overflow-hidden card-hover flex flex-col" id="${s.id}">
+          <img src="${s.img}" alt="${s.title}" class="w-full h-48 object-cover"
+               onerror="this.onerror=null;this.src='https://placehold.co/640x360/f8fafc/1f2937?text=${encodeURIComponent(s.title)}';">
+          <div class="p-5 flex flex-col flex-grow">
+            <div class="text-xs text-red-500 font-bold uppercase tracking-widest">${s.tag.replace('-',' ')}</div>
+            <h3 class="mt-1 font-bold text-lg">${s.title}</h3>
+            <p class="text-sm text-gray-500">${new Date(s.date).toLocaleDateString()}</p>
+            <p class="mt-2 text-gray-600 flex-grow">${s.excerpt}</p>
+            <div class="mt-4">
+              <a href="#stories-list" class="font-bold text-red-500 hover:text-red-600" data-story-id="${s.id}">Read story →</a>
+            </div>
+          </div>
+        </article>
+      `;
+    }
+
+    function renderStories() {
+      let list = [...STORIES];
+      if (activeTag !== 'all') list = list.filter(s => s.tag === activeTag);
+      if (query.trim()) {
+        const q = query.toLowerCase();
+        list = list.filter(s => s.title.toLowerCase().includes(q) || s.excerpt.toLowerCase().includes(q));
+      }
+      if (sort === 'latest') list.sort((a,b)=> new Date(b.date) - new Date(a.date));
+      if (sort === 'alpha') list.sort((a,b)=> a.title.localeCompare(b.title));
+
+      const totalPages = Math.ceil(list.length / STORIES_PER_PAGE);
+      const start = (currentPage - 1) * STORIES_PER_PAGE;
+      const end = start + STORIES_PER_PAGE;
+      const paginatedList = list.slice(start, end);
+
+      grid.innerHTML = paginatedList.map(cardHTML).join('');
+      noStoriesMessage.classList.toggle('hidden', list.length > 0);
+      
+      renderPagination(totalPages);
+      addStoryButtonListeners();
+    }
+
+    function renderPagination(totalPages) {
+      paginationContainer.innerHTML = '';
+      if (totalPages > 1) {
+        // Prev button
+        const prevButton = document.createElement('button');
+        prevButton.className = `px-3 py-2 rounded-lg border text-sm transition-colors duration-200 ${currentPage === 1 ? 'text-gray-400 border-gray-200 cursor-not-allowed' : 'text-red-500 border-red-500 hover:bg-red-50'}`;
+        prevButton.innerHTML = `&larr; Prev`;
+        prevButton.disabled = currentPage === 1;
+        prevButton.addEventListener('click', () => { currentPage--; renderStories(); });
+        paginationContainer.appendChild(prevButton);
+
+        // Page numbers
+        for (let i = 1; i <= totalPages; i++) {
+          const pageButton = document.createElement('button');
+          pageButton.className = `w-10 h-10 rounded-full font-semibold transition-colors duration-200 ${currentPage === i ? 'bg-red-500 text-white' : 'text-gray-700 hover:bg-gray-200'}`;
+          pageButton.textContent = i;
+          pageButton.addEventListener('click', () => { currentPage = i; renderStories(); });
+          paginationContainer.appendChild(pageButton);
+        }
+
+        // Next button
+        const nextButton = document.createElement('button');
+        nextButton.className = `px-3 py-2 rounded-lg border text-sm transition-colors duration-200 ${currentPage === totalPages ? 'text-gray-400 border-gray-200 cursor-not-allowed' : 'text-red-500 border-red-500 hover:bg-red-50'}`;
+        nextButton.innerHTML = `Next &rarr;`;
+        nextButton.disabled = currentPage === totalPages;
+        nextButton.addEventListener('click', () => { currentPage++; renderStories(); });
+        paginationContainer.appendChild(nextButton);
+      }
+    }
+
+
+    // Function to handle opening the modal
+    function openStoryModal(storyId) {
+        const story = STORIES.find(s => s.id === storyId);
+        if (story && story.fullContent) {
+            modalHeader.innerHTML = `
+              <img src="${story.img}" alt="${story.title}" class="w-full rounded-t-lg">
+              <div class="px-6 py-4">
+                <span class="text-xs text-red-500 font-bold uppercase tracking-widest">${story.tag.replace('-',' ')}</span>
+              </div>
+            `;
+            modalTitle.textContent = story.title;
+            modalContent.innerHTML = story.fullContent;
+            storyModal.style.display = "block";
+            document.body.style.overflow = "hidden"; // Prevent scrolling
+        } else {
+            console.error('Story or full content not found for id:', storyId);
+        }
+    }
+
+    // Function to close the modal
+    function closeStoryModal() {
+        storyModal.style.display = "none";
+        document.body.style.overflow = "auto"; // Restore scrolling
+    }
+
+    // Event listeners for the modal
+    closeModalBtn.addEventListener('click', closeStoryModal);
+    window.addEventListener('click', (event) => {
+        if (event.target === storyModal) {
+            closeStoryModal();
+        }
+    });
+
+    // Delegate event listener for the "Read story" buttons
+    function addStoryButtonListeners() {
+        document.querySelectorAll('[data-story-id]').forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const storyId = e.target.getAttribute('data-story-id');
+                openStoryModal(storyId);
+            });
+        });
+    }
+    
+    // Initial load and setup function
+    function initStoriesPage() {
+        // Find and render the featured story
+        const featuredStory = STORIES.find(s => s.isFeatured);
+        if (featuredStory) {
+            featuredStoryImageContainer.innerHTML = `
+                <img src="${featuredStory.img}" class="rounded-3xl shadow-2xl w-full h-[320px] object-cover"
+                    alt="${featuredStory.title}"
+                    onerror="this.onerror=null;this.src='https://placehold.co/800x480/fff1f2/ef4444?text=Featured+Story';">
+            `;
+            featuredStoryTextContainer.innerHTML = `
+                <span class="inline-block text-xs font-bold uppercase tracking-widest text-red-500">Featured</span>
+                <h2 class="mt-2 text-2xl md:text-3xl font-extrabold">${featuredStory.title}</h2>
+                <p class="mt-3 text-gray-600">${featuredStory.excerpt}</p>
+                <div class="mt-5 flex gap-3">
+                    <button class="btn-primary rounded-full px-6 py-2.5 font-semibold" data-story-id="${featuredStory.id}">Read Full Story</button>
+                    <a href="/coaching.html" class="px-6 py-2.5 rounded-full border border-gray-300 font-semibold">Start Coaching</a>
+                </div>
+            `;
+        }
+
+        // Add event listeners for filters and sort
+        chips.forEach(chip => {
+            chip.addEventListener('click', () => {
+                chips.forEach(c => c.classList.remove('active'));
+                chip.classList.add('active');
+                activeTag = chip.dataset.filter;
+                currentPage = 1;
+                renderStories();
+            });
+        });
+
+        search.addEventListener('input', (e) => {
+            query = e.target.value || '';
+            currentPage = 1;
+            renderStories();
+        });
+
+        sortSel.addEventListener('change', (e) => {
+            sort = e.target.value;
+            currentPage = 1;
+            renderStories();
+        });
+        
+        // Initial render of the stories grid
+        renderStories();
+        addStoryButtonListeners();
+    }
+    
+    // Call the initialization function when the DOM is ready
+    document.addEventListener('DOMContentLoaded', initStoriesPage);
+
+  </script>
+</body>
+</html>

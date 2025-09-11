@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The Gear Grid | Perfect Fitness Solutions</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background-color: #F8F9FA; color: #1a202c; }
+    .hero-gradient { background: linear-gradient(135deg, #FFF1F2 0%, #E0F2FE 100%); }
+    .challenge-gradient { background: linear-gradient(135deg, #4F46E5 0%, #EF4444 100%); }
+    .card-hover { transition: transform .3s ease, box-shadow .3s ease; }
+    .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgba(0,0,0,.1), 0 10px 10px -5px rgba(0,0,0,.04); }
+    .btn-primary { background-color: #EF4444; color: #fff; transition: background-color .3s; }
+    .btn-primary:hover { background-color: #DC2626; }
+    .btn-secondary { background-color: #1a202c; color: #fff; transition: background-color .3s; }
+    .btn-secondary:hover { background-color: #374151; }
+    .nav-link-hover { position: relative; transition: color .3s; }
+    .nav-link-hover::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 50%; transform: translateX(-50%); background-color: #EF4444; transition: width .3s; }
+    .nav-link-hover:hover::after, .nav-link-hover.active::after { width: 60%; }
+    .filter-chip { border: 1px solid #e5e7eb; }
+    .filter-chip.active { background:#ef4444; color:#fff; border-color:#ef4444; }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- Header & Navbar (same structure as home page) -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="/index.html" class="flex items-center space-x-2">
+        <img src="https://profitsports.in/images/pfs-color.png" alt="Perfect Fitness Solutions Pvt Ltd Logo" class="h-12 w-auto">
+      </a>
+      <div class="lg:hidden">
+        <button id="nav-toggle" class="text-gray-800 focus:outline-none" aria-label="Open Menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+        </button>
+      </div>
+      <div id="nav-menu" class="hidden lg:flex lg:items-center lg:space-x-6">
+        <a href="/index.html" class="text-gray-700 nav-link-hover font-medium">Home</a>
+        <a href="/events.html" class="text-gray-700 nav-link-hover font-medium">Signature Strides</a>
+        <a href="/corporate.html" class="text-gray-700 nav-link-hover font-medium">Power Up @ Work</a>
+        <a href="/coaching.html" class="text-gray-700 nav-link-hover font-medium">Fuel Lab</a>
+        <a href="/stories.html" class="text-gray-700 nav-link-hover font-medium">Stories & Impact</a>
+        <a href="/merchandise.html" class="text-gray-700 nav-link-hover font-medium active">The Gear Grid</a>
+        <a href="/events.html" class="btn-primary rounded-full px-5 py-2.5 font-semibold ml-2">Get Started</a>
+      </div>
+    </nav>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden px-6 pb-4 border-t border-gray-200">
+      <a href="/index.html" class="block py-2 text-gray-700 font-medium">Home</a>
+      <a href="/events.html" class="block py-2 text-gray-700 font-medium">Signature Strides</a>
+      <a href="/corporate.html" class="block py-2 text-gray-700 font-medium">Power Up @ Work</a>
+      <a href="/coaching.html" class="block py-2 text-gray-700 font-medium">Fuel Lab</a>
+      <a href="/stories.html" class="block py-2 text-gray-700 font-medium">Stories & Impact</a>
+      <a href="/merchandise.html" class="block py-2 text-gray-700 font-medium">The Gear Grid</a>
+      <a href="/coaching.html#contact" class="block mt-2 text-center btn-primary rounded-full px-5 py-2.5 font-semibold">Get Started</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero-gradient py-16 md:py-20">
+      <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">The Gear Grid</h1>
+          <p class="mt-3 text-lg text-gray-700 max-w-2xl">Performance apparel and essentials trusted by our community—designed for comfort, durability, and style on every stride.</p>
+          <div class="mt-6 flex gap-3">
+            <a href="#products" class="btn-primary rounded-full px-7 py-3 font-bold shadow-lg">Shop Products</a>
+            <a href="/events.html" class="btn-secondary rounded-full px-7 py-3 font-bold shadow-lg">Bundle with Events</a>
+          </div>
+        </div>
+        <div class="hidden lg:block">
+          <img src="/assets/images/merch-hero.jpg" class="rounded-3xl shadow-2xl" alt="Merchandise banner"
+               onerror="this.onerror=null;this.src='https://placehold.co/640x420/fff1f2/ef4444?text=Gear+Grid';">
+        </div>
+      </div>
+    </section>
+
+    <!-- Filters + Search -->
+    <section class="py-6 bg-white border-y border-gray-200">
+      <div class="container mx-auto px-6 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+        <div class="flex items-center gap-2 flex-wrap">
+          <button class="filter-chip px-4 py-2 rounded-full text-sm active" data-filter="all">All</button>
+          <button class="filter-chip px-4 py-2 rounded-full text-sm" data-filter="apparel">Apparel</button>
+          <button class="filter-chip px-4 py-2 rounded-full text-sm" data-filter="headwear">Headwear</button>
+          <button class="filter-chip px-4 py-2 rounded-full text-sm" data-filter="hydration">Hydration</button>
+          <button class="filter-chip px-4 py-2 rounded-full text-sm" data-filter="accessories">Accessories</button>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="relative w-full lg:w-80">
+            <input id="search" type="text" placeholder="Search products..."
+                   class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500">
+            <i class="fa-solid fa-magnifying-glass text-gray-400 absolute right-3 top-2.5"></i>
+          </div>
+          <select id="sort" class="px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500">
+            <option value="featured">Sort: Featured</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="name-asc">Name: A → Z</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section id="products" class="py-14">
+      <div class="container mx-auto px-6">
+        <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Cards injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits strip -->
+    <section class="py-10 bg-white border-t border-gray-200">
+      <div class="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div class="p-5 rounded-xl bg-gray-50">
+          <i class="fa-solid fa-truck-fast text-red-500"></i>
+          <p class="mt-2 font-semibold">Fast Shipping</p>
+          <p class="text-sm text-gray-600">Pan-India delivery</p>
+        </div>
+        <div class="p-5 rounded-xl bg-gray-50">
+          <i class="fa-solid fa-rotate-left text-red-500"></i>
+          <p class="mt-2 font-semibold">Easy Returns</p>
+          <p class="text-sm text-gray-600">7-day replacement</p>
+        </div>
+        <div class="p-5 rounded-xl bg-gray-50">
+          <i class="fa-solid fa-shield-halved text-red-500"></i>
+          <p class="mt-2 font-semibold">Quality Assured</p>
+          <p class="text-sm text-gray-600">Community-tested</p>
+        </div>
+        <div class="p-5 rounded-xl bg-gray-50">
+          <i class="fa-solid fa-gift text-red-500"></i>
+          <p class="mt-2 font-semibold">Team Orders</p>
+          <p class="text-sm text-gray-600">Bulk customization</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Band -->
+    <section class="challenge-gradient text-white">
+      <div class="container mx-auto px-6 py-12 text-center">
+        <h2 class="text-2xl md:text-3xl font-extrabold mb-4">Outfit the squad for race day</h2>
+        <a href="/events.html" class="bg-white text-red-500 rounded-full px-10 py-4 font-bold inline-block shadow-xl">See Event Calendar</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (same as home) -->
+  <footer class="bg-gray-800 text-white">
+    <div class="container mx-auto px-6 py-16">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="space-y-4">
+          <h3 class="text-lg font-semibold uppercase tracking-wider">The Company</h3>
+          <ul class="space-y-2">
+            <li><a href="/index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+            <li><a href="/coaching.html" class="text-gray-400 hover:text-white transition">Our Team</a></li>
+            <li><a href="/stories.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+            <li><a href="/events.html" class="text-gray-400 hover:text-white transition">Support</a></li>
+          </ul>
+        </div>
+        <div class="space-y-4">
+          <h3 class="text-lg font-semibold uppercase tracking-wider">PFS</h3>
+          <ul class="space-y-2">
+            <li><a href="/events.html" class="text-gray-400 hover:text-white transition">Signature Strides</a></li>
+            <li><a href="/corporate.html" class="text-gray-400 hover:text-white transition">Power Up @ Work</a></li>
+            <li><a href="/merchandise.html" class="text-gray-400 hover:text-white transition">The Gear Grid</a></li>
+            <li><a href="/coaching.html" class="text-gray-400 hover:text-white transition">Fuel Lab</a></li>
+            <li><a href="/stories.html" class="text-gray-400 hover:text-white transition">Stories & Impact</a></li>
+          </ul>
+        </div>
+        <div class="space-y-4">
+          <h3 class="text-lg font-semibold uppercase tracking-wider">Follow Us</h3>
+          <div class="flex space-x-4 text-gray-400">
+            <a href="#" class="hover:text-white transition" aria-label="Facebook"><i class="fab fa-facebook-f fa-lg"></i></a>
+            <a href="#" class="hover:text-white transition" aria-label="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="#" class="hover:text-white transition" aria-label="Twitter"><i class="fab fa-twitter fa-lg"></i></a>
+            <a href="#" class="hover:text-white transition" aria-label="YouTube"><i class="fab fa-youtube fa-lg"></i></a>
+          </div>
+        </div>
+        <div class="space-y-4">
+          <h3 class="text-lg font-semibold uppercase tracking-wider">Stay Updated</h3>
+          <ul class="space-y-2">
+            <li><a href="/events.html" class="text-gray-400 hover:text-white transition">Event Calendar</a></li>
+            <li><a href="/coaching.html" class="text-gray-400 hover:text-white transition">Trainings</a></li>
+          </ul>
+          <form id="newsletterForm" class="mt-4 flex gap-2">
+            <input type="email" required placeholder="Email address"
+                   class="w-full px-3 py-2 rounded-lg border border-gray-600 bg-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500"/>
+            <button class="px-4 py-2 rounded-lg bg-red-500 text-white hover:bg-red-600">Join</button>
+          </form>
+          <p id="newsletterMsg" class="text-xs text-gray-400"></p>
+        </div>
+      </div>
+      <div class="mt-12 border-top border-gray-700 pt-8 text-center text-gray-500 text-sm">
+        <p>© <span id="year"></span> Perfect Fitness Solutions Pvt Ltd. All Rights Reserved. Website by Vivek Pandey.</p>
+        <p class="mt-1">Prices shown are approximate in INR(₹).</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.getElementById('nav-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (navToggle && mobileMenu) {
+      navToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+      mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+    }
+
+    // Footer year
+    const y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+
+    // Newsletter mock
+    const newsletterForm = document.getElementById('newsletterForm');
+    const newsletterMsg = document.getElementById('newsletterMsg');
+    if (newsletterForm && newsletterMsg) {
+      newsletterForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        newsletterMsg.textContent = "Thanks for joining! Stay tuned for updates.";
+        newsletterForm.reset();
+      });
+    }
+
+    // Simple in-page product catalog
+    const products = [
+      { id: 'p1', name: 'CR Performance Tee', price: 1199, img: '/assets/images/tee.jpg', cat: 'apparel' },
+      { id: 'p2', name: 'Run Cap (Aero Mesh)', price: 899, img: '/assets/images/cap.jpg', cat: 'headwear' },
+      { id: 'p3', name: 'Hydration Bottle 750ml', price: 699, img: '/assets/images/bottle.jpg', cat: 'hydration' },
+      { id: 'p4', name: 'Training Shorts 5”', price: 1299, img: '/assets/images/shorts.jpg', cat: 'apparel' },
+      { id: 'p5', name: 'Crew Socks (2 Pack)', price: 499, img: '/assets/images/socks.jpg', cat: 'accessories' },
+      { id: 'p6', name: 'Race Belt', price: 599, img: '/assets/images/belt.jpg', cat: 'accessories' },
+      { id: 'p7', name: 'Windbreaker Jacket', price: 2299, img: '/assets/images/jacket.jpg', cat: 'apparel' },
+      { id: 'p8', name: 'Trucker Cap', price: 899, img: '/assets/images/cap-2.jpg', cat: 'headwear' }
+    ];
+
+    const grid = document.getElementById('productsGrid');
+    const search = document.getElementById('search');
+    const sortSel = document.getElementById('sort');
+    const chips = Array.from(document.querySelectorAll('.filter-chip'));
+    let activeCat = 'all';
+    let query = '';
+    let sort = 'featured';
+
+    function formatINR(n) {
+      return '₹' + n.toLocaleString('en-IN');
+    }
+
+    function cardHTML(p) {
+      return `
+        <div class="bg-white rounded-xl border border-gray-200 overflow-hidden card-hover flex flex-col">
+          <div class="relative">
+            <img src="${p.img}" alt="${p.name}" class="w-full h-56 object-cover"
+                 onerror="this.onerror=null;this.src='https://placehold.co/480x320/f8fafc/1f2937?text=${encodeURIComponent(p.name)}';">
+            <div class="absolute top-3 left-3 bg-white/90 text-gray-800 text-xs font-bold px-3 py-1.5 rounded-full capitalize">${p.cat}</div>
+          </div>
+          <div class="p-5 flex flex-col flex-grow">
+            <h3 class="font-bold text-lg">${p.name}</h3>
+            <p class="mt-1 text-gray-600">${formatINR(p.price)}</p>
+            <div class="mt-auto pt-4 flex gap-2">
+              <button class="btn-primary px-4 py-2 rounded-lg text-sm" data-add="${p.id}"><i class="fa-solid fa-cart-plus mr-2"></i>Add to cart</button>
+              <button class="px-4 py-2 rounded-lg border border-gray-300 text-sm" data-details="${p.id}">Details</button>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function applyFilters() {
+      let list = [...products];
+      if (activeCat !== 'all') list = list.filter(p => p.cat === activeCat);
+      if (query.trim()) {
+        const q = query.toLowerCase();
+        list = list.filter(p => p.name.toLowerCase().includes(q));
+      }
+      if (sort === 'price-asc') list.sort((a,b)=>a.price-b.price);
+      if (sort === 'price-desc') list.sort((a,b)=>b.price-a.price);
+      if (sort === 'name-asc') list.sort((a,b)=>a.name.localeCompare(b.name));
+      grid.innerHTML = list.map(cardHTML).join('') || `
+        <div class="col-span-full text-center text-gray-600">No products match your filters.</div>
+      `;
+    }
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chips.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        activeCat = chip.dataset.filter;
+        applyFilters();
+      });
+    });
+
+    search.addEventListener('input', (e) => {
+      query = e.target.value || '';
+      applyFilters();
+    });
+
+    sortSel.addEventListener('change', (e) => {
+      sort = e.target.value;
+      applyFilters();
+    });
+
+    // Initial render
+    applyFilters();
+
+    // Demo handlers
+    document.addEventListener('click', (e) => {
+      const add = e.target.closest('[data-add]');
+      const det = e.target.closest('[data-details]');
+      if (add) {
+        const pid = add.getAttribute('data-add');
+        const prod = products.find(p=>p.id===pid);
+        alert(`Added to cart: ${prod.name} (${formatINR(prod.price)})`);
+      }
+      if (det) {
+        const pid = det.getAttribute('data-details');
+        const prod = products.find(p=>p.id===pid);
+        alert(`Details:\n${prod.name}\nPrice: ${formatINR(prod.price)}\nCategory: ${prod.cat}`);
+      }
+    });
+  </script>
+</body>
+</html>

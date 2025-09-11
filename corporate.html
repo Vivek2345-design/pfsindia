@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Power Up @ Work | Perfect Fitness Solutions</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background-color: #F8F9FA; color: #1a202c; }
+    .hero-gradient { background: linear-gradient(135deg, #FFF1F2 0%, #E0F2FE 100%); }
+    .challenge-gradient { background: linear-gradient(135deg, #4F46E5 0%, #EF4444 100%); }
+    .card-hover { transition: transform .3s ease, box-shadow .3s ease; }
+    .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgba(0,0,0,.1), 0 10px 10px -5px rgba(0,0,0,.04); }
+    .btn-primary { background-color: #EF4444; color: #fff; transition: background-color .3s; }
+    .btn-primary:hover { background-color: #DC2626; }
+    .btn-secondary { background-color: #1a202c; color: #fff; transition: background-color .3s; }
+    .btn-secondary:hover { background-color: #374151; }
+    .nav-link-hover { position: relative; transition: color .3s; }
+    .nav-link-hover::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 50%; transform: translateX(-50%); background-color: #EF4444; transition: width .3s; }
+    .nav-link-hover:hover::after, .nav-link-hover.active::after { width: 60%; }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- Header & Navbar (same structure as home page) -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="/index.html" class="flex items-center space-x-2">
+        <img src="https://profitsports.in/images/pfs-color.png" alt="Perfect Fitness Solutions Pvt Ltd Logo" class="h-12 w-auto">
+      </a>
+      <div class="lg:hidden">
+        <button id="nav-toggle" class="text-gray-800 focus:outline-none" aria-label="Open Menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+        </button>
+      </div>
+      <div id="nav-menu" class="hidden lg:flex lg:items-center lg:space-x-6">
+        <a href="/index.html" class="text-gray-700 nav-link-hover font-medium">Home</a>
+        <a href="/events.html" class="text-gray-700 nav-link-hover font-medium">Signature Strides</a>
+        <a href="/corporate.html" class="text-gray-700 nav-link-hover font-medium active">Power Up @ Work</a>
+        <a href="/coaching.html" class="text-gray-700 nav-link-hover font-medium">Fuel Lab</a>
+        <a href="/stories.html" class="text-gray-700 nav-link-hover font-medium">Stories & Impact</a>
+        <a href="/events.html" class="btn-primary rounded-full px-5 py-2.5 font-semibold ml-2">Get Started</a>
+      </div>
+    </nav>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden px-6 pb-4 border-t border-gray-200">
+      <a href="/index.html" class="block py-2 text-gray-700 font-medium">Home</a>
+      <a href="/events.html" class="block py-2 text-gray-700 font-medium">Signature Strides</a>
+      <a href="/corporate.html" class="block py-2 text-gray-700 font-medium">Power Up @ Work</a>
+      <a href="/coaching.html" class="block py-2 text-gray-700 font-medium">Fuel Lab</a>
+      <a href="/stories.html" class="block py-2 text-gray-700 font-medium">Stories & Impact</a>
+      <a href="/coaching.html#contact" class="block mt-2 text-center btn-primary rounded-full px-5 py-2.5 font-semibold">Get Started</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero-gradient py-16 md:py-24">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="space-y-5">
+            <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">Power Up @ Work</h1>
+            <h3 class="text-xl font-medium text-gray-700">Corporate wellness programs that foster empathy, inclusion, and high-performing teams.</h3>
+            <p class="text-lg text-gray-600 max-w-2xl">From office step challenges and talk series to race-day programs—we design experiences that boost morale and long-term wellbeing.</p>
+            <div class="flex flex-col sm:flex-row gap-4 pt-2">
+              <a href="#enquire" class="btn-primary rounded-full px-7 py-3 font-bold shadow-lg">Book a Corporate Demo</a>
+              <a href="/events.html" class="btn-secondary rounded-full px-7 py-3 font-bold shadow-lg">Bring Teams to Events</a>
+            </div>
+          </div>
+          <div class="hidden md:block">
+            <img src="images/cwell.jpg" class="rounded-3xl shadow-2xl" alt="Corporate wellness"
+                 onerror="this.onerror=null;this.src='https://placehold.co/600x400/e0f2fe/4f46e5?text=Corporate+Wellness';">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Programs Overview -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Programs for Every Workplace</h2>
+          <p class="text-gray-600 mt-2 max-w-2xl mx-auto">Modular initiatives that fit culture, shift timings, and outcomes—from awareness to measurable impact.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Card 1 -->
+          <div class="bg-white rounded-xl border border-gray-200 p-7 card-hover">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="h-11 w-11 rounded-xl bg-red-50 flex items-center justify-center">
+                <i class="fa-solid fa-person-running text-red-500"></i>
+              </div>
+              <h3 class="font-bold text-lg">Run & Move Challenges</h3>
+            </div>
+            <p class="text-gray-600">Inclusive challenges for steps, walk/run streaks, and cycling—online dashboards, team leaderboards, and rewards.</p>
+            <ul class="mt-4 text-sm text-gray-700 space-y-2">
+              <li>• 21–42 day formats</li>
+              <li>• Hybrid: app + on-ground</li>
+              <li>• HR reports & engagement metrics</li>
+            </ul>
+          </div>
+          <!-- Card 2 -->
+          <div class="bg-white rounded-xl border border-gray-200 p-7 card-hover">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="h-11 w-11 rounded-xl bg-indigo-50 flex items-center justify-center">
+                <i class="fa-solid fa-chalkboard-user text-indigo-600"></i>
+              </div>
+              <h3 class="font-bold text-lg">Workshops & Talks</h3>
+            </div>
+            <p class="text-gray-600">Expert sessions on stress, mobility, nutrition, sleep, and habit design—virtual or on-site with interactive Q&A.</p>
+            <ul class="mt-4 text-sm text-gray-700 space-y-2">
+              <li>• 60–90 minute formats</li>
+              <li>• Movement mini-labs</li>
+              <li>• Follow-up resources & tasks</li>
+            </ul>
+          </div>
+          <!-- Card 3 -->
+          <div class="bg-white rounded-xl border border-gray-200 p-7 card-hover">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="h-11 w-11 rounded-xl bg-emerald-50 flex items-center justify-center">
+                <i class="fa-solid fa-flag-checkered text-emerald-600"></i>
+              </div>
+              <h3 class="font-bold text-lg">Event Partnerships</h3>
+            </div>
+            <p class="text-gray-600">All-inclusive start line solutions—bulk registrations, corporate bib desks, bus logistics, pacers, and team photos.</p>
+            <ul class="mt-4 text-sm text-gray-700 space-y-2">
+              <li>• Employee squads & captains</li>
+              <li>• On-ground hospitality</li>
+              <li>• CSR/inclusion tie-ins</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Outcomes -->
+    <section class="py-16">
+      <div class="container mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Healthier Teams, Stronger Culture</h2>
+            <p class="mt-3 text-gray-600">Our programs are built for sustainable change—high participation on day one, and real habit formation by day thirty.</p>
+            <ul class="mt-6 text-gray-700 space-y-3">
+              <li>• Engagement metrics that HR can track</li>
+              <li>• Inclusion-first: beginners to athletes</li>
+              <li>• Manager toolkits and comms templates</li>
+              <li>• Option to integrate medical partners</li>
+            </ul>
+            <div class="mt-6 flex gap-3">
+              <a href="#enquire" class="btn-primary rounded-full px-7 py-3 font-bold">Enquire Now</a>
+              <a href="/events.html" class="btn-secondary rounded-full px-7 py-3 font-bold">Upcoming Events</a>
+            </div>
+          </div>
+          <div>
+            <img src="images/outcome.jpg" class="rounded-3xl shadow-2xl" alt="Corporate outcomes"
+                 onerror="this.onerror=null;this.src='https://placehold.co/640x420/f8fafc/1f2937?text=Outcomes';">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Clients/Partners Section -->
+        <section id="partners" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Trusted By Leading Companies</h2>
+                    <p class="text-gray-600 mt-2">We're proud to partner with organizations that prioritize wellness.</p>
+                </div>
+                <div class="flex flex-wrap justify-center items-center gap-x-12 sm:gap-x-16 md:gap-x-20 gap-y-10">
+                    <img src="https://img.logo.dev/karmalakelands.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Karma Lakelands Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/marutisuzuki.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Maruti Suzuki Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/snu.edu.in?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="SNU Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/apeejay.edu?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Apeejay Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/organicindia.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Organic India Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/apollohospitals.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Apollo Hospitals Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/indiannavy.nic.in?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Indian Navy Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/dlf.in?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="DLF Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/capitaland.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="CapitaLand Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/grupobimbo.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Grupo Bimbo Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/hondacarindia.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Honda Cars Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/manipalhospitals.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Manipal Hospitals Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/nestle.in?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Nestle Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/wns.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="WNS Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/visitmexico.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Visit Mexico Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/aipl.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="AIPL Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/alcissports.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Alcis Sports Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/ericsson.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Ericsson Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/heromotocorp.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Hero MotoCorp Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/jio.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Jio Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/iimbaa.org?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="IIMBAA Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/teleperformance.in?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Teleperformance Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/hdfcbank.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="HDFC Bank Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/nokia.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Nokia Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/icicibank.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="ICICI Bank Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/ey.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="EY Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/ukg.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="UKG Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/parashealth.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Paras Health Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/tcsion.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="TCS iON Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/healthsetgo.co?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="HealthSetGo Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/marriott.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Marriott Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/nationalhrd.org?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="National HRD Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/leap-performance.in?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Leap Performance Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/accor.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Accor Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/canada.ca?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Canada.ca Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/decathlon.in?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Decathlon Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/vlcc.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="VLCC Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/paytm.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Paytm Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/harvestgold.in?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Harvest Gold Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/yesbank.in?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Yes Bank Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/gatorade.co.in?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Gatorade Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/wellthy.care?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Wellthy Care Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/vegasmall.in?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Vegas Mall Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/aosm.in?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="AOSM Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/thermaxglobal.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Thermax Global Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/rosaherbalcare.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Rosa Herbal Care Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/fastandup.in?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Fast&Up Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/honvedelem.hu?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Honvedelem Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/primushospital.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Primus Hospital Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/anvayins.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Anvayins Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/modernfoods.co.in?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Modern Foods Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/vega.co.in?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Vega Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/mcfrd.gov.in?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="MCFRD Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/prestogifts.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Presto Gifts Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/alcobrew.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Alcobrew Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/caperscorporatewellness.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Capers Corporate Wellness Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/gims.ac.in?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="GIMS Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/artemishospitals.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Artemis Hospitals Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/delta105.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Delta 105 Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/parisianbakery.in?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Parisian Bakery Logo" class="h-10 md:h-12  transition duration-300">
+                </div>
+            </div>
+        </section>
+
+
+    <!-- Enquiry Form -->
+    <section id="enquire" class="py-16">
+      <div class="container mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-10 items-start">
+          <div class="bg-white rounded-2xl border border-gray-200 p-6 md:p-8">
+            <h3 class="text-2xl font-bold">Enquire for Corporate Solutions</h3>
+            <p class="mt-2 text-gray-600">Share goals, timelines, and team size—we’ll tailor a proposal.</p>
+            <form id="corporateForm" class="mt-6 grid sm:grid-cols-2 gap-4">
+              <input name="company" required placeholder="Company Name" class="px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500" />
+              <input name="contact" required placeholder="Contact Person" class="px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500" />
+              <input name="email" type="email" required placeholder="Work Email" class="px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500" />
+              <input name="size" placeholder="Team Size" class="px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500" />
+              <textarea name="requirements" rows="4" placeholder="Describe your objectives" class="sm:col-span-2 px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500"></textarea>
+              <button class="sm:col-span-2 btn-primary rounded-lg px-5 py-3">Submit</button>
+            </form>
+            <p id="corporateMsg" class="mt-2 text-sm text-gray-600"></p>
+          </div>
+          <div class="space-y-6">
+            <div class="bg-white rounded-2xl border border-gray-200 p-6">
+              <h4 class="font-bold">Rollout Options</h4>
+              <ul class="mt-3 text-sm text-gray-700 space-y-2">
+                <li>• Single-site launch or multi-city rollout</li>
+                <li>• Calendar-based: quarterly/annual plan</li>
+                <li>• CSR and inclusion-friendly tracks</li>
+              </ul>
+            </div>
+            <div class="bg-white rounded-2xl border border-gray-200 p-6">
+              <h4 class="font-bold">Deliverables</h4>
+              <ul class="mt-3 text-sm text-gray-700 space-y-2">
+                <li>• Creative kit: mails, posters, assets</li>
+                <li>• Dashboards: participation & outcomes</li>
+                <li>• Post-program insights & next steps</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Band -->
+    <section class="challenge-gradient text-white">
+      <div class="container mx-auto px-6 py-12 text-center">
+        <h2 class="text-2xl md:text-3xl font-extrabold mb-4">Make wellness your competitive advantage</h2>
+        <a href="/events.html" class="bg-white text-red-500 rounded-full px-10 py-4 font-bold inline-block shadow-xl">View Event Calendar</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (same structure and style as home page) -->
+  <footer class="bg-gray-800 text-white">
+    <div class="container mx-auto px-6 py-16">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="space-y-4">
+          <h3 class="text-lg font-semibold uppercase tracking-wider">The Company</h3>
+          <ul class="space-y-2">
+            <li><a href="/index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+            <li><a href="/coaching.html" class="text-gray-400 hover:text-white transition">Our Team</a></li>
+            <li><a href="/stories.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+            <li><a href="/events.html" class="text-gray-400 hover:text-white transition">Support</a></li>
+          </ul>
+        </div>
+        <div class="space-y-4">
+          <h3 class="text-lg font-semibold uppercase tracking-wider">PFS</h3>
+          <ul class="space-y-2">
+            <li><a href="/events.html" class="text-gray-400 hover:text-white transition">Signature Strides</a></li>
+            <li><a href="/corporate.html" class="text-gray-400 hover:text-white transition">Power Up @ Work</a></li>
+            <li><a href="/merchandise.html" class="text-gray-400 hover:text-white transition">The Gear Grid</a></li>
+            <li><a href="/coaching.html" class="text-gray-400 hover:text-white transition">Fuel Lab</a></li>
+            <li><a href="/stories.html" class="text-gray-400 hover:text-white transition">Stories & Impact</a></li>
+          </ul>
+        </div>
+        <div class="space-y-4">
+          <h3 class="text-lg font-semibold uppercase tracking-wider">Follow Us</h3>
+          <div class="flex space-x-4 text-gray-400">
+            <a href="#" class="hover:text-white transition" aria-label="Facebook"><i class="fab fa-facebook-f fa-lg"></i></a>
+            <a href="#" class="hover:text-white transition" aria-label="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="#" class="hover:text-white transition" aria-label="Twitter"><i class="fab fa-twitter fa-lg"></i></a>
+            <a href="#" class="hover:text-white transition" aria-label="YouTube"><i class="fab fa-youtube fa-lg"></i></a>
+          </div>
+        </div>
+        <div class="space-y-4">
+          <h3 class="text-lg font-semibold uppercase tracking-wider">Stay Updated</h3>
+          <ul class="space-y-2">
+            <li><a href="/events.html" class="text-gray-400 hover:text-white transition">Event Calendar</a></li>
+            <li><a href="/coaching.html" class="text-gray-400 hover:text-white transition">Trainings</a></li>
+          </ul>
+          <form id="newsletterForm" class="mt-4 flex gap-2">
+            <input type="email" required placeholder="Email address"
+                   class="w-full px-3 py-2 rounded-lg border border-gray-600 bg-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500"/>
+            <button class="px-4 py-2 rounded-lg bg-red-500 text-white hover:bg-red-600">Join</button>
+          </form>
+          <p id="newsletterMsg" class="text-xs text-gray-400"></p>
+        </div>
+      </div>
+      <div class="mt-12 border-top border-gray-700 pt-8 text-center text-gray-500 text-sm">
+        <p>© <span id="year"></span> Perfect Fitness Solutions Pvt Ltd. All Rights Reserved. Website by Vivek Pandey.</p>
+        <p class="mt-1">Prices shown are approximate in INR(₹).</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.getElementById('nav-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (navToggle && mobileMenu) {
+      navToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+      mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+    }
+
+    // Footer year
+    const y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+
+    // Newsletter mock
+    const newsletterForm = document.getElementById('newsletterForm');
+    const newsletterMsg = document.getElementById('newsletterMsg');
+    if (newsletterForm && newsletterMsg) {
+      newsletterForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        newsletterMsg.textContent = "Thanks for joining! Stay tuned for updates.";
+        newsletterForm.reset();
+      });
+    }
+
+    // Corporate form mock
+    const corpForm = document.getElementById('corporateForm');
+    const corpMsg = document.getElementById('corporateMsg');
+    if (corpForm && corpMsg) {
+      corpForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        corpMsg.textContent = "Inquiry received. Our team will reach out shortly.";
+        corpForm.reset();
+      });
+    }
+  </script>
+</body>
+</html>

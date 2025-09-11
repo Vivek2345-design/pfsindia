@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Perfect Fitness Solutions Pvt Ltd | Event & Coaching Hub</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background-color: #F8F9FA; color: #1a202c; }
+    .hero-gradient { background: linear-gradient(135deg, #FFF1F2 0%, #E0F2FE 100%); }
+    .challenge-gradient { background: linear-gradient(135deg, #4F46E5 0%, #EF4444 100%); }
+    .card-hover { transition: transform .3s, box-shadow .3s; }
+    .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgba(0,0,0,.1), 0 10px 10px -5px rgba(0,0,0,.04); }
+    .btn-primary { background-color: #EF4444; color: #fff; transition: background-color .3s; }
+    .btn-primary:hover { background-color: #DC2626; }
+    .btn-secondary { background-color: #1a202c; color: #fff; transition: background-color .3s; }
+    .btn-secondary:hover { background-color: #374151; }
+    .nav-link-hover { position: relative; transition: color .3s; }
+    .nav-link-hover::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 50%; transform: translateX(-50%); background-color: #EF4444; transition: width .3s; }
+    .nav-link-hover:hover::after, .nav-link-hover.active::after { width: 60%; }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- Header & Navbar -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="/" class="flex items-center space-x-2">
+        <img src="https://profitsports.in/images/pfs-color.png" alt="Perfect Fitness Solutions Pvt Ltd Logo" class="h-12 w-auto">
+      </a>
+      <div class="lg:hidden">
+        <button id="nav-toggle" class="text-gray-800 focus:outline-none" aria-label="Open Menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+        </button>
+      </div>
+      <div id="nav-menu" class="hidden lg:flex lg:items-center lg:space-x-6">
+        <a href="/" class="text-gray-700 nav-link-hover font-medium active">Home</a>
+        <a href="/events.html" class="text-gray-700 nav-link-hover font-medium">Signature Strides</a>
+        <a href="/corporate.html" class="text-gray-700 nav-link-hover font-medium">Power Up @ Work</a>
+        <a href="/coaching.html" class="text-gray-700 nav-link-hover font-medium">Fuel Lab</a>
+        <a href="/stories.html" class="text-gray-700 nav-link-hover font-medium">Stories & Impact</a>
+        <a href="/events.html" class="btn-primary rounded-full px-5 py-2.5 font-semibold ml-2">Get Started</a>
+      </div>
+    </nav>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden px-6 pb-4 border-t border-gray-200">
+      <a href="/" class="block py-2 text-gray-700 font-medium">Home</a>
+      <a href="/events.html" class="block py-2 text-gray-700 font-medium">Signature Strides</a>
+      <a href="/corporate.html" class="block py-2 text-gray-700 font-medium">Power Up @ Work</a>
+      <a href="/coaching.html" class="block py-2 text-gray-700 font-medium">Fuel Lab</a>
+      <a href="/stories.html" class="block py-2 text-gray-700 font-medium">Stories & Impact</a>
+      <a href="/coaching.html#contact" class="block mt-2 text-center btn-primary rounded-full px-5 py-2.5 font-semibold">Get Started</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="hero-gradient py-20 md:py-28">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="space-y-6 text-center md:text-left">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-800 leading-tight">
+              Every Stride Tells a Story. Start Yours Today.
+            </h1>
+            <h3 class="text-xl md:text-2xl font-medium text-gray-700">
+              From sunrise runs to life-changing transformations—with Coach Ravinder, movement becomes meaning.
+            </h3>
+            <p class="text-lg text-gray-600 max-w-xl mx-auto md:mx-0">
+              Join India’s most trusted running mentor and a community that thrives on energy and excellence.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-2">
+              <a href="/events.html" class="btn-primary rounded-full px-8 py-3.5 font-bold text-lg shadow-lg transform hover:scale-105">Join an Upcoming Run</a>
+              <a href="/coaching.html" class="btn-secondary rounded-full px-8 py-3.5 font-bold text-lg shadow-lg transform hover:scale-105">Get Coaching Support</a>
+            </div>
+          </div>
+          <div class="hidden md:block">
+            <img src="images/head.jpg" class="rounded-3xl shadow-2xl" alt="Group of runners"
+              onerror="this.onerror=null;this.src='https://placehold.co/600x400/fee2e2/ef4444?text=Fitness+Image';">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What's on the Start Line? -->
+    <section id="events" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800">What’s on the Start Line?</h2>
+          <p class="text-gray-600 mt-2 max-w-2xl mx-auto">
+            Community-first events built for all paces. Explore our Signature Strides across India.
+          </p>
+        </div>
+
+        <!-- Event Cards (Replace the links and images as needed) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Card 1 -->
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover flex flex-col">
+            <div class="relative">
+              <img src="images/CE/NHRDN.jpg" class="w-full h-52 object-cover" alt="NHRDN Run 2025"
+                   onerror="this.onerror=null;this.src='https://placehold.co/352x235';">
+              <div class="absolute top-3 left-3 bg-green-100 text-green-800 text-xs font-bold px-3 py-1.5 rounded-full">Up to 50% off</div>
+            </div>
+            <div class="p-5 flex flex-col flex-grow">
+              <h3 class="text-lg font-bold text-gray-800">NHRDN Run 2025</h3>
+              <p class="text-sm text-gray-500 mt-2">Urban Akhara,Sector 58, Gurugram</p>
+              <p class="text-sm text-gray-500">21 September, 2025 (Sun) • Running</p>
+              <div class="mt-auto pt-4">
+                <a href="https://www.townscript.com/e/nhrdn-run-2025-141412" class="font-bold text-red-500 hover:text-red-600">View event details →</a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover flex flex-col">
+            <div class="relative">
+              <img src="images/CE/Freedom.jpg" class="w-full h-52 object-cover" alt="Freedom Run 5.0"
+                   onerror="this.onerror=null;this.src='https://placehold.co/352x235';">
+              <div class="absolute top-3 left-3 bg-green-100 text-green-800 text-xs font-bold px-3 py-1.5 rounded-full">Up to 40% off</div>
+            </div>
+            <div class="p-5 flex flex-col flex-grow">
+              <h3 class="text-lg font-bold text-gray-800">Freedom Run 5.0</h3>
+              <p class="text-sm text-gray-500 mt-2">Embassy of Hungary in Delhi</p>
+              <p class="text-sm text-gray-500">19 Oct, 2025 (Sun) • Running, Kids Run</p>
+              <div class="mt-auto pt-4">
+                <a href="https://freedomrun.coachravinder.com/index.html" class="font-bold text-red-500 hover:text-red-600">View event details →</a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover flex flex-col">
+            <div class="relative">
+              <img src="images/CE/Farmley.jpg" class="w-full h-52 object-cover" alt="Farmley Snack Run 2025"
+                   onerror="this.onerror=null;this.src='https://placehold.co/352x235';">
+              <div class="absolute top-3 left-3 bg-green-100 text-green-800 text-xs font-bold px-3 py-1.5 rounded-full">Up to 60% off</div>
+            </div>
+            <div class="p-5 flex flex-col flex-grow">
+              <h3 class="text-lg font-bold text-gray-800">Farmley Snack Run 2025</h3>
+              <p class="text-sm text-gray-500 mt-2">Max Super Speciality Hospital, Sector 128, Noida</p>
+              <p class="text-sm text-gray-500">26 Oct, 2025 (Sun) • Running,Walkathon</p>
+              <div class="mt-auto pt-4">
+                <a href="https://www.townscript.com/e/farmley-snack-run-2025-412020" class="font-bold text-red-500 hover:text-red-600">View event details →</a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover flex flex-col">
+            <div class="relative">
+              <img src="images/CE/Morni.jpg" class="w-full h-52 object-cover" alt="Morni Hills Marathon 2025"
+                   onerror="this.onerror=null;this.src='https://placehold.co/352x235';">
+              <div class="absolute top-3 left-3 bg-green-100 text-green-800 text-xs font-bold px-3 py-1.5 rounded-full">Up to 40% off</div>
+            </div>
+            <div class="p-5 flex flex-col flex-grow">
+              <h3 class="text-lg font-bold text-gray-800">Morni Hills Marathon 2025</h3>
+              <p class="text-sm text-gray-500 mt-2">Holy Child School, Sec 31 Panchkula</p>
+              <p class="text-sm text-gray-500">07 Dec, 2025 (Sat) • Running</p>
+              <div class="mt-auto pt-4">
+                <a href="https://mornihillsmarathon.coachravinder.com/index.html" class="font-bold text-red-500 hover:text-red-600">View event details →</a>
+              </div>
+            </div>
+          </div>
+        </div><!-- grid -->
+      </div>
+    </section>
+
+    <!-- About Coach -->
+    <section id="about" class="py-20">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="order-2 md:order-1 space-y-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-red-500">About Coach Ravinder</h2>
+            <h3 class="text-xl font-semibold text-gray-700">The Engine Behind the Energy.</h3>
+            <p class="text-gray-600">Coach Ravinder has built one of India’s most trusted and consistent running ecosystems—from national events to hyper-local circuits.</p>
+            <p class="text-gray-600">As a coach, he blends physiology, motivation, and trust—one runner at a time.</p>
+            <div class="pt-2">
+              <a href="/coaching.html" class="btn-primary rounded-full px-8 py-3.5 font-bold shadow-lg transform hover:scale-105">Learn More About the Coach</a>
+            </div>
+          </div>
+          <div class="order-1 md:order-2">
+            <img src="images/coach.jpg" class="rounded-3xl shadow-2xl" alt="Coach Ravinder"
+              onerror="this.onerror=null;this.src='https://placehold.co/600x400/fed7d7/e53e3e?text=Coach';">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pick Your Playground -->
+    <section id="stories" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Pick Your Playground</h2>
+          <p class="text-gray-600 mt-2 max-w-2xl mx-auto">We don’t just train you. We support your entire journey—from signup to finish line to lifelong habit.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <a href="/events.html" class="bg-white rounded-xl shadow-lg overflow-hidden card-hover flex flex-col">
+            <img src="images/SignatureS.JPG" class="w-full h-48 object-cover" alt="Signature Strides">
+            <div class="p-5 flex flex-col flex-grow">
+              <h3 class="text-xl font-bold text-gray-800">🏃 Signature Strides</h3>
+              <p class="text-gray-600 mt-2 flex-grow">Flagship races, curated circuits, and seasonal challenges across India.</p>
+              <span class="font-bold text-red-500 hover:text-red-600 mt-4">View All Events →</span>
+            </div>
+          </a>
+          <a href="/coaching.html" class="bg-white rounded-xl shadow-lg overflow-hidden card-hover flex flex-col">
+            <img src="images/coaching.jpg" class="w-full h-48 object-cover" alt="Fuel Lab">
+            <div class="p-5 flex flex-col flex-grow">
+              <h3 class="text-xl font-bold text-gray-800">🔬 Fuel Lab</h3>
+              <p class="text-gray-600 mt-2 flex-grow">Personalised coaching, diagnostics, and performance nutrition.</p>
+              <span class="font-bold text-red-500 hover:text-red-600 mt-4">Explore Coaching Plans →</span>
+            </div>
+          </a>
+          <a href="/merchandise.html" class="bg-white rounded-xl shadow-lg overflow-hidden card-hover flex flex-col">
+            <img src="images/geargrid.JPG" class="w-full h-48 object-cover" alt="The Gear Grid">
+            <div class="p-5 flex flex-col flex-grow">
+              <h3 class="text-xl font-bold text-gray-800">🧢 The Gear Grid</h3>
+              <p class="text-gray-600 mt-2 flex-grow">Apparel, race kits, and official Coach Ravinder gear.</p>
+              <span class="font-bold text-red-500 hover:text-red-600 mt-4">Visit the Shop →</span>
+            </div>
+          </a>
+          <a href="/corporate.html" class="bg-white rounded-xl shadow-lg overflow-hidden card-hover flex flex-col">
+            <img src="images/powerup.jpg" class="w-full h-48 object-cover" alt="Corporate">
+            <div class="p-5 flex flex-col flex-grow">
+              <h3 class="text-xl font-bold text-gray-800">💼 Power Up @ Work</h3>
+              <p class="text-gray-600 mt-2 flex-grow">Corporate wellness programs, inclusion events, and HR-led transformation.</p>
+              <span class="font-bold text-red-500 hover:text-red-600 mt-4">Book a Corporate Demo →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+     <!-- Our Clients/Partners Section -->
+        <section id="partners" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Trusted By Leading Companies</h2>
+                    <p class="text-gray-600 mt-2">We're proud to partner with organizations that prioritize wellness.</p>
+                </div>
+                <div class="flex flex-wrap justify-center items-center gap-x-12 sm:gap-x-16 md:gap-x-20 gap-y-10">
+                    <img src="https://img.logo.dev/karmalakelands.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Karma Lakelands Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/marutisuzuki.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Maruti Suzuki Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/snu.edu.in?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="SNU Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/apeejay.edu?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Apeejay Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/organicindia.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Organic India Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/apollohospitals.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Apollo Hospitals Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/indiannavy.nic.in?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Indian Navy Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/dlf.in?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="DLF Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/capitaland.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="CapitaLand Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/grupobimbo.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Grupo Bimbo Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/hondacarindia.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Honda Cars Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/manipalhospitals.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Manipal Hospitals Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/nestle.in?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Nestle Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/wns.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="WNS Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/visitmexico.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Visit Mexico Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/aipl.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="AIPL Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/alcissports.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Alcis Sports Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/ericsson.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Ericsson Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/heromotocorp.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Hero MotoCorp Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/jio.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Jio Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/iimbaa.org?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="IIMBAA Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/teleperformance.in?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Teleperformance Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/hdfcbank.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="HDFC Bank Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/nokia.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Nokia Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/icicibank.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="ICICI Bank Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/ey.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="EY Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/ukg.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="UKG Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/parashealth.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Paras Health Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/tcsion.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="TCS iON Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/healthsetgo.co?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="HealthSetGo Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/marriott.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Marriott Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/nationalhrd.org?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="National HRD Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/leap-performance.in?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Leap Performance Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/accor.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Accor Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/canada.ca?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Canada.ca Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/decathlon.in?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Decathlon Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/vlcc.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="VLCC Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/paytm.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Paytm Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/harvestgold.in?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Harvest Gold Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/yesbank.in?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Yes Bank Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/gatorade.co.in?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Gatorade Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/wellthy.care?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Wellthy Care Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/vegasmall.in?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Vegas Mall Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/aosm.in?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="AOSM Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/thermaxglobal.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Thermax Global Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/rosaherbalcare.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Rosa Herbal Care Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/fastandup.in?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Fast&Up Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/honvedelem.hu?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Honvedelem Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/primushospital.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Primus Hospital Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/anvayins.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Anvayins Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/modernfoods.co.in?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Modern Foods Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/vega.co.in?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Vega Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/mcfrd.gov.in?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="MCFRD Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/prestogifts.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Presto Gifts Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/alcobrew.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Alcobrew Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/caperscorporatewellness.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Capers Corporate Wellness Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/gims.ac.in?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="GIMS Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/artemishospitals.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Artemis Hospitals Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/delta105.com?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Delta 105 Logo" class="h-10 md:h-12  transition duration-300">
+                    <img src="https://img.logo.dev/parisianbakery.in?token=pk_G7UwDaapR1OLylkqLvJ6hQ&size=69&format=png&retina=true" alt="Parisian Bakery Logo" class="h-10 md:h-12  transition duration-300">
+                </div>
+            </div>
+        </section>
+
+
+    <!-- Challenge CTA -->
+    <section class="challenge-gradient text-white">
+      <div class="container mx-auto px-6 py-16 text-center">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-6">Are you ready for the challenge?</h2>
+        <a href="/events.html" class="bg-white text-red-500 rounded-full px-10 py-4 font-bold text-lg shadow-xl transform hover:scale-105 inline-block">View Event Calendar</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-gray-800 text-white">
+    <div class="container mx-auto px-6 py-16">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="space-y-4">
+          <h3 class="text-lg font-semibold uppercase tracking-wider">The Company</h3>
+          <ul class="space-y-2">
+            <li><a href="/" class="text-gray-400 hover:text-white transition">Home</a></li>
+            <li><a href="/coaching.html" class="text-gray-400 hover:text-white transition">Our Team</a></li>
+            <li><a href="/stories.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+            <li><a href="/events.html" class="text-gray-400 hover:text-white transition">Support</a></li>
+          </ul>
+        </div>
+        <div class="space-y-4">
+          <h3 class="text-lg font-semibold uppercase tracking-wider">PFS</h3>
+          <ul class="space-y-2">
+            <li><a href="/events.html" class="text-gray-400 hover:text-white transition">Signature Strides</a></li>
+            <li><a href="/corporate.html" class="text-gray-400 hover:text-white transition">Power Up @ Work</a></li>
+            <li><a href="/merchandise.html" class="text-gray-400 hover:text-white transition">The Gear Grid</a></li>
+            <li><a href="/coaching.html" class="text-gray-400 hover:text-white transition">Fuel Lab</a></li>
+            <li><a href="/stories.html" class="text-gray-400 hover:text-white transition">Stories & Impact</a></li>
+          </ul>
+        </div>
+        <div class="space-y-4">
+          <h3 class="text-lg font-semibold uppercase tracking-wider">Follow Us</h3>
+          <div class="flex space-x-4 text-gray-400">
+            <a href="#" class="hover:text-white transition" aria-label="Facebook"><i class="fab fa-facebook-f fa-lg"></i></a>
+            <a href="#" class="hover:text-white transition" aria-label="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="#" class="hover:text-white transition" aria-label="Twitter"><i class="fab fa-twitter fa-lg"></i></a>
+            <a href="#" class="hover:text-white transition" aria-label="YouTube"><i class="fab fa-youtube fa-lg"></i></a>
+          </div>
+        </div>
+        <div class="space-y-4">
+          <h3 class="text-lg font-semibold uppercase tracking-wider">Stay Updated</h3>
+          <ul class="space-y-2">
+            <li><a href="/events.html" class="text-gray-400 hover:text-white transition">Event Calendar</a></li>
+            <li><a href="/coaching.html" class="text-gray-400 hover:text-white transition">Trainings</a></li>
+          </ul>
+          <form id="newsletterForm" class="mt-4 flex gap-2">
+            <input type="email" required placeholder="Email address"
+                   class="w-full px-3 py-2 rounded-lg border border-gray-600 bg-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500"/>
+            <button class="px-4 py-2 rounded-lg bg-red-500 text-white hover:bg-red-600">Join</button>
+          </form>
+          <p id="newsletterMsg" class="text-xs text-gray-400"></p>
+        </div>
+      </div>
+      <div class="mt-12 border-top border-gray-700 pt-8 text-center text-gray-500 text-sm">
+        <p>© <span id="year"></span> Perfect Fitness Solutions Pvt Ltd. All Rights Reserved. Website by Vivek Pandey.</p>
+        <p class="mt-1">Prices shown are approximate in INR(₹).</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+  <script>
+    // Mobile nav
+    const navToggle = document.getElementById('nav-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (navToggle && mobileMenu) {
+      navToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+      mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+    }
+  </script>
+</body>
+</html>
