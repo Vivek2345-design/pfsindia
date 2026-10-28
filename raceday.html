@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b1f2e" />
+  <meta name="description" content="Columbia Trail Race 2026 — expo, kit collection, route maps, start times, aid stations and race-day guidelines." />
+  <title>Columbia Trail Race 2026 | Race Day Guide</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{
+      --navy:#0b1f2e;
+      --navy-2:#12344b;
+      --blue:#0b87c9;
+      --blue-soft:#e6f4fb;
+      --bg:#f5f8fa;
+      --card:#ffffff;
+      --text:#0f1b26;
+      --muted:#5b6b79;
+      --line:#e0e7ed;
+      --warn:#c2410c;
+      --warn-bg:#fff4ed;
+      --radius:18px;
+      --shadow:0 1px 2px rgba(11,31,46,.05),0 8px 24px rgba(11,31,46,.06);
+      --max:1120px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:76px;-webkit-text-size-adjust:100%}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+    img{max-width:100%;display:block}
+    a{color:var(--blue);text-decoration:none;font-weight:600}
+    a:hover{text-decoration:underline}
+    .wrap{width:min(var(--max),100% - 32px);margin-inline:auto}
+    .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+    /* Buttons */
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 20px;border-radius:12px;border:1.5px solid transparent;font:700 .92rem/1 Inter,sans-serif;cursor:pointer;transition:transform .15s,background .15s,box-shadow .15s;text-decoration:none!important}
+    .btn:hover{transform:translateY(-1px)}
+    .btn-primary{background:var(--blue);color:#fff;box-shadow:0 6px 16px rgba(11,135,201,.28)}
+    .btn-primary:hover{background:#0975ae}
+    .btn-ghost{background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.3)}
+    .btn-ghost:hover{background:rgba(255,255,255,.18)}
+    .btn-outline{background:#fff;color:var(--navy);border-color:var(--line)}
+    .btn-outline:hover{border-color:var(--blue);color:var(--blue)}
+
+    /* Header */
+    header.top{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px}
+    .brand{display:flex;flex-direction:column;line-height:1.15;color:var(--navy);text-decoration:none!important}
+    .brand b{font-size:1rem;font-weight:800;letter-spacing:-.01em}
+    .brand small{font-size:.66rem;font-weight:600;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}
+    nav.links{display:flex;align-items:center;gap:4px}
+    nav.links a{padding:8px 12px;border-radius:9px;color:#31414f;font-size:.88rem;font-weight:600}
+    nav.links a:hover{background:var(--blue-soft);color:var(--blue);text-decoration:none}
+    nav.links .btn{min-height:40px;margin-left:8px;color:#fff;font-size:.82rem}
+    nav.links .btn:hover{background:#0975ae;color:#fff}
+
+    /* Hero */
+    .hero{position:relative;overflow:hidden;color:#fff;background:
+      radial-gradient(900px 400px at 85% -10%,rgba(11,135,201,.55),transparent 60%),
+      linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 100%)}
+    .hero::after{content:"";position:absolute;inset:auto 0 0 0;height:120px;opacity:.35;pointer-events:none;
+      background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0 120V78l120-34 140 40 150-62 130 52 160-58 140 46 150-44 110 40v102z' fill='%230b87c9' fill-opacity='.35'/%3E%3Cpath d='M0 120V96l160-30 140 34 180-48 160 40 170-34 150 30 240-26v58z' fill='%23f5f8fa'/%3E%3C/svg%3E") bottom/100% 100% no-repeat}
+    .hero-in{padding:72px 0 120px;max-width:760px}
+    .tag{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+    .hero h1{margin:20px 0 14px;font-size:clamp(2.6rem,7.5vw,4.9rem);line-height:1;font-weight:900;letter-spacing:-.035em}
+    .hero h1 span{color:#5cc6f4}
+    .hero p{margin:0 0 26px;color:#cfe2ee;font-size:clamp(1rem,2.2vw,1.15rem);max-width:640px}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+    .chip{padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);font-size:.82rem;color:#e3eef5}
+    .chip b{color:#fff}
+    .cta{display:flex;flex-wrap:wrap;gap:12px}
+
+    /* Alert */
+    .alert{position:relative;z-index:3;margin-top:-56px}
+    .alert-card{display:flex;align-items:center;gap:18px;padding:20px 22px;background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--line)}
+    .alert-ic{flex:none;width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:var(--blue-soft);color:var(--blue);font-weight:900;font-size:1.2rem}
+    .alert-card h3{margin:0 0 2px;font-size:1rem}
+    .alert-card p{margin:0;color:var(--muted);font-size:.9rem}
+    .alert-card .btn{margin-left:auto;flex:none}
+
+    /* Sections */
+    section{padding:84px 0}
+    section.alt{background:#fff;border-block:1px solid var(--line)}
+    .kicker{font-size:.76rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
+    .head{max-width:720px;margin-bottom:36px}
+    .head h2{margin:8px 0 10px;font-size:clamp(1.8rem,4.6vw,2.8rem);line-height:1.1;letter-spacing:-.03em;font-weight:900}
+    .head p{margin:0;color:var(--muted)}
+    .grid{display:grid;gap:18px}
+    .g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
+    .card h3{margin:0 0 8px;font-size:1.15rem;letter-spacing:-.01em}
+    .card p{margin:0 0 14px;color:var(--muted)}
+    .when{display:inline-block;margin-bottom:14px;padding:6px 12px;border-radius:999px;background:var(--blue-soft);color:var(--blue);font-weight:700;font-size:.82rem}
+    .list{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+    .list li{position:relative;padding-left:22px;font-size:.93rem;color:#33434f}
+    .list li::before{content:"";position:absolute;left:2px;top:.6em;width:8px;height:8px;border-radius:50%;background:var(--blue)}
+    .note{margin-top:20px;padding:16px 18px;border-radius:14px;background:var(--blue-soft);border:1px solid #cde8f6;color:#1d4c66;font-size:.92rem}
+    .warn{background:var(--warn-bg);border-color:#fcd9c2}
+    .warn .kicker{color:var(--warn)}
+    .warn h3{margin-top:6px}
+
+    /* Venue */
+    .venue{display:grid;grid-template-columns:1.1fr .9fr;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:var(--card);box-shadow:var(--shadow)}
+    .venue-copy{padding:32px}
+    .venue-copy h3{margin:8px 0 12px;font-size:1.6rem;line-height:1.2;letter-spacing:-.02em}
+    .venue-copy p{color:var(--muted)}
+    .venue-side{background:linear-gradient(160deg,var(--navy),var(--navy-2));color:#fff;padding:32px;display:flex;flex-direction:column;justify-content:flex-end;min-height:260px}
+    .venue-side small{color:#9fc4da;font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:.7rem}
+    .venue-side strong{font-size:1.7rem;line-height:1.1;letter-spacing:-.02em;margin:6px 0 8px}
+    .venue-side span{color:#cfe2ee;font-size:.9rem}
+
+    /* Route map */
+    .tabs{display:inline-flex;padding:5px;gap:4px;background:#e9eff3;border-radius:14px;margin-bottom:22px;max-width:100%}
+    .tab{border:0;background:transparent;color:#41515e;padding:11px 18px;border-radius:10px;font:700 .9rem/1 Inter,sans-serif;cursor:pointer;white-space:nowrap}
+    .tab[aria-selected="true"]{background:#fff;color:var(--navy);box-shadow:0 1px 4px rgba(11,31,46,.14)}
+    .route{display:none;grid-template-columns:minmax(0,380px) 1fr;gap:28px;align-items:start}
+    .route.on{display:grid}
+    .map-btn{position:relative;display:block;width:100%;padding:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff;cursor:zoom-in;box-shadow:var(--shadow)}
+    .map-btn img{width:100%;height:auto}
+    .map-btn span{position:absolute;right:12px;bottom:12px;padding:7px 12px;border-radius:999px;background:rgba(11,31,46,.85);color:#fff;font-size:.75rem;font-weight:700}
+    .cat{display:grid;gap:12px}
+    .cat-item{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;align-items:center;padding:16px 18px;background:var(--card);border:1px solid var(--line);border-radius:14px}
+    .cat-item b{font-size:1.5rem;font-weight:900;letter-spacing:-.03em;color:var(--navy);grid-row:span 2;min-width:76px}
+    .cat-item strong{font-size:.95rem}
+    .cat-item small{color:var(--muted);font-size:.82rem}
+    .elev{display:inline-flex;gap:10px;font-size:.76rem;font-weight:700;color:var(--blue)}
+    .legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:6px;font-size:.84rem;color:var(--muted)}
+    .legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-2px;background:var(--blue)}
+
+    /* Lightbox */
+    .lb{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(5,12,18,.88)}
+    .lb.on{display:flex}
+    .lb img{max-height:92vh;width:auto;max-width:100%;border-radius:10px;background:#fff}
+    .lb button{position:absolute;top:14px;right:14px;width:44px;height:44px;border-radius:50%;border:0;background:#fff;color:var(--navy);font-size:1.4rem;cursor:pointer}
+
+    /* Schedule */
+    .sched{display:grid;gap:10px}
+    .row{display:grid;grid-template-columns:150px 170px 1fr auto;gap:16px;align-items:center;padding:16px 20px;background:var(--card);border:1px solid var(--line);border-radius:14px}
+    .dist{font-size:1.7rem;font-weight:900;letter-spacing:-.03em;line-height:1}
+    .dist small{display:block;margin-top:5px;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+    .time{font-weight:800}
+    .time small{display:block;color:var(--muted);font-size:.78rem;font-weight:500}
+    .rt{color:#41515e;font-size:.88rem}
+    .pill{padding:6px 12px;border-radius:999px;background:var(--blue-soft);color:var(--blue);font-size:.74rem;font-weight:800;white-space:nowrap}
+    .pill.nc{background:#f0f2f4;color:#5b6b79}
+
+    /* Aid */
+    .aid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:20px}
+    .aid div{padding:20px 10px;text-align:center;background:var(--card);border:1px solid var(--line);border-radius:14px}
+    .aid b{display:block;font-size:1.9rem;font-weight:900;color:var(--blue);letter-spacing:-.03em;line-height:1.1}
+    .aid span{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:700}
+
+    /* Accordion */
+    details{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:10px;overflow:hidden}
+    summary{list-style:none;cursor:pointer;padding:18px 20px;font-weight:700;display:flex;justify-content:space-between;gap:16px;align-items:center}
+    summary::-webkit-details-marker{display:none}
+    summary::after{content:"+";flex:none;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--blue-soft);color:var(--blue);font-weight:700}
+    details[open] summary::after{content:"–"}
+    details .list{padding:0 20px 20px}
+
+    .results{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:32px;border-radius:var(--radius);color:#fff;background:linear-gradient(135deg,var(--navy),var(--navy-2))}
+    .results h3{margin:0 0 8px;font-size:1.6rem;letter-spacing:-.02em}
+    .results p{margin:0;color:#cfe2ee;max-width:560px}
+    .results .cta{flex:none}
+
+    footer{padding:40px 0 100px;color:var(--muted);font-size:.86rem;border-top:1px solid var(--line)}
+    .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px}
+    .foot strong{color:var(--text)}
+
+    .mbar{display:none}
+
+    @media (max-width:900px){
+      nav.links a:not(.btn){display:none}
+      .g3{grid-template-columns:1fr}
+      .venue{grid-template-columns:1fr}
+      .route.on{grid-template-columns:1fr}
+      .map-btn{max-width:420px;margin-inline:auto}
+      .row{grid-template-columns:130px 1fr auto}
+      .row .rt{grid-column:1/-1;order:5}
+      .aid{grid-template-columns:repeat(3,1fr)}
+      .results{flex-direction:column;align-items:flex-start}
+    }
+    @media (max-width:640px){
+      .wrap{width:calc(100% - 28px)}
+      section{padding:60px 0}
+      .hero-in{padding:48px 0 100px}
+      .cta .btn{width:100%}
+      .alert-card{flex-wrap:wrap}
+      .alert-card .btn{width:100%;margin-left:0}
+      .g2{grid-template-columns:1fr}
+      .card{padding:22px}
+      .venue-copy,.venue-side{padding:24px}
+      .tabs{display:flex}
+      .tab{flex:1;padding:11px 8px;font-size:.82rem}
+      .row{grid-template-columns:1fr auto;gap:8px 12px;padding:16px}
+      .row .time{text-align:right}
+      .row .pill{grid-column:1/-1;justify-self:start}
+      .aid{grid-template-columns:repeat(2,1fr)}
+      .aid div:last-child{grid-column:1/-1}
+      .results{padding:24px 20px}
+      .mbar{display:flex;position:fixed;z-index:60;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));align-items:center;justify-content:space-between;gap:12px;padding:10px 10px 10px 16px;background:rgba(11,31,46,.95);backdrop-filter:blur(12px);border-radius:16px;box-shadow:0 12px 32px rgba(0,0,0,.3);color:#fff}
+      .mbar small{display:block;color:#9fc4da;font-size:.66rem;letter-spacing:.06em}
+      .mbar strong{font-size:.86rem}
+      .mbar .btn{min-height:40px;padding:0 16px;font-size:.8rem}
+    }
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+  </style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Columbia Trail Race home">
+      <b>Columbia Trail Race</b>
+      <small>Race Day Guide</small>
+    </a>
+    <nav class="links" aria-label="Primary">
+      <a href="#expo">Expo</a>
+      <a href="#race-day">Race Day</a>
+      <a href="#route">Route Map</a>
+      <a href="#starts">Starts</a>
+      <a href="#aid">Aid Stations</a>
+      <a class="btn btn-primary" href="https://racemateindia.com/checkyourbib?event_id=31984ba98d08b0fa188c702d29ff5ad3:2f5ba5" target="_blank" rel="noopener">Check Your Bib</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap hero-in">
+      <span class="tag">01 Nov 2026 · Village Mangar</span>
+      <h1>Race ready.<br><span>Trail ready.</span></h1>
+      <p>Your registration is confirmed. Review expo details, route maps, start times and the mandatory race-day guidelines before you arrive.</p>
+      <div class="chips">
+        <span class="chip"><b>100%</b> technical trail</span>
+        <span class="chip"><b>75K → 5K</b> categories</span>
+        <span class="chip">Report <b>1 hour</b> before start</span>
+      </div>
+      <div class="cta">
+        <a class="btn btn-primary" href="https://racemateindia.com/checkyourbib?event_id=31984ba98d08b0fa188c702d29ff5ad3:2f5ba5" target="_blank" rel="noopener">Re-check registration</a>
+        <a class="btn btn-ghost" href="#route">View route map</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap alert">
+    <div class="alert-card">
+      <div class="alert-ic" aria-hidden="true">!</div>
+      <div>
+        <h3>Verify your gender, DOB and bib number before race day.</h3>
+        <p>Use the official bib lookup to confirm your details.</p>
+      </div>
+      <a class="btn btn-primary" href="https://racemateindia.com/checkyourbib?event_id=31984ba98d08b0fa188c702d29ff5ad3:2f5ba5" target="_blank" rel="noopener">Check details</a>
+    </div>
+  </div>
+
+  <!-- EXPO -->
+  <section id="expo">
+    <div class="wrap">
+      <div class="head">
+        <div class="kicker">01 · Expo</div>
+        <h2>Collect. Check. Get race ready.</h2>
+        <p>Pick up your race kit one day before the race. Keep your confirmation mail or bib number handy for faster collection.</p>
+      </div>
+      <div class="grid g2">
+        <article class="card">
+          <span class="when">Sat, 31 Oct 2026 · 11:00 AM – 4:00 PM</span>
+          <h3>Expo / kit collection</h3>
+          <ul class="list">
+            <li><strong>Venue:</strong> Not Just Smoo’V Café (NJS), Ground Floor, AIPL Joy Central, Sector 65, Gurugram</li>
+            <li><strong>Duration:</strong> 5 hours</li>
+            <li>Carry a copy of your confirmation mail or simply tell us your bib number.</li>
+          </ul>
+          <p style="margin:20px 0 0"><a class="btn btn-primary" href="https://maps.app.goo.gl/jJKymDEXkK3k4HEP7" target="_blank" rel="noopener">Open expo location</a></p>
+        </article>
+        <article class="card">
+          <h3>Collection &amp; courier notes</h3>
+          <ul class="list">
+            <li>Courier kits are expected by <strong>28 October</strong>. If not received, email <a href="mailto:support@coachravinder.com">support@coachravinder.com</a>.</li>
+            <li>Do not exchange or transfer your bib to another participant.</li>
+            <li>If you cannot collect your bib personally, you may authorize someone or your group representative to collect it for you.</li>
+          </ul>
+        </article>
+      </div>
+      <div class="note"><strong>Outstation participants:</strong> you may collect your bib on race-day morning, Sunday 1 November, at least one hour before your race start time.</div>
+    </div>
+  </section>
+
+  <!-- RACE DAY -->
+  <section id="race-day" class="alt">
+    <div class="wrap">
+      <div class="head">
+        <div class="kicker">02 · Race day</div>
+        <h2>Into the Aravalli trail.</h2>
+        <p>The terrain is the challenge. Expect barren plains, rolling gradient, loose gravel and boulder sections across a fully technical course.</p>
+      </div>
+      <div class="venue">
+        <div class="venue-copy">
+          <div class="kicker">Sunday · 01 November 2026</div>
+          <h3>Near Bani Dham Mandir, Baba Colony, Mangar</h3>
+          <p>Gurgaon–Faridabad Road. Parking is available. Reach the venue at least <strong>1 hour before your race start time.</strong></p>
+          <div class="cta">
+            <a class="btn btn-primary" href="https://maps.app.goo.gl/x8RqdXJsQt5Nb8xF7" target="_blank" rel="noopener">Get directions</a>
+            <a class="btn btn-outline" href="#starts">See start times</a>
+          </div>
+        </div>
+        <div class="venue-side">
+          <small>Course profile</small>
+          <strong>Tough. Treacherous. Technical.</strong>
+          <span>Barren plains · gradients · gravel · boulders</span>
+        </div>
+      </div>
+      <div class="grid g2" style="margin-top:18px">
+        <article class="card warn">
+          <div class="kicker">Mandatory</div>
+          <h3>5:30 AM starters — head torch required</h3>
+          <p style="margin:0">Participants starting at 5:30 AM will <strong>not be allowed to start</strong> without a head torch or proper lighting arrangement.</p>
+        </article>
+        <article class="card warn">
+          <div class="kicker">Walk category caution</div>
+          <h3>Walkers are not allowed to run</h3>
+          <p style="margin:0">Any 30K Walk participant finishing in less than <strong>4 hours 30 minutes</strong> will be disqualified.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROUTE MAP -->
+  <section id="route">
+    <div class="wrap">
+      <div class="head">
+        <div class="kicker">03 · Route map</div>
+        <h2>Know the loop before you run it.</h2>
+        <p>Two loop maps cover all categories. Arrows show the direction of travel. Tap a map to enlarge it.</p>
+      </div>
+
+      <div class="tabs" role="tablist" aria-label="Route map selection">
+        <button class="tab" role="tab" id="tab-30" aria-selected="true" aria-controls="panel-30">30 km loop</button>
+        <button class="tab" role="tab" id="tab-21" aria-selected="false" aria-controls="panel-21" tabindex="-1">21 km loop</button>
+      </div>
+
+      <div class="route on" id="panel-30" role="tabpanel" aria-labelledby="tab-30">
+        <button class="map-btn" type="button" data-zoom="images/columbia/route-30k.jpg" data-alt="Columbia Trail Race 30 km loop route map">
+          <img src="images/columbia/route-30k.jpg" alt="Columbia Trail Race 30 km loop route map showing start/finish at Baba Colony, Mangar, James Bond Lake, Pani Kot Lake and Mini Ladakh" width="433" height="866" loading="lazy" />
+          <span>Tap to enlarge</span>
+        </button>
+        <div>
+          <div class="cat">
+            <div class="cat-item"><b>75K</b><strong>5:30 AM – 5:30 PM · 12 hrs</strong><small>30K (15+15) · 20K (10+10) · 10K (5+5) · 10K (5+5) · 5K (2.5+2.5)</small></div>
+            <div class="cat-item"><b>50K</b><strong>5:30 AM – 2:00 PM · 8:30 hrs</strong><small>1st loop 30K (15+15) · 2nd loop 20K (10+10)</small></div>
+            <div class="cat-item"><b>30K</b><strong>Run · 5:30 AM – 10:00 AM · 4:30 hrs</strong><small>One 30K loop (15K + 15K)</small></div>
+            <div class="cat-item"><b>30K</b><strong>Walk · 5:30 AM – 11:30 AM · 6 hrs</strong><small>One 30K loop (15K + 15K)</small></div>
+          </div>
+          <p class="elev" style="margin:14px 0 0"><span>▲ Max elevation 315 m</span><span>▼ Min 221 m</span></p>
+          <p class="legend"><span><i></i>Start / Finish at Baba Colony, Mangar</span><span>Landmarks: James Bond Lake · Pani Kot Lake · Mini Ladakh</span></p>
+          <p style="margin-top:14px"><a class="btn btn-outline" href="images/columbia/route-30k.jpg" download>Download 30K map</a></p>
+        </div>
+      </div>
+
+      <div class="route" id="panel-21" role="tabpanel" aria-labelledby="tab-21" hidden>
+        <button class="map-btn" type="button" data-zoom="images/columbia/route-21k.jpg" data-alt="Columbia Trail Race 21 km loop route map">
+          <img src="images/columbia/route-21k.jpg" alt="Columbia Trail Race 21 km loop route map showing start/finish at Baba Colony, Mangar and James Bond Lake" width="433" height="866" loading="lazy" />
+          <span>Tap to enlarge</span>
+        </button>
+        <div>
+          <div class="cat">
+            <div class="cat-item"><b>21.1K</b><strong>Run · 6:00 – 9:30 AM · 3:30 hrs</strong><small>One loop · U-turn at 10.55K</small></div>
+            <div class="cat-item"><b>10K</b><strong>Run · 7:00 – 9:00 AM · 2 hrs</strong><small>One loop · U-turn at 5K</small></div>
+            <div class="cat-item"><b>10K</b><strong>Walk · 7:00 AM · Non-timed</strong><small>Non-competitive · U-turn at 5K</small></div>
+            <div class="cat-item"><b>5K</b><strong>Fun run · 7:30 AM · Non-timed</strong><small>Non-competitive · U-turn at 2.5K</small></div>
+          </div>
+          <p class="elev" style="margin:14px 0 0"><span>▲ 315 m (21.1K) · 311 m (10K) · 299 m (5K)</span><span>▼ Min 221 m</span></p>
+          <p class="legend"><span><i></i>Start / Finish at Baba Colony, Mangar</span><span>Landmark: James Bond Lake</span></p>
+          <p style="margin-top:14px"><a class="btn btn-outline" href="images/columbia/route-21k.jpg" download>Download 21K map</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STARTS -->
+  <section id="starts" class="alt">
+    <div class="wrap">
+      <div class="head">
+        <div class="kicker">04 · Race starts</div>
+        <h2>Know your start. Know your cut-off.</h2>
+        <p>Start only with your registered distance category and arrive at least one hour before the listed start time.</p>
+      </div>
+      <div class="sched">
+        <div class="row"><div class="dist">75K<small>Ultra run</small></div><div class="time">5:30 AM<small>Finish by 5:30 PM</small></div><div class="rt">30K (15+15) → 20K (10+10) → 10K (5+5) → 10K (5+5) → 5K (2.5+2.5)</div><div class="pill">12 hrs</div></div>
+        <div class="row"><div class="dist">50K<small>Endurance run</small></div><div class="time">5:30 AM<small>Finish by 2:00 PM</small></div><div class="rt">1st loop 30K (15+15K) → 2nd loop 20K (10+10K)</div><div class="pill">8:30 hrs</div></div>
+        <div class="row"><div class="dist">30K<small>Run</small></div><div class="time">5:30 AM<small>Finish by 10:00 AM</small></div><div class="rt">One 30K loop (15K + 15K)</div><div class="pill">4:30 hrs</div></div>
+        <div class="row"><div class="dist">30K<small>Walk</small></div><div class="time">5:30 AM<small>Finish by 11:30 AM</small></div><div class="rt">One 30K loop (15K + 15K)</div><div class="pill">6 hrs</div></div>
+        <div class="row"><div class="dist">21.1K<small>Half trail run</small></div><div class="time">6:00 AM<small>Finish by 9:30 AM</small></div><div class="rt">One loop · U-turn at 10.55K</div><div class="pill">3:30 hrs</div></div>
+        <div class="row"><div class="dist">10K<small>Trail run</small></div><div class="time">7:00 AM<small>Finish by 9:00 AM</small></div><div class="rt">One loop · U-turn at 5K</div><div class="pill">2 hrs</div></div>
+        <div class="row"><div class="dist">10K<small>Walk</small></div><div class="time">7:00 AM<small>Non-timed</small></div><div class="rt">One loop · U-turn at 5K</div><div class="pill nc">Non-competitive</div></div>
+        <div class="row"><div class="dist">5K<small>Fun run</small></div><div class="time">7:30 AM<small>Non-timed</small></div><div class="rt">One loop · U-turn at 2.5K</div><div class="pill nc">Non-competitive</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AID -->
+  <section id="aid">
+    <div class="wrap">
+      <div class="head">
+        <div class="kicker">05 · Route support</div>
+        <h2>Five aid stations. One tough trail.</h2>
+        <p>Every aid station offers first aid, hydration and runner-focused refuelling. Carry your own sipper if you want water between stations.</p>
+      </div>
+      <div class="aid">
+        <div><b>2K</b><span>Aid 01</span></div>
+        <div><b>4.5K</b><span>Aid 02</span></div>
+        <div><b>7.5K</b><span>Aid 03</span></div>
+        <div><b>10K</b><span>Aid 04</span></div>
+        <div><b>15K</b><span>Aid 05</span></div>
+      </div>
+      <div class="grid g2">
+        <article class="card">
+          <h3>At every aid station</h3>
+          <ul class="list">
+            <li>First aid, water and energy drink</li>
+            <li>Fruits and running-related snacking items</li>
+            <li>Disposable cups for water service</li>
+            <li>Route marshals and route markings throughout the course</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Ultra runner refuelling</h3>
+          <p>Necessary refuelling arrangements for ultra runners will be available at the aid stations.</p>
+          <div class="note" style="margin:0">The route is properly marked and marshalled. There is minimal chance of going off-route, but stay alert and follow course markers carefully.</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- RULES -->
+  <section id="rules" class="alt">
+    <div class="wrap">
+      <div class="head">
+        <div class="kicker">06 · Essential rules</div>
+        <h2>Read before you toe the line.</h2>
+        <p>These points directly affect timing, qualification, medals, safety and your race experience.</p>
+      </div>
+      <details open>
+        <summary>Distance change / downgrade / upgrade</summary>
+        <ul class="list">
+          <li>Runners who downgrade their distance during the run, irrespective of the reason, will not be considered qualified for the lower distance or ranking.</li>
+          <li>If you have already decided to downgrade or upgrade, inform the Help Desk in the assembly area and start with the respective distance start time.</li>
+          <li>If you do not report the change before the start, you will not receive a timing certificate for the changed distance.</li>
+          <li>You cannot change your race distance after starting the race.</li>
+        </ul>
+      </details>
+      <details>
+        <summary>Baggage &amp; medal counter</summary>
+        <ul class="list">
+          <li>You may keep baggage in your car or deposit it at the baggage counter.</li>
+          <li>If baggage is left inside the car, keep it in the dashboard/boot and out of outside view.</li>
+          <li>Mark identification on your bag and do not leave valuables in it.</li>
+          <li>A separate tent will be available for ultra runners to store baggage and race-related material.</li>
+        </ul>
+      </details>
+      <details>
+        <summary>Parking &amp; toilet facilities</summary>
+        <ul class="list">
+          <li>Sufficient parking is available at the race venue.</li>
+          <li>Toilet facility is available at the venue.</li>
+        </ul>
+      </details>
+      <details>
+        <summary>Rewards &amp; felicitations</summary>
+        <ul class="list">
+          <li>Columbia Sports goodies for the winner.</li>
+          <li>No prizes/felicitation where participation is 5 or fewer in a gender category of a distance.</li>
+          <li>Only the winner will be felicitated where participation is between 5 and 10.</li>
+          <li>Top 3 will be felicitated where participation is 11 or above.</li>
+          <li>Age-category prizes apply only in distance categories with more than 100 participants.</li>
+        </ul>
+      </details>
+      <details>
+        <summary>Points worth noting</summary>
+        <ul class="list">
+          <li>Start your run/walk only with your respective distance category.</li>
+          <li>Participants marked DNF (Did Not Finish) will not receive a finisher medal or timing certificate.</li>
+          <li>Carry your mobile phone for navigation and safety. In an emergency, contact the nearest aid station.</li>
+          <li>Keep your phone fully charged; GPS/navigation may drain the battery faster.</li>
+          <li>Long socks with shorts/lowers and a cap are advisable for trail protection.</li>
+          <li>Stay focused throughout the course even though portions of the trail may feel relatively simple.</li>
+        </ul>
+      </details>
+      <div class="note">For queries, email <a href="mailto:support@coachravinder.com">support@coachravinder.com</a>. Additional race-day page: <a href="https://columbiatrailrun.pfsindia.in/raceday.html" target="_blank" rel="noopener">columbiatrailrun.pfsindia.in/raceday.html</a></div>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section>
+    <div class="wrap">
+      <div class="head">
+        <div class="kicker">07 · Results &amp; photos</div>
+        <h2>After the finish.</h2>
+      </div>
+      <div class="results">
+        <div>
+          <h3>Your race story continues.</h3>
+          <p>Race photos are scheduled for <strong>Tuesday, 3 November at 8:00 PM</strong>, with bib-number and face-recognition search. Race timing will be available through RaceMate.</p>
+        </div>
+        <div class="cta">
+          <a class="btn btn-primary" href="https://www.honeysnapshots.in/" target="_blank" rel="noopener">View photos</a>
+          <a class="btn btn-ghost" href="https://racemateindia.com/event-results" target="_blank" rel="noopener">Race results</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div><strong>Columbia Trail Race 2026</strong><br>Light Feet. Serious Trails.</div>
+    <div>Queries: <a href="mailto:support@coachravinder.com">support@coachravinder.com</a><br>Team CTR &amp; Coach Ravinder</div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <div><small>01 NOV 2026 · MANGAR</small><strong>Race Day Guide</strong></div>
+  <a class="btn btn-primary" href="https://racemateindia.com/checkyourbib?event_id=31984ba98d08b0fa188c702d29ff5ad3:2f5ba5" target="_blank" rel="noopener">Check bib</a>
+</div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Route map enlarged">
+  <button type="button" id="lb-close" aria-label="Close">×</button>
+  <img id="lb-img" alt="" />
+</div>
+
+<script>
+  // Route map tabs
+  (function(){
+    var tabs=document.querySelectorAll('.tab');
+    function show(t){
+      tabs.forEach(function(x){
+        var on=x===t, p=document.getElementById(x.getAttribute('aria-controls'));
+        x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;
+        p.classList.toggle('on',on);p.hidden=!on;
+      });
+    }
+    tabs.forEach(function(t,i){
+      t.addEventListener('click',function(){show(t)});
+      t.addEventListener('keydown',function(e){
+        if(e.key==='ArrowRight'||e.key==='ArrowLeft'){
+          var n=tabs[(i+(e.key==='ArrowRight'?1:tabs.length-1))%tabs.length];show(n);n.focus();
+        }
+      });
+    });
+  })();
+
+  // Lightbox
+  (function(){
+    var lb=document.getElementById('lb'),img=document.getElementById('lb-img'),last;
+    function close(){lb.classList.remove('on');if(last)last.focus()}
+    document.querySelectorAll('[data-zoom]').forEach(function(b){
+      b.addEventListener('click',function(){
+        last=b;img.src=b.dataset.zoom;img.alt=b.dataset.alt||'';
+        lb.classList.add('on');document.getElementById('lb-close').focus();
+      });
+    });
+    lb.addEventListener('click',function(e){if(e.target!==img)close()});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&lb.classList.contains('on'))close()});
+  })();
+</script>
+</body>
+</html>
